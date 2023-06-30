@@ -1,0 +1,506 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.29)  30 JUN 2023 05:40
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"d:/3br7man/Grad Book/chapters/intro.tex"
+(d:/3br7man/Grad Book/chapters/intro.tex
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-06-16>
+(C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count185
+\l__pdf_internal_box=\box51
+) (intro.aux)
+\openout1 = `intro.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+
+
+d:/3br7man/Grad Book/chapters/intro.tex:1: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+d:/3br7man/Grad Book/chapters/intro.tex:3: Undefined control sequence.
+l.3 \section
+            {The mobile industry in numbers}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+d:/3br7man/Grad Book/chapters/intro.tex:8: Undefined control sequence.
+l.8 \subsection
+               {5G in the mobile market}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+d:/3br7man/Grad Book/chapters/intro.tex:13: LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \begin{figure}
+                   [h]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+d:/3br7man/Grad Book/chapters/intro.tex:15: Undefined control sequence.
+l.15 \includegraphics
+                     [width=3.54 in, height=1.85in]{1.PNG}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+d:/3br7man/Grad Book/chapters/intro.tex:16: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \caption
+             {4G vs 5G connections }
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+d:/3br7man/Grad Book/chapters/intro.tex:18: LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \end{figure}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+d:/3br7man/Grad Book/chapters/intro.tex:21: Undefined control sequence.
+l.21 \section
+             {The next generation – 5G NR}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+d:/3br7man/Grad Book/chapters/intro.tex:25: Undefined control sequence.
+l.25 \subsection
+                {5G Use Cases}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+d:/3br7man/Grad Book/chapters/intro.tex:34: LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 \begin{figure}
+                   [h]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+d:/3br7man/Grad Book/chapters/intro.tex:36: Undefined control sequence.
+l.36 \includegraphics
+                     [width=4.76in, height=2.37in]{2.PNG}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+d:/3br7man/Grad Book/chapters/intro.tex:37: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 \caption
+             {5G Use cases classification}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+d:/3br7man/Grad Book/chapters/intro.tex:38: LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 \end{figure}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+d:/3br7man/Grad Book/chapters/intro.tex:40: Undefined control sequence.
+l.40 \subsection
+                {Waveform, Numerology, and Frame Structure}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 51.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 51.
+
+d:/3br7man/Grad Book/chapters/intro.tex:54: LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 \begin{figure}
+                   [h]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+d:/3br7man/Grad Book/chapters/intro.tex:56: Undefined control sequence.
+l.56 \includegraphics
+                     [width=6in, height=3.4in]{3.PNG}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+d:/3br7man/Grad Book/chapters/intro.tex:57: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 \caption
+             {5G Frame structure}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+d:/3br7man/Grad Book/chapters/intro.tex:58: LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 \end{figure}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+d:/3br7man/Grad Book/chapters/intro.tex:60: Undefined control sequence.
+l.60 \section
+             {5G Data Channels: Logical, Transport \& Physical}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+d:/3br7man/Grad Book/chapters/intro.tex:81: Undefined control sequence.
+l.81 \subsection
+                {5G NR logical channels}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+d:/3br7man/Grad Book/chapters/intro.tex:95: Undefined control sequence.
+l.95 \subsection
+                {5G NR transport channels}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+d:/3br7man/Grad Book/chapters/intro.tex:110: Undefined control sequence.
+l.110 \subsection
+                 {5G NR physical channels}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+d:/3br7man/Grad Book/chapters/intro.tex:151: LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.151 \begin{figure}
+                    [h]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+d:/3br7man/Grad Book/chapters/intro.tex:153: Undefined control sequence.
+l.153     \includegraphics
+                          [width=4.31in, height = 2in]{4.PNG}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+d:/3br7man/Grad Book/chapters/intro.tex:154: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.154     \caption
+                  {5G Downlink logical, transport and physical channel mapping}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+d:/3br7man/Grad Book/chapters/intro.tex:156: LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.156 \end{figure}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--157
+
+ []
+
+
+d:/3br7man/Grad Book/chapters/intro.tex:158: LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.158 \begin{figure}
+                    [h]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+d:/3br7man/Grad Book/chapters/intro.tex:160: Undefined control sequence.
+l.160     \includegraphics
+                          [width=4.31in, height = 2in]{5.PNG}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+d:/3br7man/Grad Book/chapters/intro.tex:161: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.161     \caption
+                  {5G Uplink logical, transport and physical channel mapping...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+d:/3br7man/Grad Book/chapters/intro.tex:162: LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.162 \end{figure}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+d:/3br7man/Grad Book/chapters/intro.tex:165: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.165 \newpage
+              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1{C:/Users/abdoi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+d:/3br7man/Grad Book/chapters/intro.tex:165: Undefined control sequence.
+<write> \newlabel{fig:figure1.1}{{}{\thepage 
+                                             }{}{}{}}
+l.165 \newpage
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+d:/3br7man/Grad Book/chapters/intro.tex:165: Undefined control sequence.
+<write> \newlabel{fig:sub-first}{{}{\thepage 
+                                             }{}{}{}}
+l.165 \newpage
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+d:/3br7man/Grad Book/chapters/intro.tex:165: Undefined control sequence.
+<write> \newlabel{fig:second}{{}{\thepage 
+                                          }{}{}{}}
+l.165 \newpage
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+]
+d:/3br7man/Grad Book/chapters/intro.tex:167: Undefined control sequence.
+l.167 \section
+              {5G NR PDSCH}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+d:/3br7man/Grad Book/chapters/intro.tex:169: Undefined control sequence.
+l.169 \section
+              {PDSCH overview \& Motivation}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--187
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--187
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--187
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--187
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--187
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--187
+
+ []
+
+
+d:/3br7man/Grad Book/chapters/intro.tex:196: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.196 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[2] (intro.aux)
+ ***********
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-06-16>
+ ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 239 strings out of 476037
+ 6264 string characters out of 5779845
+ 1893763 words of memory out of 5000000
+ 21061 multiletter control sequences out of 15000+600000
+ 513695 words of font info for 35 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 35i,5n,50p,843b,108s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on intro.pdf (2 pages, 80574 bytes).
+PDF statistics:
+ 34 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

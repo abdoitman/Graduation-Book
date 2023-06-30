@@ -1,0 +1,96 @@
+\documentclass[12pt, a4paper, oneside]{book}
+\usepackage{import}
+\usepackage{graphicx} %For adding images
+\usepackage{booktabs} %For adding tables
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+}
+
+\graphicspath{ {./images/} }
+
+%---------- COVER INFO ----------%
+\def \LOGOPATH {au-logo1}
+\def \UNIVERSITY {ALEXANDRIA UNIVERSITY}
+\def \FACULTY {FACULTY OF ENGINEERING}
+\def \DEPARTMENT {Department of Communication \& Electronics Engineering}
+\def \PROJECTTITLE {5G PDSCH Simulator and DRL Approach For Designing The Optimal Precoder Vector and Power Allocation in MU-MIMO}
+\def \SUPERVISOR {Dr. Muhammad Karmoose}
+%--------------------------------%
+
+\begin{document}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1.5em}
+\pagenumbering{Roman}
+
+
+\begin{titlepage}
+    \centering
+    \vfill
+    \begin{center}
+        \includegraphics[scale=0.12]{\LOGOPATH}
+
+        \vfill
+
+        \textbf{\UNIVERSITY} \\
+        \textbf{\FACULTY} \\
+        \DEPARTMENT
+
+        \vfill
+
+        \LARGE{\textbf{\PROJECTTITLE}}
+    
+        \vfill
+        By \\
+        \textbf{Ahmed Hany} \\
+        \textbf{Ahmed Al-Alwani} \\
+        \textbf{Abulrahman Itman} \\
+        \textbf{Muhammad Emad} \\
+        \textbf{Momen Ashraf} \\
+        \textbf{Khalid Diab} \\
+        \textbf{Muhammad Abu-Elmagd} \\
+        \textbf{Muhammad Nagy}
+
+        \vfill
+        Supervised By \\
+        \textbf{\SUPERVISOR}
+
+        \vfill
+        \large{A Graduation Project submitted to the Department of Communication \& Electronics in partial fulfillment of the requirements for the degree of B.Sc. in Communication Engineering.}
+
+        \vspace{0.5cm}
+        Alexandria\\
+        July 2023
+    
+    \end{center}
+\end{titlepage}
+
+\setlength{\parskip}{0.75em}
+
+\tableofcontents
+\listoffigures
+
+\setlength{\parskip}{0.8em}
+\pagenumbering{arabic}
+%------- Introduction -------%
+\include{chapters/intro.tex}
+
+%------- Part 1: Comm -------%
+\part{5G PDSCH Simulator}
+\include{chapters/pdsch_intro.tex}
+
+\include{chapters/channel_coding}
+
+\include{chapters/MIMO_setup}
+
+\include{chapters/reference_signals}
+
+\include{chapters/simulations}
+
+%----- Part 2: RL Model -----%
+\part{Deep Reinforcement Learning Model}
+
+\end{document}

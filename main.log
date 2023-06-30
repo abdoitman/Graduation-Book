@@ -1,0 +1,333 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.29)  30 JUN 2023 17:56
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"d:/3br7man/Grad Book/main.tex"
+(d:/3br7man/Grad Book/main.tex
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-06-16>
+(C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
+Document Class: book 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/base\bk12.clo
+File: bk12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@chapter=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/import\import.sty
+Package: import 2020/04/01  v 6.2
+) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
+) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen143
+\lightrulewidth=\dimen144
+\cmidrulewidth=\dimen145
+\belowrulesep=\dimen146
+\belowbottomsep=\dimen147
+\aboverulesep=\dimen148
+\abovetopsep=\dimen149
+\cmidrulesep=\dimen150
+\cmidrulekern=\dimen151
+\defaultaddspace=\dimen152
+\@cmidla=\count194
+\@cmidlb=\count195
+\@aboverulesep=\dimen153
+\@belowrulesep=\dimen154
+\@thisruleclass=\count196
+\@lastruleclass=\count197
+\@thisrulewidth=\dimen155
+) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count198
+\Gm@cntv=\count199
+\c@Gm@tempcnt=\count266
+\Gm@bindingoffset=\dimen156
+\Gm@wd@mp=\dimen157
+\Gm@odd@mp=\dimen158
+\Gm@even@mp=\dimen159
+\Gm@layoutwidth=\dimen160
+\Gm@layoutheight=\dimen161
+\Gm@layouthoffset=\dimen162
+\Gm@layoutvoffset=\dimen163
+\Gm@dimlist=\toks18
+ (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count267
+\l__pdf_internal_box=\box51
+) (main.aux (chapters/intro.aux) (chapters/pdsch_intro.aux) (chapters/channel_coding.aux) (chapters/MIMO_setup.aux) (chapters/reference_signals.aux) (chapters/simulations.aux))
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+ (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count268
+\scratchdimen=\dimen164
+\scratchbox=\box52
+\nofMPsegments=\count269
+\nofMParguments=\count270
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count271
+\MPscratchDim=\dimen165
+\MPnumerator=\count272
+\makeMPintoPDFobject=\count273
+\everyMPtoPDFconversion=\toks20
+) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 483.69684pt, 56.90553pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23582pt, 56.90552pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69684pt
+* \textheight=731.23582pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-47.23828pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=38.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<./images/au-logo1.png, id=1, 2509.375pt x 1052.93375pt>
+File: ./images/au-logo1.png Graphic file (type png)
+<use ./images/au-logo1.png>
+Package pdftex.def Info: ./images/au-logo1.png  used on input line 34.
+(pdftex.def)             Requested size: 301.11201pt x 126.34659pt.
+[1
+
+
+{C:/Users/abdoi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/au-logo1.png>] (main.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 2.
+ [1
+
+])
+\tf@toc=\write3
+\openout3 = `main.toc'.
+
+ [2] (main.lof)
+\tf@lof=\write4
+\openout4 = `main.lof'.
+
+ [1
+
+]
+\openout2 = `chapters/intro.aux'.
+
+ (chapters/intro.tex
+Chapter 1.
+<./images/1.PNG, id=21, 1204.5pt x 631.35875pt>
+File: ./images/1.PNG Graphic file (type png)
+<use ./images/1.PNG>
+Package pdftex.def Info: ./images/1.PNG  used on input line 15.
+(pdftex.def)             Requested size: 255.838pt x 133.69713pt.
+[2
+
+
+ <./images/1.PNG (PNG copy)>]
+<./images/2.PNG, id=25, 375.20175pt x 186.6975pt>
+File: ./images/2.PNG Graphic file (type png)
+<use ./images/2.PNG>
+Package pdftex.def Info: ./images/2.PNG  used on input line 36.
+(pdftex.def)             Requested size: 344.01614pt x 171.28802pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3]
+<./images/3.PNG, id=30, 749.80125pt x 425.1885pt>
+File: ./images/3.PNG Graphic file (type png)
+<use ./images/3.PNG>
+Package pdftex.def Info: ./images/3.PNG  used on input line 56.
+(pdftex.def)             Requested size: 433.62651pt x 245.72066pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <./images/2.PNG>] [5 <./images/3.PNG>] [6] [7]
+Overfull \hbox (3.03296pt too wide) in paragraph at lines 140--145
+[]\OT1/cmr/m/n/12 Physical up-link shared chan-nel (PUSCH): The 5G phys-i-cal up-link shared chan-nel, PUSCH,
+ []
+
+<./images/4.PNG, id=49, 563.10374pt x 261.3765pt>
+File: ./images/4.PNG Graphic file (type png)
+<use ./images/4.PNG>
+Package pdftex.def Info: ./images/4.PNG  used on input line 153.
+(pdftex.def)             Requested size: 311.48662pt x 144.5392pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--157
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./images/5.PNG, id=50, 547.44525pt x 245.11575pt>
+File: ./images/5.PNG Graphic file (type png)
+<use ./images/5.PNG>
+Package pdftex.def Info: ./images/5.PNG  used on input line 160.
+(pdftex.def)             Requested size: 311.479pt x 144.54222pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [8] [9 <./images/4.PNG> <./images/5.PNG>] [10
+
+
+
+]
+\openout2 = `chapters/pdsch_intro.aux'.
+
+ (chapters/pdsch_intro.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--13
+
+ []
+
+) [11
+
+]
+\openout2 = `chapters/channel_coding.aux'.
+
+ (chapters/channel_coding.tex
+Chapter 2.
+) [12
+
+
+
+
+]
+\openout2 = `chapters/MIMO_setup.aux'.
+
+ (chapters/MIMO_setup.tex
+Chapter 3.
+) [13
+
+
+
+
+]
+\openout2 = `chapters/reference_signals.aux'.
+
+ (chapters/reference_signals.tex
+Chapter 4.
+) [14
+
+
+
+
+]
+\openout2 = `chapters/simulations.aux'.
+
+ (chapters/simulations.tex
+Chapter 5.
+) [15
+
+
+
+
+] [16
+
+
+
+] (main.aux (chapters/intro.aux) (chapters/pdsch_intro.aux) (chapters/channel_coding.aux) (chapters/MIMO_setup.aux) (chapters/reference_signals.aux) (chapters/simulations.aux))
+ ***********
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-06-16>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 2227 strings out of 476037
+ 39710 string characters out of 5779845
+ 1861763 words of memory out of 5000000
+ 22926 multiletter control sequences out of 15000+600000
+ 519542 words of font info for 54 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,7n,65p,862b,240s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\abdoi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on main.pdf (19 pages, 669418 bytes).
+PDF statistics:
+ 116 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+
