@@ -1,7 +1,48 @@
-\chapter{MIMO Setup}
+\chapter{Input/Output Setup}
 
-\section*{Overview}
+\section{Overview}
+In this chapter, we will discuss various input-output setups (depending on \emph{how many antennas are used in both the transmitter and the receiver}) that were implemented in the simulator. \\
+The availability of multiple antennas at the transmitter and/or the receiver can be utilized in different ways to achieve different aims:
+\begin{itemize}
+    \item Multiple antennas at the transmitter and/or the receiver can be used to provide additional diversity against fading on the radio channel. In this case, the channels experienced by the different antennas should have low mutual correlation, implying the need for a sufficiently large inter-antenna distance (spatial diversity), alternatively the use of different antenna polarization directions (polarization diversity).
+    \item Multiple antennas at the transmitter and/or the receiver can be used to “shape” the overall antenna beam (transmit beam and receive beam, respectively) in a certain way, for example, to maximize the overall antenna gain in the direction of the target receiver/transmitter or to suppress specific dominant interfering signals.
+    \item The simultaneous availability of multiple antennas at the transmitter and the receiver can be used to create what can be seen as multiple parallel communication “channels” over the radio interface. This provides the possibility for very high bandwidth utilization without a corresponding reduction in power efficiency or, in other words, the possibility for very high data rates within a limited bandwidth without an un-proportionally large degradation in terms of coverage. This feature is highly present in the MIMO setup.
+\end{itemize}
 
+The following table explains the different setups implemented in the simulator.
+\begin{table}[!ht]
+    \centering
+    \caption{Transmitter \& Receiver for different setups}
+    \label{tbl:mytable}
+    \begin{tabular}{lll}
+        \toprule
+        Setup & Transmitter & Receiver \\
+        \midrule
+        SISO (Single-Input Single-Output)  & One antenna   & One antenna   \\
+        SIMO (Single-Input Multi-Output)   & One antenna   & Many antennas \\
+        MISO (Multi-Input Single-Output)   & Many antennas & One antenna   \\
+        MIMO (Multi-Input Multi-Output)    & Many antennas & Many antennas \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Later in the chapter we will discuss how each setup works, its encoding and decoding techniques and benifits.
+
+\begin{GrayBox}
+    \textbf{Before we discuss each setup in great detail, some information about the channel model must be cleared out:}
+    \begin{itemize}
+        \item We are using an OFDM based system.
+        \item Each subcarrier carries only one modulated symbol.
+        \item We let the channel model be a block fading channel where the channel stays the same for some time (Coherence time) and for some subcarriers (Coherence bandwidth).
+    \end{itemize}
+
+    \textbf{The following assumptions were also made:}
+    \begin{itemize}
+        \item We will ignore the modulation of the input signal for better understanding of how each setup works.
+        \item We will also assume perfect knowledge of the channel at both the transmitter and the receiver.
+    \end{itemize}
+
+\end{GrayBox}
 
 \section{SISO}
 

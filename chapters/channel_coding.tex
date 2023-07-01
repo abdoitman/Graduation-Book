@@ -1,7 +1,191 @@
 \chapter{Channel Coding}
 
-\section*{Introduction}
+%--------- Intro ---------%
+\section{Overview}
+This part deals with linear block codes covering their fundamental concepts, generator and parity check matrices, error-correcting capabilities, encoding and decoding, and performance analysis. The linear block code discussed in this part is Hamming code.
 
-\section{Linear Coding}
+\subsection{Shannon's Noisy Channel Coding Theorem}
+Any channel affected by noise possesses a speciﬁc “channel capacity” C a rate of conveying information that can never be exceeded without error, but in principle, an error-correcting code always exists such that information can be transmitted at rates less than C with an arbitrarily low BER.
+
+\subsection{Channel Coding Principle}
+The channel coding principle is to add redundancy to minimize error rate as illustrated in Figure 2.1.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width= 0.8\textwidth]{au-logo-bl.PNG}
+    \caption{Illustration of the channel coding principle.}
+\end{figure}
+
+\subsection{Channel Coding Gain}
+The bit error rate (BER) is the probability that a binary digit transmitted from the source received erroneously by the user. For required BER, the difference between the powers required for without and with coding is called the coding gain. A typical plot of BER versus Eb/No (bit energy to noise spectral density ratio) with and without channel coding is shown in Figure 2.2. It can be seen that coding can arrive at the same value of the BER at lower Eb/No than without coding. Thus, the channel coding yields coding gain which is usually measured in dB. Also, the coding gain usually increases with a decrease in BER.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width= 0.8\textwidth]{au-logo-bl.PNG}
+    \caption{Coding gain.}
+\end{figure}
+%-------------------------%
+
+%--------- Linear --------%
+\section{Block Codes}
+The data stream is broken into blocks of $k$ bits and each k-bit block is encoded into a block of n bits with $n > k$ bits as illustrated in Figure 2.3. The n-bit block of the channel block encoder is called the code word. The code word is formed by adding $(n - k)$ parity check bits derived from the $k$ message bits.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width= 0.8\textwidth]{au-logo-bl.PNG}
+    \caption{Coded data stream.}
+\end{figure}
+
+\subsection*{Properties of Block Codes}
+
+\subsubsection*{Block code rate}
+The block code rate (R) is deﬁned as the ratio of $k$ message bits and length of the code word $n$.
+\[R = \frac{k}{n} \]
+
+\subsubsection*{Code word weight}
+The weight of a code word or error pattern is the number of nonzero bits in the code word or error pattern. \\
+For example, the weight of a code word $c = (1, 0, 0, 1, 1, 0, 1, 0)$ is 4.
+
+\subsubsection*{Hamming distance}
+The Hamming distance between two blocks v and w is the number of coordinates in which the two blocks differ.
+\[ d_{hamming}(v,w) = d(v,w) = | \{i | v_i \neq w_i, i = 0,1,\ldots,n-1 \} | \]
+Example: Consider the code words $v$ = (00100) and $w$ = (10010), then the Hamming distance $d_{hamming}(v, w) = 3$. \\
+Hamming distance allows for a useful characterization of the error detection and error correction capabilities of a block code as a function of the code’s minimum distance.
+
+\subsubsection*{The Minimum Distance of a Block Code}
+The minimum distance of a block code $C$ is the minimum Hamming distance between all distinct pairs of code words in $C$.
+A code with minimum distance $d_{min}$ can thus detect all error patterns of weight less than or equal to $(d_{min} - 1)$.
+A code with minimum distance $d_{min}$ can correct all error patterns of weight less than or equal to $(d_{min} - 1) / 2$. \\
+Example: Consider the binary code $C$ composed of the following four code words.
+\[ C = \{(00100), (10010), (01001), (11111)\} \]
+Hamming distance of (00100) and (10010) = 3 \\
+Hamming distance of (10010) and (01001) = 4 \\
+Hamming distance of (00100) and (01001) = 3 \\
+Hamming distance of (10010) and (11111) = 3 \\
+Hamming distance of (00100) and (11111) = 4 \\
+Hamming distance of (01001) and (11111) = 3 \\
+Therefore, the minimum distance $d_{min}$ = 3.
+
+\subsection{Linear Block Codes}
+A block code $C$ consisting of n-tuples $\{(c_0, c_1, . . . , c_{n-1})\}$ of symbols from $GF(2)$ is said to be binary linear block code if and only if $C$ forms a vector subspace over $GF(2)$. 
+\begin{GrayBox}
+    Note: finite fields are also called Galois fields (GF).
+\end{GrayBox}
+The code word is said to be systematic linear code word if each of the $2^k$ code words is represented as linear combination of $k$ linearly independent code words.
+
+\subsubsection{Linear Block Codes Properties}
+There are \emph{two important properties} of linear block codes which are:
+\begin{description}
+    \item[Property 1:] The linear combination of any set of code words is a code word.
+    \item[Property 2:] The minimum distance of a linear block code is equal to the minimum weight of any nonzero word in the code.
+\end{description}
+Also, there are 2 well-known bounds on the minimum distance which are
+\begin{description}
+    \item[Singleton Bound:]
+    The minimum distance of an $(n, k)$ linear code is bounded by
+    \[ d_{min} \leq n-k+1 \]
+    \item[Hamming Bound:]
+    An $(n, k)$ block code can correct up to $t_{ec}$ errors per code word, provided that $n$ and $k$ satisfy the Hamming bound.
+    \[ 2^{n-k} \geq \sum_{i = 0}^{t_{ec}} \binom{n}{i}  \]
+    \[ \binom{n}{i} = \frac{n!}{(n-1)!i!} \quad , \quad t_{ec} = \frac{(d_{min} - 1)}{2} \]
+    The relation is the upper bound on $d_{min}$ and is known as \emph{the Hamming bound}.
+
+\end{description}
+ 
+\subsection{Generator \& Parity Check Matrices}
+Let $\{g_0, g_1, \ldots  , g_{k-1}\}$ be a basis of code words for the $(n, k)$ linear block code $C$ and $m = [m_0, m_1, \ldots , m_{k-1}]$ the message to be encoded. The Theorem that says the code word $c = (c_0, c_1, \ldots , c_{n-1})$ for the message is uniquely represented by the following linear combination of $g_0, g_1, \ldots , g_{k-1}$
+\[ c = m_0g_0 + \ldots + m_{k-1}g_{k-1} \]
+
+for every code word $c \in C$.\\
+Since every linear combination of the basis elements must also be a code word, there is a one-to-one mapping between the set of k-bit blocks $(a_0, a_1, \ldots , a_{k-1})$ over $GF(2)$ and the code words in $C$. A matrix $G$ is constructed by taking the vectors in the basis as its rows.
+\[ G = \left[ \begin{array}{c}
+    g_0 \\
+    g_1 \\
+    \vdots \\
+    g_{k-1}
+\end{array} \right] = \left[ \begin{array}{c c c c}
+    g_{0,0} & g_{0,1} & \ldots & g_{0,n-1} \\
+    g_{1,0} & g_{1,1} & \ldots & g_{1,n-1} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    g_{k-1,0} & g_{k-1,1} & \ldots & g_{k-1,n-1}
+\end{array} \right]
+\]
+This matrix $G$ is a generator matrix for the code $C$. It can be used to directly encode k-bit blocks in the following manner:
+\[
+mG = [m_0, m_1, \ldots, m_{k-1}] \cdot \left[ \begin{array}{c}
+    g_0 \\
+    g_1 \\
+    \vdots \\
+    g_{k-1}
+\end{array} \right] = m_0g_0 + m_1g_1 + \ldots + m_{k-1}g_{k-1} = c
+\]
+
+The dual space of a linear block code $C$ is the dual code of $C$ and a basis $\{h_0, h_1, \ldots , h_{n-k-1}\}$ can be found for dual code of $C$, and the following parity check matrix can be constructed:
+\[
+H = \left[ \begin{array}{c}
+    h_0 \\
+    h_1 \\
+    \vdots \\
+    h_{n-k-1}
+\end{array} \right] = \left[ \begin{array}{c c c c}
+    h_{0,0} & h_{0,1} & \ldots & h_{0,n-1} \\
+    h_{1,0} & h_{1,1} & \ldots & h_{1,n-1} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    h_{n-k-1,0} & g_{n-k-1,1} & \ldots & g_{n-k-1,n-1}
+\end{array} \right]
+\]
+
+In a systematic linear block code, the last $k$ bits of the codeword are \emph{the message bits}, that is
+\[ c_i = m_{i-(n-k)} \quad , \quad i = n-k, \ldots , n-1 \]
+While the first $n-k$ bits in the codeword are check bits generated from the k message bits according to
+\[ 
+c_0 = p_{0,0} m_0 + p_{1,0}
+\]
+
+\newtcbtheorem[auto counter,number within=section]{theo}
+  {Theorem}{fonttitle=\bfseries\upshape, fontupper=\slshape,
+     arc=0mm, colback=black!5!white,colframe=black!75!white}{theorem}
+
+\begin{theo}{Parity Check Theorem}{}
+    For any $(n, k)$ linear block code $C$ with $(n-k)\times n$ parity check matrix $H$, a code word $c \in C$ is a valid code word \textbf{if and only if} $cH^{T}=0$.
+    \par\noindent\dotfill \\
+    \textbf{Example:}\\
+    For the following generator matrix of (7,4) block code. Find the code vector for the message vector m = (1110) and check the validity of code vector generated.
+    \[
+    G = \left[ \begin{array}{c c c | c c c c}
+        1 & 1 & 0 & 1 & 0 & 0 & 0 \\
+        0 & 1 & 1 & 0 & 1 & 0 & 0 \\
+        1 & 1 & 1 & 0 & 0 & 1 & 0 \\
+        1 & 0 & 1 & 0 & 0 & 0 & 1 
+    \end{array} \right]
+    \]
+    \textbf{Solution:} The code vector for the message block $m = (1110)$ is given by
+    \[
+    c = mG = [1 1 1 0] \cdot \left[ \begin{array}{c c c | c c c c}
+        1 & 1 & 0 & 1 & 0 & 0 & 0 \\
+        0 & 1 & 1 & 0 & 1 & 0 & 0 \\
+        1 & 1 & 1 & 0 & 0 & 1 & 0 \\
+        1 & 0 & 1 & 0 & 0 & 0 & 1 
+    \end{array} \right] = [0 1 0 1 1 1 0]
+    \]
+    \[
+    H = \left[ \begin{array}{c c c | c c c c}
+        1 & 0 & 0 & 1 & 0 & 1 & 1 \\
+        0 & 1 & 0 & 1 & 1 & 1 & 0 \\
+        0 & 0 & 1 & 0 & 1 & 1 & 1 
+    \end{array} \right]
+    \]
+    \[
+    cH^T = [0 1 0 1 1 1 0] \cdot \left[ \begin{array}{c c c}
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1 \\
+        1 & 1 & 0 \\
+        0 & 1 & 1 \\
+        1 & 1 & 1 \\
+        1 & 0 & 1 
+    \end{array} \right] = [0 0 0]
+    \]
+    Hence, the generated code vector is valid.
+\end{theo}
+
+
 
 \section{LDPC Coding}

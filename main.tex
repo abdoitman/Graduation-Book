@@ -2,16 +2,37 @@
 \usepackage{import}
 \usepackage{graphicx} %For adding images
 \usepackage{booktabs} %For adding tables
+\usepackage{float}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{subcaption}
 \usepackage{geometry}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath,amssymb}
 \geometry{
  a4paper,
  total={170mm,257mm},
  left=20mm,
  top=20mm,
 }
+
+\usepackage{tikz}
+
+\newlength{\RoundedBoxWidth}
+\newsavebox{\GrayRoundedBox}
+\newenvironment{GrayBox}[1][\dimexpr\textwidth-4.5ex]%
+   {\setlength{\RoundedBoxWidth}{\dimexpr#1}
+    \begin{lrbox}{\GrayRoundedBox}
+       \begin{minipage}{\RoundedBoxWidth}}%
+   {   \end{minipage}
+    \end{lrbox}
+    \begin{center}
+    \begin{tikzpicture}%
+       \draw node[draw=black,fill=black!10,rounded corners,%
+             inner sep=2ex,text width=\RoundedBoxWidth]%
+             {\usebox{\GrayRoundedBox}};
+    \end{tikzpicture}
+    \end{center}}
 
 \graphicspath{ {./images/} }
 
