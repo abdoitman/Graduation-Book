@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.29)  30 JUN 2023 17:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.29)  1 JUL 2023 03:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"d:/3br7man/Grad Book/main.tex"
-(d:/3br7man/Grad Book/main.tex
+**d:/3br7man/Graduation-Book/main.tex
+(d:/3br7man/Graduation-Book/main.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-16>
 (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
@@ -63,6 +63,37 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count196
 \@lastruleclass=\count197
 \@thisrulewidth=\dimen155
+) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
+\wrapoverhang=\dimen156
+\WF@size=\dimen157
+\c@WF@wrappedlines=\count198
+\WF@box=\box51
+\WF@everypar=\toks18
+Package: wrapfig 2003/01/31  v 3.6
+) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2023/02/19 v1.6 Sub-captions (AR)
+ (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+ (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen158
+\captionmargin=\dimen159
+\caption@leftmargin=\dimen160
+\caption@rightmargin=\dimen161
+\caption@width=\dimen162
+\caption@indent=\dimen163
+\caption@parindent=\dimen164
+\caption@hangindent=\dimen165
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count199
+\c@continuedfloat=\count266
+Package caption Info: wrapfig package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 239.
+\c@subfigure=\count267
+Package caption Info: New subtype `subtable' on input line 239.
+\c@subtable=\count268
 ) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
@@ -70,58 +101,61 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
-\Gm@cnth=\count198
-\Gm@cntv=\count199
-\c@Gm@tempcnt=\count266
-\Gm@bindingoffset=\dimen156
-\Gm@wd@mp=\dimen157
-\Gm@odd@mp=\dimen158
-\Gm@even@mp=\dimen159
-\Gm@layoutwidth=\dimen160
-\Gm@layoutheight=\dimen161
-\Gm@layouthoffset=\dimen162
-\Gm@layoutvoffset=\dimen163
-\Gm@dimlist=\toks18
+\Gm@cnth=\count269
+\Gm@cntv=\count270
+\c@Gm@tempcnt=\count271
+\Gm@bindingoffset=\dimen166
+\Gm@wd@mp=\dimen167
+\Gm@odd@mp=\dimen168
+\Gm@even@mp=\dimen169
+\Gm@layoutwidth=\dimen170
+\Gm@layoutheight=\dimen171
+\Gm@layouthoffset=\dimen172
+\Gm@layoutvoffset=\dimen173
+\Gm@dimlist=\toks19
  (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count267
-\l__pdf_internal_box=\box51
+\l__color_backend_stack_int=\count272
+\l__pdf_internal_box=\box52
 ) (main.aux (chapters/intro.aux) (chapters/pdsch_intro.aux) (chapters/channel_coding.aux) (chapters/MIMO_setup.aux) (chapters/reference_signals.aux) (chapters/simulations.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
  (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count268
-\scratchdimen=\dimen164
-\scratchbox=\box52
-\nofMPsegments=\count269
-\nofMParguments=\count270
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count271
-\MPscratchDim=\dimen165
-\MPnumerator=\count272
-\makeMPintoPDFobject=\count273
-\everyMPtoPDFconversion=\toks20
+\scratchcounter=\count273
+\scratchdimen=\dimen174
+\scratchbox=\box53
+\nofMPsegments=\count274
+\nofMParguments=\count275
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count276
+\MPscratchDim=\dimen175
+\MPnumerator=\count277
+\makeMPintoPDFobject=\count278
+\everyMPtoPDFconversion=\toks21
 ) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -159,7 +193,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 <./images/au-logo1.png, id=1, 2509.375pt x 1052.93375pt>
 File: ./images/au-logo1.png Graphic file (type png)
 <use ./images/au-logo1.png>
-Package pdftex.def Info: ./images/au-logo1.png  used on input line 34.
+Package pdftex.def Info: ./images/au-logo1.png  used on input line 37.
 (pdftex.def)             Requested size: 301.11201pt x 126.34659pt.
 [1
 
@@ -291,22 +325,80 @@ Chapter 3.
 
  (chapters/reference_signals.tex
 Chapter 4.
-) [14
+[14
 
 
 
 
 ]
+<./images/6-2.jpg, id=75, 1433.355pt x 621.07031pt>
+File: ./images/6-2.jpg Graphic file (type jpg)
+<use ./images/6-2.jpg>
+Package pdftex.def Info: ./images/6-2.jpg  used on input line 37.
+(pdftex.def)             Requested size: 290.22105pt x 125.74709pt.
+ [15 <./images/6-2.jpg>]
+<./images/7.png, id=79, 804.00375pt x 313.17pt>
+File: ./images/7.png Graphic file (type png)
+<use ./images/7.png>
+Package pdftex.def Info: ./images/7.png  used on input line 47.
+(pdftex.def)             Requested size: 193.47577pt x 75.35825pt.
+<./images/8.PNG, id=80, 616.704pt x 279.444pt>
+File: ./images/8.PNG Graphic file (type png)
+<use ./images/8.PNG>
+Package pdftex.def Info: ./images/8.PNG  used on input line 62.
+(pdftex.def)             Requested size: 467.58951pt x 170.55865pt.
+<./images/9.PNG, id=81, 602.25pt x 259.56975pt>
+File: ./images/9.PNG Graphic file (type png)
+<use ./images/9.PNG>
+Package pdftex.def Info: ./images/9.PNG  used on input line 73.
+(pdftex.def)             Requested size: 193.47577pt x 83.38878pt.
+<./images/10.PNG, id=82, 626.34pt x 270.41025pt>
+File: ./images/10.PNG Graphic file (type png)
+<use ./images/10.PNG>
+Package pdftex.def Info: ./images/10.PNG  used on input line 79.
+(pdftex.def)             Requested size: 193.47577pt x 83.52922pt.
+<./images/11.PNG, id=83, 598.03426pt x 269.20575pt>
+File: ./images/11.PNG Graphic file (type png)
+<use ./images/11.PNG>
+Package pdftex.def Info: ./images/11.PNG  used on input line 85.
+(pdftex.def)             Requested size: 193.47577pt x 87.09238pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--94
+
+ []
+
+<./images/12.PNG, id=84, 314.3745pt x 205.9695pt>
+File: ./images/12.PNG Graphic file (type png)
+<use ./images/12.PNG>
+Package pdftex.def Info: ./images/12.PNG  used on input line 102.
+(pdftex.def)             Requested size: 193.47577pt x 126.76318pt.
+<./images/13.PNG, id=85, 304.7385pt x 207.174pt>
+File: ./images/13.PNG Graphic file (type png)
+<use ./images/13.PNG>
+Package pdftex.def Info: ./images/13.PNG  used on input line 108.
+(pdftex.def)             Requested size: 193.47577pt x 131.53189pt.
+[16 <./images/7.png> <./images/8.PNG>]
+<./images/14.PNG, id=92, 295.70474pt x 202.356pt>
+File: ./images/14.PNG Graphic file (type png)
+<use ./images/14.PNG>
+Package pdftex.def Info: ./images/14.PNG  used on input line 123.
+(pdftex.def)             Requested size: 193.47577pt x 132.39748pt.
+<./images/15.PNG, id=93, 290.2845pt x 198.7425pt>
+File: ./images/15.PNG Graphic file (type png)
+<use ./images/15.PNG>
+Package pdftex.def Info: ./images/15.PNG  used on input line 129.
+(pdftex.def)             Requested size: 193.47577pt x 132.46231pt.
+) [17 <./images/9.PNG> <./images/10.PNG> <./images/11.PNG> <./images/12.PNG> <./images/13.PNG>] [18 <./images/14.PNG> <./images/15.PNG>]
 \openout2 = `chapters/simulations.aux'.
 
  (chapters/simulations.tex
 Chapter 5.
-) [15
+) [19
 
 
 
 
-] [16
+] [20
 
 
 
@@ -317,17 +409,17 @@ L3 programming layer <2023-06-16>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2227 strings out of 476037
- 39710 string characters out of 5779845
+ 3852 strings out of 476037
+ 71043 string characters out of 5779845
  1861763 words of memory out of 5000000
- 22926 multiletter control sequences out of 15000+600000
- 519542 words of font info for 54 fonts, out of 8000000 for 9000
+ 24538 multiletter control sequences out of 15000+600000
+ 519842 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,862b,240s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\abdoi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (19 pages, 669418 bytes).
+ 67i,9n,77p,866b,481s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\abdoi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on main.pdf (23 pages, 1103166 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
+ 156 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
