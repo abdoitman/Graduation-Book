@@ -5,14 +5,15 @@
 This part deals with linear block codes covering their fundamental concepts, generator and parity check matrices, error-correcting capabilities, encoding and decoding, and performance analysis. The linear block code discussed in this part is Hamming code.
 
 \subsection{Shannon's Noisy Channel Coding Theorem}
-Any channel affected by noise possesses a speciﬁc “channel capacity” C a rate of conveying information that can never be exceeded without error, but in principle, an error-correcting code always exists such that information can be transmitted at rates less than C with an arbitrarily low BER.
+Any channel affected by noise possesses a specific “channel capacity” C a rate of conveying information that can never be exceeded without error, but in principle, an error-correcting code always exists such that information can be transmitted at rates less than C with an arbitrarily low BER.
 
 \subsection{Channel Coding Principle}
-The channel coding principle is to add redundancy to minimize error rate as illustrated in Figure 2.1.
+The channel coding principle is to add redundancy to minimize error rate as illustrated in Figure~\ref{fig:channel coding principle}.
 \begin{figure}[ht]
     \centering
     \includegraphics[width= 0.8\textwidth]{au-logo-bl.PNG}
     \caption{Illustration of the channel coding principle.}
+    \label{fig:channel coding principle}
 \end{figure}
 
 \subsection{Channel Coding Gain}
@@ -36,7 +37,7 @@ The data stream is broken into blocks of $k$ bits and each k-bit block is encode
 \subsection*{Properties of Block Codes}
 
 \subsubsection*{Block code rate}
-The block code rate (R) is deﬁned as the ratio of $k$ message bits and length of the code word $n$.
+The block code rate (R) is defined as the ratio of $k$ message bits and length of the code word $n$.
 \[R = \frac{k}{n} \]
 
 \subsubsection*{Code word weight}
@@ -47,13 +48,18 @@ For example, the weight of a code word $c = (1, 0, 0, 1, 1, 0, 1, 0)$ is 4.
 The Hamming distance between two blocks v and w is the number of coordinates in which the two blocks differ.
 \[ d_{hamming}(v,w) = d(v,w) = | \{i | v_i \neq w_i, i = 0,1,\ldots,n-1 \} | \]
 Example: Consider the code words $v$ = (00100) and $w$ = (10010), then the Hamming distance $d_{hamming}(v, w) = 3$. \\
-Hamming distance allows for a useful characterization of the error detection and error correction capabilities of a block code as a function of the code’s minimum distance.
+Hamming distance allows for a useful characterization of the error detection and error correction capabilities of a block code as a function of the code's minimum distance.
 
 \subsubsection*{The Minimum Distance of a Block Code}
 The minimum distance of a block code $C$ is the minimum Hamming distance between all distinct pairs of code words in $C$.
-A code with minimum distance $d_{min}$ can thus detect all error patterns of weight less than or equal to $(d_{min} - 1)$.
-A code with minimum distance $d_{min}$ can correct all error patterns of weight less than or equal to $(d_{min} - 1) / 2$. \\
-Example: Consider the binary code $C$ composed of the following four code words.
+\begin{GrayBox}
+    \textbf{A code with minimum distance $d_{min}$ can:}
+    \begin{itemize}
+        \item \emph{detect} all error patterns of weight less than or equal to $(d_{min} - 1)$.
+        \item \emph{correct} all error patterns of weight less than or equal to $(d_{min} - 1) / 2$.
+    \end{itemize}
+\end{GrayBox}
+\textbf{Example:} Consider the binary code $C$ composed of the following four code words.
 \[ C = \{(00100), (10010), (01001), (11111)\} \]
 Hamming distance of (00100) and (10010) = 3 \\
 Hamming distance of (10010) and (01001) = 4 \\
@@ -65,9 +71,9 @@ Therefore, the minimum distance $d_{min}$ = 3.
 
 \subsection{Linear Block Codes}
 A block code $C$ consisting of n-tuples $\{(c_0, c_1, . . . , c_{n-1})\}$ of symbols from $GF(2)$ is said to be binary linear block code if and only if $C$ forms a vector subspace over $GF(2)$. 
-\begin{GrayBox}
-    Note: finite fields are also called Galois fields (GF).
-\end{GrayBox}
+\begin{description}
+    \item[Note:] finite fields are also called Galois fields (GF).
+\end{description}
 The code word is said to be systematic linear code word if each of the $2^k$ code words is represented as linear combination of $k$ linearly independent code words.
 
 \subsubsection{Linear Block Codes Properties}
@@ -80,13 +86,18 @@ Also, there are 2 well-known bounds on the minimum distance which are
 \begin{description}
     \item[Singleton Bound:]
     The minimum distance of an $(n, k)$ linear code is bounded by
-    \[ d_{min} \leq n-k+1 \]
+    \begin{equation}
+        \label{eq:Singleton Bound}
+        d_{min} \leq n-k+1
+    \end{equation}
     \item[Hamming Bound:]
-    An $(n, k)$ block code can correct up to $t_{ec}$ errors per code word, provided that $n$ and $k$ satisfy the Hamming bound.
-    \[ 2^{n-k} \geq \sum_{i = 0}^{t_{ec}} \binom{n}{i}  \]
-    \[ \binom{n}{i} = \frac{n!}{(n-1)!i!} \quad , \quad t_{ec} = \frac{(d_{min} - 1)}{2} \]
+    An $(n, k)$ block code can \emph{detect} $t_{ed}$ errors per code word and can correct up to $t_{ec}$ errors per code word, provided that $n$ and $k$ satisfy the Hamming bound.
+    \begin{equation}
+        \label{eq:Hamming Bound}
+        2^{n-k} \geq \sum_{i = 0}^{t_{ec}} \binom{n}{i} \quad \text{where} \quad \binom{n}{i} = \frac{n!}{(n-1)!i!}
+    \end{equation}
+    \[ t_{ec} = \frac{(d_{min} - 1)}{2} \quad , \quad t_{ed} = d_{min} - 1  \]
     The relation is the upper bound on $d_{min}$ and is known as \emph{the Hamming bound}.
-
 \end{description}
  
 \subsection{Generator \& Parity Check Matrices}
@@ -135,9 +146,41 @@ H = \left[ \begin{array}{c}
 In a systematic linear block code, the last $k$ bits of the codeword are \emph{the message bits}, that is
 \[ c_i = m_{i-(n-k)} \quad , \quad i = n-k, \ldots , n-1 \]
 While the first $n-k$ bits in the codeword are check bits generated from the k message bits according to
-\[ 
-c_0 = p_{0,0} m_0 + p_{1,0}
-\]
+\[ c_0 = p_{0,0} m_0 + p_{1,0} m_1 + \ldots + p_{k-1, 0} m_{k-1} \]
+\[ c_1 = p_{0,1} m_0 + p_{1,1} m_1 + \ldots + p_{k-1, 1} m_{k-1} \]
+\[ \vdots \]
+\[ c_{n-k-1} = p_{0,n-k-1} m_0 + p_{1,n-k-1} m_1 + \ldots + p_{k-1, n-k-1} m_{k-1} \]
+
+The above equation can be written in a matrix form as:
+\begin{equation}
+    \label{equation:c=mG}
+    [ c_0, c_1, \ldots, c_{n-1} ] = [ m_0, m_1, \ldots, m_{k-1} ] \left[ \begin{array}{c c c c c c c}
+        p_{0,0} & p_{0,1} & \cdots & p_{0,n-k-1} & 1000 & \cdots & 0 \\
+        p_{1,0} & p_{1,1} & \cdots & p_{1,n-k-1} & 0100 & \cdots & 0 \\
+        \vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \vdots \\
+        p_{k-1,0} & p_{k-1,1} & \cdots & p_{k-1,n-k-1} & 0000 & \cdots & 1 \\     
+    \end{array} \right]_{k \times n}
+\end{equation}
+\[ \text{or} \]
+\[ c = mG \]
+where $G$ is the matrix on the right hand side of the equation~\ref{equation:c=mG}. \\
+The $k \times n$ matrix $G$ is called a generator matrix of the code and it has the following form:
+\begin{equation}
+    \label{eq:G}
+    G = \left[ P | I_k \right]_{k \times n}
+\end{equation}
+
+The matrix $I_k$ is the identity matrix of order $k$, and $P$ is an arbitrary $k \times n-k $ matrix. When $P$ is specified, it defines the $(n, k)$ block code completely. The parity check matrix H corresponding to the above generator matrix G can be obtained as
+\[ H = \left[ I_{n-k} | P^T \right] \]
+\begin{equation}
+    \label{equation:H}
+    H = \left[ \begin{array}{c c c c c c c}
+        1000 & \cdots & 0 & p_{0,0} & p_{0,1} & \cdots & p_{0,n-k-1} \\
+        0100 & \cdots & 0 & p_{1,0} & p_{1,1} & \cdots & p_{1,n-k-1} \\
+        \vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+        0000 & \cdots & 1 & p_{0,n-k-1} & p_{1,n-k-1} & \cdots & p_{k-1,n-k-1} \\     
+    \end{array} \right]
+\end{equation}
 
 \newtcbtheorem[auto counter,number within=section]{theo}
   {Theorem}{fonttitle=\bfseries\upshape, fontupper=\slshape,
@@ -186,6 +229,17 @@ c_0 = p_{0,0} m_0 + p_{1,0}
     Hence, the generated code vector is valid.
 \end{theo}
 
+\section{Hamming Codes}
+Hamming code is a linear block code capable of correcting single errors having a minimum distance $d_{min} = 3$. It is very easy to construct Hamming codes. The parity check matrix $H$ (obtained in equation~\ref{equation:H}) must be chosen so that no row in $H^T$ is zero and the first $(n-k)$ rows of $H^T$ form an identity matrix and all the rows are distinct. We can select $2^{n-k}-1$ distinct rows of $H^T$.\\
+Since the matrix $H^T$ has $n$ rows, for all of them to be distinct, the following inequality should be satisfied.
+\[ 2^{n-k} -1 \geq n \]
+Implying that
+\[ (n-k) \geq \log_2(n+1) \]
+\begin{equation}
+    \label{eq:n geq klog}
+    n \geq k + \log_2(n+1)
+\end{equation}
+Hence, the minimum size $n$ for the code words can be determined from equation~\ref{eq:n geq klog}
 
 
 \section{LDPC Coding}
