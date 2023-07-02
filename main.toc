@@ -8,6 +8,8 @@
 \contentsline {subsection}{\numberline {1.3.1}5G NR logical channels}{6}{}%
 \contentsline {subsection}{\numberline {1.3.2}5G NR transport channels}{6}{}%
 \contentsline {subsection}{\numberline {1.3.3}5G NR physical channels}{7}{}%
+\contentsline {subsubsection}{5G NR Downlink Physical Channels}{7}{}%
+\contentsline {subsubsection}{5G NR Uplink Physical Channels}{8}{}%
 \contentsline {part}{I\hspace {1em}5G PDSCH Simulator}{10}{}%
 \contentsline {chapter}{\numberline {2}Channel Coding}{12}{}%
 \contentsline {section}{\numberline {2.1}Overview}{12}{}%

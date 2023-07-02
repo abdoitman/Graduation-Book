@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.29)  2 JUL 2023 01:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.29)  2 JUL 2023 05:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -662,27 +662,23 @@ Package pdftex.def Info: ./images/3.PNG  used on input line 56.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4 <./images/2.PNG>] [5 <./images/3.PNG>] [6] [7]
-Overfull \hbox (3.03296pt too wide) in paragraph at lines 140--145
-[]\OT1/cmr/m/n/12 Physical up-link shared chan-nel (PUSCH): The 5G phys-i-cal up-link shared chan-nel, PUSCH,
- []
-
-<./images/4.PNG, id=88, 563.10374pt x 261.3765pt>
+<./images/4.PNG, id=89, 563.10374pt x 261.3765pt>
 File: ./images/4.PNG Graphic file (type png)
 <use ./images/4.PNG>
-Package pdftex.def Info: ./images/4.PNG  used on input line 153.
+Package pdftex.def Info: ./images/4.PNG  used on input line 144.
 (pdftex.def)             Requested size: 311.48662pt x 144.5392pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--157
+Underfull \hbox (badness 10000) in paragraph at lines 139--148
 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./images/5.PNG, id=89, 547.44525pt x 245.11575pt>
+<./images/5.PNG, id=90, 547.44525pt x 245.11575pt>
 File: ./images/5.PNG Graphic file (type png)
 <use ./images/5.PNG>
-Package pdftex.def Info: ./images/5.PNG  used on input line 160.
+Package pdftex.def Info: ./images/5.PNG  used on input line 151.
 (pdftex.def)             Requested size: 311.479pt x 144.54222pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -716,7 +712,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--13
 
  (chapters/channel_coding.tex
 Chapter 2.
-<./images/au-logo-bl.PNG, id=105, 702.625pt x 295.1025pt>
+<./images/au-logo-bl.PNG, id=106, 702.625pt x 295.1025pt>
 File: ./images/au-logo-bl.PNG Graphic file (type png)
 <use ./images/au-logo-bl.PNG>
 Package pdftex.def Info: ./images/au-logo-bl.PNG  used on input line 14.
@@ -879,15 +875,15 @@ L3 programming layer <2023-06-16>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 22971 strings out of 476037
- 495306 string characters out of 5779845
+ 22973 strings out of 476037
+ 495363 string characters out of 5779845
  1869763 words of memory out of 5000000
- 43280 multiletter control sequences out of 15000+600000
+ 43282 multiletter control sequences out of 15000+600000
  522457 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  93i,9n,99p,881b,741s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\abdoi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (34 pages, 1665268 bytes).
+Output written on main.pdf (34 pages, 1666636 bytes).
 PDF statistics:
  279 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

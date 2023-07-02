@@ -330,6 +330,7 @@ INPUT .\images\3.PNG
 INPUT .\images\3.PNG
 INPUT .\images\3.PNG
 INPUT .\images\3.PNG
+INPUT C:\Users\abdoi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti12.tfm
 INPUT .\images\4.PNG
 INPUT .\images\4.PNG
 INPUT .\images\4.PNG
@@ -365,7 +366,6 @@ INPUT .\images\au-logo-bl.PNG
 INPUT .\images\au-logo-bl.PNG
 INPUT .\images\au-logo-bl.PNG
 INPUT .\images\au-logo-bl.PNG
-INPUT C:\Users\abdoi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti12.tfm
 INPUT C:\Users\abdoi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxsl10.tfm
 INPUT .\chapters\MIMO_setup.tex
 INPUT .\chapters\MIMO_setup.tex

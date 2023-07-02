@@ -81,73 +81,64 @@ The physical channels often have higher level channels mapped onto them of provi
 \subsection{5G NR logical channels}
 There are several different logical channels that are used within the 5G NR radio access network. Some of them will be familiar names from the 4G LTE system as the names have been carried over.
 \begin{itemize}
-    \item Broadcast Control Channel (BCCH): The BCCH is used within the downlink, and it is used for sending broadcast style information to the UE within that cell. The system information transmitted by the 5G NR BCCH is divided into different blocks:
+    \item \textbf{Broadcast Control Channel (BCCH)}: The BCCH is used within the downlink, and it is used for sending broadcast style information to the UE within that cell. The system information transmitted by the 5G NR BCCH is divided into different blocks:
     \begin{itemize}
         \item Master Information Block (MIB): There is one MIB and this is mapped onto the BCH transport channel and then to the PBCH physical channel.
         \item System Information Block (SIB): There are several system information blocks, SIBs. These are mapped onto the DL-SCH transport channel and then onto the PDSCH physical channel.
     \end{itemize}
-    \item Paging Control Channel (PCCH): This is a Downlink channel. It is used to page the UEs whose location at cell level is not known to the network. As a result the paging message needs to be transmitted in multiple cells. The PCCH is mapped to the PCH transport channel and then to the PDSCH physical channel.
-    \item Common Control Channel (CCCH): This 5G channel is used on both the downlink and uplink for transmitting control information to and from the user equipments or mobiles. The channel is used for initial access, i.e. those mobiles that do not have a radio resource control, RRC connection.
-    \item Dedicated Control Channel (DCCH): The DCCH is used within the uplink and downlink to carry dedicated control information between the UE or mobile and the network. It is used by the UE and the network after a radio resource control, RRC connection has been established.
-    \item Dedicated Traffic Channel (DTCH): This 5G channel is present in both the uplink and downlink. It is dedicated to one UE and is used for carrying user information to and from a specific UE and the network.
+    \item \textbf{Paging Control Channel (PCCH)}: This is a Downlink channel. It is used to page the UEs whose location at cell level is not known to the network. As a result the paging message needs to be transmitted in multiple cells. The PCCH is mapped to the PCH transport channel and then to the PDSCH physical channel.
+    \item \textbf{Common Control Channel (CCCH)}: This 5G channel is used on both the downlink and uplink for transmitting control information to and from the user equipments or mobiles. The channel is used for initial access, i.e. those mobiles that do not have a radio resource control, RRC connection.
+    \item \textbf{Dedicated Control Channel (DCCH)}: The DCCH is used within the uplink and downlink to carry dedicated control information between the UE or mobile and the network. It is used by the UE and the network after a radio resource control, RRC connection has been established.
+    \item \textbf{Dedicated Traffic Channel (DTCH)}: This 5G channel is present in both the uplink and downlink. It is dedicated to one UE and is used for carrying user information to and from a specific UE and the network.
 \end{itemize}
 
 \subsection{5G NR transport channels}
-There are five different transport channels. Some are used on the uplink, others on the downlink, and some can be used on both.
+There are \emph{five different transport channels.} Some are used on the uplink, others on the downlink, and some can be used on both.
 
 \begin{itemize}
-    \item Broadcast Channel (BCH): The BCH 5G channel is used in the downlink only for transmitting the BCCH system information and specifically the Master Information Block, MIB, information. In order that the data can be utilised, it has a specific format.
-    \item Paging Channel (PCH): The PCH is used for carrying paging information from the PCCH logical channel. The PCH supports discontinuous reception, DRX, to enable the UE to save battery power by waking up at a specific time to receive the PCH.
+    \item \textbf{Broadcast Channel (BCH)}: The BCH 5G channel is used in the downlink only for transmitting the BCCH system information and specifically the Master Information Block, MIB, information. In order that the data can be utilised, it has a specific format.
+    \item \textbf{Paging Channel (PCH)}: The PCH is used for carrying paging information from the PCCH logical channel. The PCH supports discontinuous reception, DRX, to enable the UE to save battery power by waking up at a specific time to receive the PCH.
     \newline
     In order that the PCH is received by all mobiles / UEs in the cell, the PCH must be broadcast over the entire cell as a single message, or where beam forming is used, this can be done using several different PCH instances.
-    \item Downlink Shared Channel (DL-SCH): As the name indicates, this is a downlink only channel. It is the main transport channel used for transmitting downlink data and it supports all the key 5G NR features. These include: dynamic rate adaptation; HARQ, channel aware scheduling, and spatial multiplexing.
+    \item \textbf{Downlink Shared Channel (DL-SCH)}: As the name indicates, this is a downlink only channel. It is the main transport channel used for transmitting downlink data and it supports all the key 5G NR features. These include: dynamic rate adaptation; HARQ, channel aware scheduling, and spatial multiplexing.
     \newline
     The DL-SCH is also used for transmitting some parts of the BCCH system information, specifically the SIB. Each UE has a DL-SCH for each cell it is connected to.
-    \item Uplink Shared Channel (UL-SCH): This is the uplink counterpart to the DLSCH that is, the uplink transport channel used for transmission of uplink data.
-    \item Random-Access Channel (RACH): The RACH is a transport channel, which carries the random access preamble which is used to overcome the message collisions that can occur when UEs access the system simultaneously.
+    \item \textbf{Uplink Shared Channel (UL-SCH)}: This is the uplink counterpart to the DLSCH that is, the uplink transport channel used for transmission of uplink data.
+    \item \textbf{Random-Access Channel (RACH)}: The RACH is a transport channel, which carries the random access preamble which is used to overcome the message collisions that can occur when UEs access the system simultaneously.
 \end{itemize}
 
 \subsection{5G NR physical channels}
 The 5G physical channels are used to transport information over the actual radio interface. They have the transport channels mapped into them, but they also include various physical layer data required for the maintenance and optimization of the radio communications link between the UE and the base station.
 The 5G mobile communications physical layer channels resemble those of 4G LTE, but PHICH and PCIICH have been removed. The HARQ operation has also been updated to be more flexible. Also the downlink control channel PDCCH is now administered by layer 3 procedures.
-There are three physical channels for each of the uplink and downlink:
-\newline
-\textbf{5G NR Downlink Physical Channels}
+There are \emph{three physical channels} for each of the uplink and downlink
 
-\begin{itemize}
-    \item Physical downlink shared channel (PDSCH): The 5G NR physical downlink shared channel, PDSCH carries data sharing the capacity on a time and frequency basis. The PDSCH physical channel carries a variety of items of data: user data; UE-specific higher layer control messages mapped down from higher channels; system information blocks (SIBs) \& paging.
-    \newline
+\subsubsection{5G NR Downlink Physical Channels}
+\begin{description}
+    \item[Physical downlink shared channel (PDSCH):] 5G NR physical downlink shared channel, PDSCH carries data sharing the capacity on a time and frequency basis. The PDSCH physical channel carries a variety of items of data: user data; UE-specific higher layer control messages mapped down from higher channels; system information blocks (SIBs) \& paging. \\
     The PDSCH uses an adaptive modulation format dependent upon the link conditions, i.e. signal to noise ratio. It also uses a flexible coding scheme. The combination of these means that there is a flexible coding and data rate.
-    \item Physical downlink control channel (PDCCH): As the name implies, the 5G physical downlink control channel carries downlink control data. Its primary function is scheduling the downlink transmissions on the PDSCH and also the uplink data transmissions on the PUSCH.
-    \newline
+    \item[Physical downlink control channel (PDCCH):] As the name implies, 5G physical downlink control channel carries downlink control data. Its primary function is scheduling the downlink transmissions on the PDSCH and also the uplink data transmissions on the PUSCH.\\
     The PDCCH uses QPSK as its modulation format and polar coding as the coding scheme, except for small packets of data.
-    \item Physical broadcast channel (PBCH): This 5G channel forms part of the synchronization signal block. Its function is to provide UEs with the Master Information Block, MIB. A further function of the PBCH in conjunction with the control channel is to support the synchronization of time and frequency. This aids with cell acquisition, selection and re-selection.
-    \newline
+    \item[Physical broadcast channel (PBCH):] This 5G channel forms part of the synchronization signal block. Its function is to provide UEs with the Master Information Block, MIB. A further function of the PBCH in conjunction with the control channel is to support the synchronization of time and frequency. This aids with cell acquisition, selection and re-selection.\\
     The PBCH uses a fixed data format and there is one block that extends over a TTI of 80ms, uses QPSK modulation and it transmits a cell specific demodulation reference signal, DMRS pattern that can be used aid with beam-forming.
-\end{itemize}
+\end{description}
 
-
-\textbf{5G NR Uplink Physical Channels}
-
-\begin{itemize}
-    \item Physical random access channel (PRACH): This 5G channel - the physical random access channel, PRACH, is used for channel access. It transmits an initial random access pre-amble consisting of sequences which may be of two different lengths:
-
+\subsubsection{5G NR Uplink Physical Channels}
+\begin{description}
+    \item[Physical random access channel (PRACH):] This 5G channel is used for channel access. It transmits an initial random access pre-amble consisting of sequences which may be of two different lengths:
     \begin{itemize}
         \item A long sequence is 839 which is applied to the subcarrier spacings of 1.25kHz and 5 kHz
         \item Short sequence lengths of 139 are applied to subcarrier spacings of 15 kHz and 30 kHz (FR1 bands) and 60 kHz and 120 kHz (FR2 bands).
     \end{itemize}
     
-    \item Physical uplink shared channel (PUSCH):   The 5G physical uplink shared channel, PUSCH, is the counterpart of the PDSCH. It is used to carry data from the UL-SCH and its higher mapped channels on a frequency and time-shared basis. 
-    \newline
-    Like the PDSCH, The PUSCH also has a very flexible format. The allocation of frequency resources is undertaken using resource blocks along with a flexible modulation and coding scheme dependent upon the link signal to noise ratio.
-    \newline
+    \item[Physical uplink shared channel (PUSCH):] The counterpart of the PDSCH. It is used to carry data from the UL-SCH and its higher mapped channels on a frequency and time-shared basis.\\
+    Like the PDSCH, The PUSCH also has a very flexible format. The allocation of frequency resources is undertaken using resource blocks along with a flexible modulation and coding scheme dependent upon the link signal to noise ratio.\\
     To support the channel link estimation and demodulation, the PUSCH contains DMRS signals.
-    \item Physical uplink control channel (PUCCH):   The 5G physical uplink control channel, PUCCH, carries the uplink control data. It is also possible that dependent upon the resource allocation the uplink control information or data may also be sent on the PUSCH, even though in the downlink direction, control information is always sent on the PDCCH.
-\end{itemize}
+    \item[Physical uplink control channel (PUCCH):] This carries the uplink control data. It is also possible that dependent upon the resource allocation the uplink control information or data may also be sent on the PUSCH, even though in the downlink direction, control information is always sent on the PDCCH.
+\end{description}
 	
-The use of these 5G channels provide a method for organizing the data flow over the radio interface of the 5G communications network. Using channels enables the communications system to recognize the type of data that is being sent, and to deal with it accordingly. The format used is very similar to that employed on 4G LTE and it built on the technology of previous mobile communications or mobile phone generations.
+The use of these 5G channels provide a method for organizing the flow of data over the radio interface of the 5G communications network. Using channels enables the communications system to recognize the type of data that is being sent, and to deal with it accordingly. The format used is very similar to that employed on 4G LTE and it built on the technology of previous mobile communications or mobile phone generations.
 \newline\newline
-Figures 4 \& 5 shows the mapping between logical, transport and physical channels in both DL and UL
+Figures \ref{fig:sub-first} \& \ref{fig:second} shows the mapping between logical, transport and physical channels in both DL and UL
 \begin{figure}[h]
     \centering
     \includegraphics[width=4.31in, height = 2in]{4.PNG}
@@ -158,5 +149,6 @@ Figures 4 \& 5 shows the mapping between logical, transport and physical channel
 \begin{figure}[h]
     \centering
     \includegraphics[width=4.31in, height = 2in]{5.PNG}
-    \caption{5G Uplink logical, transport and physical channel mapping}         \label{fig:second}
+    \caption{5G Uplink logical, transport and physical channel mapping}
+    \label{fig:second}
 \end{figure}
