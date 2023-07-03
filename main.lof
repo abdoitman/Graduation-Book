@@ -34,3 +34,6 @@
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Deterministic vs. Stochastic Policies\relax }}{43}{}%
 \contentsline {figure}{\numberline {6.6}{\ignorespaces 5x5 environment\relax }}{44}{}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces ACTOR-CRITIC Methods\relax }}{47}{}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces ACTOR-CRITIC\relax }}{48}{}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces DDPG Algorithm\relax }}{48}{}%

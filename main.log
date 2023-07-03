@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.29)  3 JUL 2023 06:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.29)  3 JUL 2023 17:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -524,43 +524,67 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-\RoundedBoxWidth=\skip56
+)) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudocode.sty
+Package: algpseudocode 
+ (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count324
+\c@ALG@rem=\count325
+\c@ALG@nested=\count326
+\ALG@tlm=\skip56
+\ALG@thistlm=\skip57
+\c@ALG@Lnr=\count327
+\c@ALG@blocknr=\count328
+\c@ALG@storecount=\count329
+\c@ALG@tmpcounter=\count330
+\ALG@tmplength=\skip58
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+\@float@every@algorithm=\toks49
+\c@algorithm=\count331
+)
+\RoundedBoxWidth=\skip59
 \GrayRoundedBox=\box81
  (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count324
+\l__color_backend_stack_int=\count332
 \l__pdf_internal_box=\box82
 ) (main.aux (chapters/intro.aux) (chapters/pdsch_intro.aux) (chapters/channel_coding.aux) (chapters/MIMO_setup.aux) (chapters/reference_signals.aux) (chapters/simulations.aux) (chapters/RL_Intro.aux) (chapters/DDPG.aux) (chapters/single_user.aux) (chapters/multi_user.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
  (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count325
+\scratchcounter=\count333
 \scratchdimen=\dimen296
 \scratchbox=\box83
-\nofMPsegments=\count326
-\nofMParguments=\count327
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count328
+\nofMPsegments=\count334
+\nofMParguments=\count335
+\everyMPshowfont=\toks50
+\MPscratchCnt=\count336
 \MPscratchDim=\dimen297
-\MPnumerator=\count329
-\makeMPintoPDFobject=\count330
-\everyMPtoPDFconversion=\toks50
+\MPnumerator=\count337
+\makeMPintoPDFobject=\count338
+\everyMPtoPDFconversion=\toks51
 ) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -605,16 +629,16 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count331
+\c@lstlisting=\count339
 (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks51
-\inpenc@posthook=\toks52
+\inpenc@prehook=\toks52
+\inpenc@posthook=\toks53
 )
 <./images/au-logo1.png, id=40, 2509.375pt x 1052.93375pt>
 File: ./images/au-logo1.png Graphic file (type png)
 <use ./images/au-logo1.png>
-Package pdftex.def Info: ./images/au-logo1.png  used on input line 58.
+Package pdftex.def Info: ./images/au-logo1.png  used on input line 60.
 (pdftex.def)             Requested size: 301.11201pt x 126.34659pt.
  [1
 
@@ -743,7 +767,7 @@ File: ./images/au-logo-bl.PNG Graphic file (type png)
 Package pdftex.def Info: ./images/au-logo-bl.PNG  used on input line 33.
 (pdftex.def)             Requested size: 386.95894pt x 162.5275pt.
  [13] [14] [15] [16]
-\c@tcb@cnt@theo=\count332
+\c@tcb@cnt@theo=\count340
  [17]
 Underfull \hbox (badness 10000) in paragraph at lines 242--244
 
@@ -999,12 +1023,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 244--246
 
  (chapters/DDPG.tex
 Chapter 7.
-) [47
+<./images/41.PNG, id=278, 1105.12875pt x 722.7pt>
+File: ./images/41.PNG Graphic file (type png)
+<use ./images/41.PNG>
+Package pdftex.def Info: ./images/41.PNG  used on input line 8.
+(pdftex.def)             Requested size: 266.03473pt x 173.96983pt.
+
+Underfull \hbox (badness 7151) in paragraph at lines 13--17
+[]\OT1/cmr/m/n/12 Figure 7.1[] de-picts the main con-
+ []
+
+
+Underfull \hbox (badness 3601) in paragraph at lines 13--17
+\OT1/cmr/m/n/12 Critic meth-ods com-bine the \OT1/cmr/bx/n/12 value-
+ []
+
+
+Underfull \hbox (badness 1596) in paragraph at lines 13--17
+\OT1/cmr/bx/n/12 based meth-ods \OT1/cmr/m/n/12 such as DQN and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--17
+
+ []
+
+[47
 
 
 
 
-]
+ <./images/41.PNG>]
+<./images/42.PNG, id=282, 1003.75pt x 768.8725pt>
+File: ./images/42.PNG Graphic file (type png)
+<use ./images/42.PNG>
+Package pdftex.def Info: ./images/42.PNG  used on input line 27.
+(pdftex.def)             Requested size: 241.84842pt x 185.24883pt.
+
+Overfull \hbox (1.33252pt too wide) in paragraph at lines 32--33
+[][]\OT1/cmr/m/n/12 Estimated gra-di-ent in Pol-icy Gra-di-ent method
+ []
+
+<./images/43.PNG, id=283, 757.83125pt x 536.0025pt>
+File: ./images/43.PNG Graphic file (type png)
+<use ./images/43.PNG>
+Package pdftex.def Info: ./images/43.PNG  used on input line 37.
+(pdftex.def)             Requested size: 241.84842pt x 171.04993pt.
+[48 <./images/42.PNG> <./images/43.PNG>] [49] [50]) [51] [52]
 \openout2 = `chapters/single_user.aux'.
 
  (chapters/single_user.tex)
@@ -1017,17 +1082,17 @@ L3 programming layer <2023-06-16>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 23255 strings out of 476037
- 502049 string characters out of 5779845
- 1882763 words of memory out of 5000000
- 43530 multiletter control sequences out of 15000+600000
- 523078 words of font info for 68 fonts, out of 8000000 for 9000
+ 23915 strings out of 476037
+ 512788 string characters out of 5779845
+ 1883763 words of memory out of 5000000
+ 44174 multiletter control sequences out of 15000+600000
+ 523779 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 93i,10n,99p,881b,743s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,10n,99p,881b,750s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\abdoi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (52 pages, 2547761 bytes).
+Output written on main.pdf (57 pages, 2785701 bytes).
 PDF statistics:
- 357 PDF objects out of 1000 (max. 8388607)
+ 378 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 312 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 327 words of extra memory for PDF output out of 10000 (max. 10000000)
 
