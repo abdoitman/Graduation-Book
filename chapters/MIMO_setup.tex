@@ -32,7 +32,7 @@ Later in the chapter we will discuss how each setup works, its encoding and deco
     \textbf{Before we discuss each setup in great detail, some information about the channel model must be cleared out:}
     \begin{itemize}
         \item We are using an OFDM based system.
-        \item Each subcarrier carries only one modulated symbol.
+        \item Each sub-carrier carries only one modulated symbol.
         \item We let the channel model be a block fading channel where the channel stays the same for some time (Coherence time) and for some subcarriers (Coherence bandwidth).
     \end{itemize}
 
@@ -43,7 +43,69 @@ Later in the chapter we will discuss how each setup works, its encoding and deco
     \end{itemize}
 \end{GrayBox}
 
+\subsection{Narrow-band wireless fading channel}
+One of the most common wireless channel model and the one that we will be using is the following
+\[y[m]=h[m]x[m]+n[m]\]
+Where the index m is a time index, $x[m]$ is the transmitted complex symbol at time m, $y[m]$ is the corresponding receives signal, and $n[m]$ is the AWGN at time m.\\
+The different component compared to the AWGN channel is $h[m]$. This is referred to as the “fading” coefficient. It is a random value which captures the changes that happen in the transmitted electromagnetic waves due to the environment. \\
+$h[m]$ is modelled as a complex number, where
+\begin{equation}
+    \label{eq:h channel}
+    h[m]=\text{a}+j\text{b}= |h[m]| e^{j\theta[m]}
+\end{equation}
+\begin{wrapfigure}{h}{0.4\textwidth}
+    \includegraphics[width=0.4\textwidth]{22.PNG}
+  \caption{Rayleigh random variable}
+\end{wrapfigure}
+where the magnitude of the channel $|h[m]|$ is a Rayleigh random variable
+\[|h[m]|  ~ f_{\sigma^2}(x)=\frac{x}{\sigma^2}  e^{\frac{-x^2}{2\sigma^2 }}\]  
+The phase $\theta[m]$ is a uniform random variable.
+The figure shows a Rayleigh distribution for different values of $\sigma$. This shows the impact of fading on communications. Specifically, the value of $|h[m]|$ can be small with a considerable probability, and that effectively reduces the received power of the transmitted signal. When $|h[m]|$  is too small, the channel is said to be in deep fading. 
+
 \section{SISO}
+SISO stands for \textbf{"Single Input, Single Output"}. In communication engineering, SISO is the simplest way to describe a communication link between a transmitter and a receiver. It is used to describe the case where both the transmitter and receiver have single antennas. Pre-coding is not typically used in SISO communication systems. \\
+For a SISO channel (we drop the time index for now)
+\[y = hx + n\]
+The noise power is $N_o$. The minimum distance between Constellation points without fading is $2a$, where $a$ is the smallest transmitted amplitude per constellation points.
+Now, with fading coefficient $h$, minimum distance becomes $d_{min}=2|h|a$. There, for this CSI value, we can upper bound the probability of error as
+
+\begin{equation}
+    \label{eq:upper bound Pe for SISO}
+    P_e\left(\bar{h}\right)\le\ k\ Q\left(\frac{d_{min}}{\sqrt{2N_o}}\right)=\ k\ Q\left(\sqrt{\frac{4\left|h\right|^2a^2}{N_o}}\right)=k\ Q\left(\sqrt{2\left|h\right|^2\text{SNR}}\right)
+\end{equation}
+
+We assume that $h$ is Rayleigh (as described in equation~\ref{eq:h channel}) with $\sigma^2= 1$.
+Then, we want to compute the "average" $P_e$ over CSI realization. This turns out to be
+
+\begin{equation}
+    \label{eq:avg Pe for SISO}
+    P_{e\ }=\mathbb{E}_{\left|h\right|^2}\{P_e\left(h\right)\} \le k \left(\frac{1}{2}-\frac{1}{2}\sqrt{\frac{\text{SNR}}{1+\text{SNR}}}\right) =\frac{k}{2}\left(1-\mu\right)
+\end{equation}
+
+\textbf{How does this compare with AWGN?} \\
+\textbf{Recall:} $P_e$ for AWGN is bounded by $k Q(\sqrt{2\text{SNR}})$. \\
+The following figure compares Pe for both AWGN and fading far BPSK.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{23.PNG}
+    \caption{AWGN vs Rayleigh fading BER for SISO}
+    \label{fig:BER SISO}
+\end{figure}
+
+At high SNR: \\
+Probability of error in AWGN has a water fall behavior which indicates very good performance.
+However, it decays linearly in case of fading and that is too slow.
+This is because $|h|$ is many times too small and therefore the received power $|h|^2 a^2$ is not enough to make decoding performance good.
+we say that a channel in \emph{"deep fade"} if received signal power is less than or equal to the noise power. \\
+\[\left|h\right|^2a^2\le N_o\]
+\[|h|^2\le \frac{N_o}{a^2}\ =\ \frac{1}{\text{SNR}}\] \\
+What is the probability of this happening? \\
+This probability is found to can be approximated to 
+\begin{equation}
+    \label{eq:SISO Pe}
+    10\log\left(\mathbb{P}\{|h|^2\le \frac{1}{\text{SNR}}\} \right)= \text{const}-10\log\left(\text{SNR}\right)=\text{const}-\text{SNR}_{dB}
+\end{equation}
+This looks like the linear decrease behavior we saw above in Figure~\ref{fig:BER SISO}.
 
 \section{SIMO}
 

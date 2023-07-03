@@ -199,7 +199,8 @@ The matrix $I_k$ is the identity matrix of order $k$, and $P$ is an arbitrary $k
         1 & 0 & 1 & 0 & 0 & 0 & 1 
     \end{array} \right]
     \]
-    \textbf{Solution:} The code vector for the message block $m = (1110)$ is given by
+    \textbf{Solution:}\\
+    The code vector for the message block $m = (1110)$ is given by
     \[
     c = mG = [1 1 1 0] \cdot \left[ \begin{array}{c c c | c c c c}
         1 & 1 & 0 & 1 & 0 & 0 & 0 \\
@@ -239,7 +240,150 @@ Implying that
     \label{eq:n geq klog}
     n \geq k + \log_2(n+1)
 \end{equation}
-Hence, the minimum size $n$ for the code words can be determined from equation~\ref{eq:n geq klog}
+Hence, the minimum size $n$ for the code words can be determined from equation~\ref{eq:n geq klog}. \\
+
+\textbf{Example:} Design a Hamming code with message block size of eleven bits. \\
+\textbf{Solution:} It follows from equation~\ref{eq:n geq klog} that
+\[ n \geq 11 + \log_2(n+1) \]
+The smallest $n$ that satisfies the above inequality is 15, and hence, we need a $(15,11)$ block code. Thus, the transpose of the parity check matrix $H$ will be $4 \times 15$ matrix. The first four rows of $H^T$ will be $I_4$ matrix. The last eleven rows are arbitrarily chosen, with the restrictions that no row is zero, and all the rows are distinct.
+\begin{equation}
+    \label{eq:H solution}
+    H^T = \left[ \begin{array}{c c c c}
+        1 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & 0 \\
+        0 & 0 & 0 & 1 \\
+        \hline
+        0 & 1 & 0 & 1 \\
+        0 & 1 & 1 & 0 \\
+        0 & 1 & 1 & 1 \\
+        0 & 0 & 1 & 1 \\
+        1 & 0 & 0 & 1 \\
+        1 & 0 & 1 & 0 \\
+        1 & 0 & 1 & 1 \\
+        1 & 1 & 0 & 0 \\
+        1 & 1 & 0 & 1 \\
+        1 & 1 & 1 & 0 \\
+        1 & 1 & 1 & 1
+    \end{array} \right] = \left[ \begin{array}{c}
+        I_{n-k} \\
+        \hline
+        P^T    
+    \end{array} \right]
+\end{equation}
+
+Then generator matrix $G$ equals
+\[
+G = \left[ \begin{array}{c c c c c c c c c c c c c c c}
+    0&1&0&1&1&0&0&0&0&0&0&0&0&0&0 \\
+    0&1&1&0&0&1&0&0&0&0&0&0&0&0&0 \\
+    0&1&1&1&0&0&1&0&0&0&0&0&0&0&0 \\
+    0&0&1&1&0&0&0&1&0&0&0&0&0&0&0 \\
+    1&0&0&1&0&0&0&0&1&0&0&0&0&0&0 \\
+    1&0&1&0&0&0&0&0&0&1&0&0&0&0&0 \\ 
+    1&0&1&1&0&0&0&0&0&0&1&0&0&0&0 \\
+    1&1&0&0&0&0&0&0&0&0&0&1&0&0&0 \\
+    1&1&0&1&0&0&0&0&0&0&0&0&1&0&0 \\
+    1&1&1&0&0&0&0&0&0&0&0&0&0&1&0 \\
+    1&1&1&1&0&0&0&0&0&0&0&0&0&0&1
+\end{array} \right]
+\]
+
+\textbf{Example:} Construct parity check and generator matrices for a $(7, 4)$ Hamming code. \\
+\textbf{Solution:} The parity check matrix $H$ and generator matrix $G$ for a $(7, 4)$ Hamming code are
+\[
+H = \left[ \begin{array}{c c c c c c c}
+    1 & 0 & 0 & 1 & 0 & 1 & 1 \\
+    0 & 1 & 0 & 1 & 1 & 1 & 0 \\
+    0 & 0 & 1 & 0 & 1 & 1 & 1
+\end{array} \right]
+\]
+\[
+G = \left[ \begin{array}{c c c c c c c}
+    1 & 1 & 0 & 1 & 0 & 0 & 0 \\
+    0 & 1 & 1 & 0 & 1 & 0 & 0 \\
+    1 & 1 & 1 & 0 & 0 & 1 & 0 \\
+    1 & 0 & 1 & 0 & 0 & 0 & 1
+\end{array} \right]
+\]
+
+\subsection{Syndrome Table Decoding}
+Consider a valid code word $c$ for transmission and let $e$ be an error pattern introduced by the channel during transmission. Then, the received vector $r$ can be written as
+\[ r = c + e \]
+Multiplying the $r$ by the transpose of the parity check matrix gives the syndrome $S$ which can be expressed as \\
+\begin{equation}
+    \label{eq:Syndrome Table Decoding}
+    \begin{aligned}
+        S &= r \cdot H^T \\
+        &= (c+e) \cdot H^T \\
+        &= cH^T + eH^T\\
+        &= 0 + eH^T \\ 
+        &= eH^T
+    \end{aligned}
+\end{equation}
+
+Thus, the syndrome vector is independent of the transmitted code word $c$ and is only a function of the error pattern $e$. Decoding is performed by computing the syndrome of a received vector, looking up the corresponding error pattern, and subtracting the error pattern from the received word. \\
+
+\textbf{Example:} Construct a syndrome decoding table for a $(7, 4)$ Hamming code \\
+\textbf{Solution:} For a $(7, 4)$ Hamming code, there are $2^{(7-4)}$ error patterns $e$ as in Table~\ref{eq:Syndrome Table Decoding}
+\begin{table}[!ht]
+    \centering
+    \caption{Syndrome decoding table for a $(7, 4)$ Hamming code}
+    \label{tbl:syndrome decoding table}
+    \begin{tabular}{cc}
+        \toprule
+        Error Pattern $e$ & Syndrome \\
+        \midrule
+        0000000 & 000 \\
+        1000000 & 100 \\
+        0100000 & 010 \\
+        0010000 & 001 \\
+        0001000 & 110 \\
+        0000100 & 011 \\
+        0000010 & 111 \\
+        0000001 & 101 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The syndrome for $(7, 4)$ Hamming code is computed using the parity check matrix $H$ (as given in the solution~\ref{eq:H solution}) as follows
+\[ S = e \cdot H^T \]
+Thus, the syndrome decoding table for a $(7, 4)$ Hamming code is as in Table~\ref{tbl:syndrome decoding table}
+
+\subsection{Hamming Codes Decoding}
+Syndrome table is used to decode the Hamming codes. The syndrome table gives the syndrome value based on the simple relationship with parity check matrix. The single-error-correcting codes (i.e., Hamming codes), are decoded by using syndrome value. Consider a code word $c$ corrupted by $e$, an error pattern with a single one in the $j^{th}$ coordinate position results a received vector $r$. Let ${h_0, h_1, \ldots , h_{n-1}}$ be the set of columns of the parity check matrix $H$. When the syndrome is computed, we obtain the transposition of the $j^{th}$ column of $H$. \\
+\begin{equation}
+    \label{eq:hamming codes decoding}
+    s = eH^T = [0, \ldots, 0,1,0, \ldots, 0] \cdot \left[ \begin{array}{c}
+        h_0^T \\
+        h_1^T \\
+        \vdots \\
+        h_{n-1}^T
+    \end{array} \right] = h_j^T
+\end{equation}
+
+The above-mentioned process in equation~\ref{eq:hamming codes decoding} can be implemented using the following algorithm:
+\begin{enumerate}
+    \item Compute the syndrome $s$ for the received word. If $s = 0$, the received code word is the correct code word.
+    \item Find the position $j$ of the column of $H$ that is the transposition of the syndrome.
+    \item Complement the $j^{th}$ bit in the received codeword to obtain the corrected code word. \\
+\end{enumerate}
+
+\textbf{Example:} Decode the received vector $r = [001100011100000]$ using the $(15,11)$ parity check matrix. \\
+\textbf{Solution:} \\
+\[
+H = \left[ \begin{array}{c c c c c c c c c c c c c c c}
+    1&0&0&0&0&0&0&0&1&1&1&1&1&1&1 \\
+    0&1&0&0&1&1&1&0&0&0&0&1&1&1&1 \\
+    0&0&1&0&0&1&1&1&0&1&1&0&0&1&1 \\
+    0&0&0&1&1&0&1&1&1&0&1&0&1&0&1    
+\end{array} \right]
+\] \\
+The received vector is $r = [001100011100000]$ \\
+The corresponding syndrome $s = r \cdot H^T$ is \\
+\[s = [0011]\] \\
+The syndrome is the transposition of $7^{th}$ column of $H$. Inverting the $7^{th}$ coordinate of $r$, the following code word is obtained \\
+\[c = [001100001100000]\]
 
 
 \section{LDPC Coding}

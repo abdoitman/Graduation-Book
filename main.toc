@@ -21,26 +21,29 @@
 \contentsline {subsubsection}{Linear Block Codes Properties}{15}{}%
 \contentsline {subsection}{\numberline {2.2.2}Generator \& Parity Check Matrices}{15}{}%
 \contentsline {section}{\numberline {2.3}Hamming Codes}{17}{}%
-\contentsline {section}{\numberline {2.4}LDPC Coding}{18}{}%
-\contentsline {chapter}{\numberline {3}Input/Output Setup}{19}{}%
-\contentsline {section}{\numberline {3.1}Overview}{19}{}%
-\contentsline {section}{\numberline {3.2}SISO}{20}{}%
-\contentsline {section}{\numberline {3.3}SIMO}{20}{}%
-\contentsline {section}{\numberline {3.4}MISO}{20}{}%
-\contentsline {section}{\numberline {3.5}MIMO}{20}{}%
-\contentsline {subsection}{\numberline {3.5.1}Diversity}{20}{}%
-\contentsline {subsection}{\numberline {3.5.2}Multiplexing}{20}{}%
-\contentsline {chapter}{\numberline {4}Reference Signals}{21}{}%
-\contentsline {section}{\numberline {4.1}Overview}{21}{}%
-\contentsline {section}{\numberline {4.2}Demodulation Reference signal (DMRS)}{22}{}%
-\contentsline {subsection}{\numberline {4.2.1}Pilot based DMRS channel estimation}{23}{}%
-\contentsline {section}{\numberline {4.3}Channel State Information Reference Signal (CSI-RS)}{25}{}%
-\contentsline {subsection}{\numberline {4.3.1}Basic CSI-RS structure}{26}{}%
-\contentsline {subsection}{\numberline {4.3.2}Frequency-Domain structure of CSI-RS configurations}{26}{}%
-\contentsline {subsection}{\numberline {4.3.3}Time-Domain structure of CSI-RS configurations}{27}{}%
-\contentsline {subsection}{\numberline {4.3.4}CSI-RS and DMRS for full channel estimation}{28}{}%
-\contentsline {section}{\numberline {4.4}Channel Estimation}{28}{}%
-\contentsline {subsection}{\numberline {4.4.1}Simple pilot based estimation}{29}{}%
-\contentsline {subsection}{\numberline {4.4.2}Minimum mean square error (MMSE) estimation}{30}{}%
-\contentsline {chapter}{\numberline {5}Simulations}{31}{}%
-\contentsline {part}{II\hspace {1em}Deep Reinforcement Learning Model}{32}{}%
+\contentsline {subsection}{\numberline {2.3.1}Syndrome Table Decoding}{19}{}%
+\contentsline {subsection}{\numberline {2.3.2}Hamming Codes Decoding}{20}{}%
+\contentsline {section}{\numberline {2.4}LDPC Coding}{21}{}%
+\contentsline {chapter}{\numberline {3}Input/Output Setup}{22}{}%
+\contentsline {section}{\numberline {3.1}Overview}{22}{}%
+\contentsline {subsection}{\numberline {3.1.1}Narrow-band wireless fading channel}{23}{}%
+\contentsline {section}{\numberline {3.2}SISO}{24}{}%
+\contentsline {section}{\numberline {3.3}SIMO}{25}{}%
+\contentsline {section}{\numberline {3.4}MISO}{25}{}%
+\contentsline {section}{\numberline {3.5}MIMO}{25}{}%
+\contentsline {subsection}{\numberline {3.5.1}Diversity}{25}{}%
+\contentsline {subsection}{\numberline {3.5.2}Multiplexing}{25}{}%
+\contentsline {chapter}{\numberline {4}Reference Signals}{26}{}%
+\contentsline {section}{\numberline {4.1}Overview}{26}{}%
+\contentsline {section}{\numberline {4.2}Demodulation Reference signal (DMRS)}{27}{}%
+\contentsline {subsection}{\numberline {4.2.1}Pilot based DMRS channel estimation}{28}{}%
+\contentsline {section}{\numberline {4.3}Channel State Information Reference Signal (CSI-RS)}{30}{}%
+\contentsline {subsection}{\numberline {4.3.1}Basic CSI-RS structure}{31}{}%
+\contentsline {subsection}{\numberline {4.3.2}Frequency-Domain structure of CSI-RS configurations}{31}{}%
+\contentsline {subsection}{\numberline {4.3.3}Time-Domain structure of CSI-RS configurations}{32}{}%
+\contentsline {subsection}{\numberline {4.3.4}CSI-RS and DMRS for full channel estimation}{33}{}%
+\contentsline {section}{\numberline {4.4}Channel Estimation}{33}{}%
+\contentsline {subsection}{\numberline {4.4.1}Simple pilot based estimation}{34}{}%
+\contentsline {subsection}{\numberline {4.4.2}Minimum mean square error (MMSE) estimation}{35}{}%
+\contentsline {chapter}{\numberline {5}Simulations}{36}{}%
+\contentsline {part}{II\hspace {1em}Deep Reinforcement Learning Model}{37}{}%

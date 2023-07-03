@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.29)  3 JUL 2023 02:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.29)  3 JUL 2023 04:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -504,7 +504,18 @@ File: tikzlibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbposter.code.tex
 Library (tcolorbox): 'tcbposter.code.tex' version '6.0.4'
-)) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+)) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks43
+\thm@bodyfont=\toks44
+\thm@headfont=\toks45
+\thm@notefont=\toks46
+\thm@headpunct=\toks47
+\thm@preskip=\skip53
+\thm@postskip=\skip54
+\thm@headsep=\skip55
+\dth@everypar=\toks48
+) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
  (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
@@ -514,7 +525,7 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-\RoundedBoxWidth=\skip53
+\RoundedBoxWidth=\skip56
 \GrayRoundedBox=\box81
  (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
@@ -544,12 +555,12 @@ LaTeX Font Info:    ... okay on input line 48.
 \scratchbox=\box83
 \nofMPsegments=\count326
 \nofMParguments=\count327
-\everyMPshowfont=\toks43
+\everyMPshowfont=\toks49
 \MPscratchCnt=\count328
 \MPscratchDim=\dimen297
 \MPnumerator=\count329
 \makeMPintoPDFobject=\count330
-\everyMPtoPDFconversion=\toks44
+\everyMPtoPDFconversion=\toks50
 ) (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -597,8 +608,8 @@ Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count331
 (C:\Users\abdoi\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks45
-\inpenc@posthook=\toks46
+\inpenc@prehook=\toks51
+\inpenc@posthook=\toks52
 )
 <./images/au-logo1.png, id=40, 2509.375pt x 1052.93375pt>
 File: ./images/au-logo1.png Graphic file (type png)
@@ -626,14 +637,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
- [1
+ [3
 
-]
+] [1]
 \openout2 = `chapters/intro.aux'.
 
  (chapters/intro.tex
 Chapter 1.
-<./images/1.PNG, id=60, 1204.5pt x 631.35875pt>
+<./images/1.PNG, id=63, 1204.5pt x 631.35875pt>
 File: ./images/1.PNG Graphic file (type png)
 <use ./images/1.PNG>
 Package pdftex.def Info: ./images/1.PNG  used on input line 15.
@@ -642,7 +653,7 @@ Package pdftex.def Info: ./images/1.PNG  used on input line 15.
 
 
  <./images/1.PNG (PNG copy)>]
-<./images/2.PNG, id=64, 375.20175pt x 186.6975pt>
+<./images/2.PNG, id=67, 375.20175pt x 186.6975pt>
 File: ./images/2.PNG Graphic file (type png)
 <use ./images/2.PNG>
 Package pdftex.def Info: ./images/2.PNG  used on input line 36.
@@ -652,7 +663,7 @@ Package pdftex.def Info: ./images/2.PNG  used on input line 36.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3]
-<./images/3.PNG, id=69, 749.80125pt x 425.1885pt>
+<./images/3.PNG, id=73, 749.80125pt x 425.1885pt>
 File: ./images/3.PNG Graphic file (type png)
 <use ./images/3.PNG>
 Package pdftex.def Info: ./images/3.PNG  used on input line 56.
@@ -662,7 +673,7 @@ Package pdftex.def Info: ./images/3.PNG  used on input line 56.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4 <./images/2.PNG>] [5 <./images/3.PNG>] [6] [7]
-<./images/4.PNG, id=89, 563.10374pt x 261.3765pt>
+<./images/4.PNG, id=92, 563.10374pt x 261.3765pt>
 File: ./images/4.PNG Graphic file (type png)
 <use ./images/4.PNG>
 Package pdftex.def Info: ./images/4.PNG  used on input line 144.
@@ -675,7 +686,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--148
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./images/5.PNG, id=90, 547.44525pt x 245.11575pt>
+<./images/5.PNG, id=93, 547.44525pt x 245.11575pt>
 File: ./images/5.PNG Graphic file (type png)
 <use ./images/5.PNG>
 Package pdftex.def Info: ./images/5.PNG  used on input line 151.
@@ -712,7 +723,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--13
 
  (chapters/channel_coding.tex
 Chapter 2.
-<./images/au-logo-bl.PNG, id=106, 702.625pt x 295.1025pt>
+<./images/au-logo-bl.PNG, id=109, 702.625pt x 295.1025pt>
 File: ./images/au-logo-bl.PNG Graphic file (type png)
 <use ./images/au-logo-bl.PNG>
 Package pdftex.def Info: ./images/au-logo-bl.PNG  used on input line 14.
@@ -733,54 +744,111 @@ Package pdftex.def Info: ./images/au-logo-bl.PNG  used on input line 33.
 (pdftex.def)             Requested size: 386.95894pt x 162.5275pt.
  [13] [14] [15] [16]
 \c@tcb@cnt@theo=\count332
- [17]) [18]
+ [17]
+Underfull \hbox (badness 10000) in paragraph at lines 242--244
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 312--314
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--374
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--384
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 384--386
+
+ []
+
+) [20] [21]
 \openout2 = `chapters/MIMO_setup.aux'.
 
  (chapters/MIMO_setup.tex
 Chapter 3.
-[19
-
-
-
-
-]) [20]
-\openout2 = `chapters/reference_signals.aux'.
-
- (chapters/reference_signals.tex
-Chapter 4.
-[21
+[22
 
 
 
 
 ]
-<./images/6-2.jpg, id=144, 1433.355pt x 621.07031pt>
+<./images/22.PNG, id=151, 803.0pt x 602.25pt>
+File: ./images/22.PNG Graphic file (type png)
+<use ./images/22.PNG>
+Package pdftex.def Info: ./images/22.PNG  used on input line 57.
+(pdftex.def)             Requested size: 193.47577pt x 145.10352pt.
+ [23 <./images/22.PNG>]
+<./images/23.PNG, id=158, 526.96875pt x 395.22656pt>
+File: ./images/23.PNG Graphic file (type png)
+<use ./images/23.PNG>
+Package pdftex.def Info: ./images/23.PNG  used on input line 90.
+(pdftex.def)             Requested size: 338.5863pt x 253.95125pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--100
+
+ []
+
+[24 <./images/23.PNG (PNG copy)>]) [25]
+\openout2 = `chapters/reference_signals.aux'.
+
+ (chapters/reference_signals.tex
+Chapter 4.
+[26
+
+
+
+
+]
+<./images/6-2.jpg, id=169, 1433.355pt x 621.07031pt>
 File: ./images/6-2.jpg Graphic file (type jpg)
 <use ./images/6-2.jpg>
 Package pdftex.def Info: ./images/6-2.jpg  used on input line 37.
 (pdftex.def)             Requested size: 290.22105pt x 125.74709pt.
- [22 <./images/6-2.jpg>]
-<./images/7.png, id=149, 804.00375pt x 313.17pt>
+ [27 <./images/6-2.jpg>]
+<./images/7.png, id=174, 804.00375pt x 313.17pt>
 File: ./images/7.png Graphic file (type png)
 <use ./images/7.png>
 Package pdftex.def Info: ./images/7.png  used on input line 47.
 (pdftex.def)             Requested size: 193.47577pt x 75.35825pt.
-<./images/8.PNG, id=150, 616.704pt x 279.444pt>
+<./images/8.PNG, id=175, 616.704pt x 279.444pt>
 File: ./images/8.PNG Graphic file (type png)
 <use ./images/8.PNG>
 Package pdftex.def Info: ./images/8.PNG  used on input line 63.
 (pdftex.def)             Requested size: 467.58951pt x 170.55865pt.
-<./images/9.PNG, id=151, 602.25pt x 259.56975pt>
+<./images/9.PNG, id=176, 602.25pt x 259.56975pt>
 File: ./images/9.PNG Graphic file (type png)
 <use ./images/9.PNG>
 Package pdftex.def Info: ./images/9.PNG  used on input line 74.
 (pdftex.def)             Requested size: 193.47577pt x 83.38878pt.
-<./images/10.PNG, id=152, 626.34pt x 270.41025pt>
+<./images/10.PNG, id=177, 626.34pt x 270.41025pt>
 File: ./images/10.PNG Graphic file (type png)
 <use ./images/10.PNG>
 Package pdftex.def Info: ./images/10.PNG  used on input line 80.
 (pdftex.def)             Requested size: 193.47577pt x 83.52922pt.
-<./images/11.PNG, id=153, 598.03426pt x 269.20575pt>
+<./images/11.PNG, id=178, 598.03426pt x 269.20575pt>
 File: ./images/11.PNG Graphic file (type png)
 <use ./images/11.PNG>
 Package pdftex.def Info: ./images/11.PNG  used on input line 86.
@@ -790,61 +858,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--95
 
  []
 
-<./images/12.PNG, id=154, 314.3745pt x 205.9695pt>
+<./images/12.PNG, id=179, 314.3745pt x 205.9695pt>
 File: ./images/12.PNG Graphic file (type png)
 <use ./images/12.PNG>
 Package pdftex.def Info: ./images/12.PNG  used on input line 105.
 (pdftex.def)             Requested size: 193.47577pt x 126.76318pt.
-<./images/13.PNG, id=155, 304.7385pt x 207.174pt>
+<./images/13.PNG, id=180, 304.7385pt x 207.174pt>
 File: ./images/13.PNG Graphic file (type png)
 <use ./images/13.PNG>
 Package pdftex.def Info: ./images/13.PNG  used on input line 111.
 (pdftex.def)             Requested size: 193.47577pt x 131.53189pt.
-[23 <./images/7.png> <./images/8.PNG>]
-<./images/14.PNG, id=160, 295.70474pt x 202.356pt>
+[28 <./images/7.png> <./images/8.PNG>]
+<./images/14.PNG, id=185, 295.70474pt x 202.356pt>
 File: ./images/14.PNG Graphic file (type png)
 <use ./images/14.PNG>
 Package pdftex.def Info: ./images/14.PNG  used on input line 129.
 (pdftex.def)             Requested size: 193.47577pt x 132.39748pt.
-<./images/15.PNG, id=161, 290.2845pt x 198.7425pt>
+<./images/15.PNG, id=186, 290.2845pt x 198.7425pt>
 File: ./images/15.PNG Graphic file (type png)
 <use ./images/15.PNG>
 Package pdftex.def Info: ./images/15.PNG  used on input line 135.
 (pdftex.def)             Requested size: 193.47577pt x 132.46231pt.
- [24 <./images/9.PNG> <./images/10.PNG> <./images/11.PNG> <./images/12.PNG> <./images/13.PNG>] [25 <./images/14.PNG> <./images/15.PNG>]
-<./images/16.PNG, id=176, 346.896pt x 116.8365pt>
+ [29 <./images/9.PNG> <./images/10.PNG> <./images/11.PNG> <./images/12.PNG> <./images/13.PNG>] [30 <./images/14.PNG> <./images/15.PNG>]
+<./images/16.PNG, id=201, 346.896pt x 116.8365pt>
 File: ./images/16.PNG Graphic file (type png)
 <use ./images/16.PNG>
 Package pdftex.def Info: ./images/16.PNG  used on input line 174.
 (pdftex.def)             Requested size: 346.9163pt x 117.07687pt.
-<./images/17.PNG, id=177, 373.833pt x 181.0035pt>
+<./images/17.PNG, id=202, 373.833pt x 181.0035pt>
 File: ./images/17.PNG Graphic file (type png)
 <use ./images/17.PNG>
 Package pdftex.def Info: ./images/17.PNG  used on input line 193.
 (pdftex.def)             Requested size: 373.65523pt x 181.398pt.
- [26 <./images/16.PNG>]
-<./images/18.PNG, id=182, 437.2335pt x 98.16675pt>
+ [31 <./images/16.PNG>]
+<./images/18.PNG, id=207, 437.2335pt x 98.16675pt>
 File: ./images/18.PNG Graphic file (type png)
 <use ./images/18.PNG>
 Package pdftex.def Info: ./images/18.PNG  used on input line 210.
 (pdftex.def)             Requested size: 467.59503pt x 104.79321pt.
- [27 <./images/17.PNG> <./images/18.PNG>]
-<./images/19.PNG, id=188, 604.05675pt x 258.36525pt>
+ [32 <./images/17.PNG> <./images/18.PNG>]
+<./images/19.PNG, id=213, 604.05675pt x 258.36525pt>
 File: ./images/19.PNG Graphic file (type png)
 <use ./images/19.PNG>
 Package pdftex.def Info: ./images/19.PNG  used on input line 229.
 (pdftex.def)             Requested size: 438.69035pt x 187.90332pt.
- [28 <./images/19.PNG>]
+ [33 <./images/19.PNG>]
 File: ./images/7.png Graphic file (type png)
 <use ./images/7.png>
 Package pdftex.def Info: ./images/7.png  used on input line 256.
 (pdftex.def)             Requested size: 193.47577pt x 75.35825pt.
-<./images/20.PNG, id=194, 278.84175pt x 109.00725pt>
+<./images/20.PNG, id=219, 278.84175pt x 109.00725pt>
 File: ./images/20.PNG Graphic file (type png)
 <use ./images/20.PNG>
 Package pdftex.def Info: ./images/20.PNG  used on input line 269.
 (pdftex.def)             Requested size: 193.47577pt x 75.63756pt.
-<./images/21.PNG, id=195, 329.43076pt x 198.14024pt>
+<./images/21.PNG, id=220, 329.43076pt x 198.14024pt>
 File: ./images/21.PNG Graphic file (type png)
 <use ./images/21.PNG>
 Package pdftex.def Info: ./images/21.PNG  used on input line 284.
@@ -854,17 +922,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 292--297
 
  []
 
-[29 <./images/20.PNG>]) [30 <./images/21.PNG>]
+[34 <./images/20.PNG>]) [35 <./images/21.PNG>]
 \openout2 = `chapters/simulations.aux'.
 
  (chapters/simulations.tex
 Chapter 5.
-) [31
+) [36
 
 
 
 
-] [32
+] [37
 
 
 
@@ -875,17 +943,17 @@ L3 programming layer <2023-06-16>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 22980 strings out of 476037
- 495479 string characters out of 5779845
- 1875763 words of memory out of 5000000
- 43289 multiletter control sequences out of 15000+600000
+ 23092 strings out of 476037
+ 497342 string characters out of 5779845
+ 1882763 words of memory out of 5000000
+ 43397 multiletter control sequences out of 15000+600000
  522457 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 93i,9n,99p,881b,743s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\abdoi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (35 pages, 1670764 bytes).
+ 93i,10n,99p,881b,743s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\abdoi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (41 pages, 1756093 bytes).
 PDF statistics:
- 282 PDF objects out of 1000 (max. 8388607)
+ 311 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 272 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 282 words of extra memory for PDF output out of 10000 (max. 10000000)
 
