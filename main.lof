@@ -8,32 +8,39 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Illustration of the channel coding principle.\relax }}{12}{}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Coding gain.\relax }}{13}{}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Coded data stream.\relax }}{13}{}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Tanner graph of $H$ matrix of the above example.\relax }}{23}{}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Table sets of LDPC lifting size\relax }}{27}{}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Base graphs block structure\relax }}{27}{}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Base graph 1 with iLS = 1\relax }}{28}{}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Base graph B\relax }}{29}{}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Parity-check matrix H\relax }}{29}{}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces LDPC channel coding chain\relax }}{29}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Rayleigh random variable\relax }}{23}{}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces AWGN vs Rayleigh fading BER for SISO\relax }}{24}{}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Rayleigh random variable\relax }}{32}{}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces AWGN vs Rayleigh fading BER for SISO\relax }}{33}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces DMRS Mapping type A \& type B \relax }}{27}{}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Single Tx Single Rx\relax }}{28}{}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Pilot signals in some REs\relax }}{28}{}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Correlation in time \& frequency\relax }}{29}{}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Delay spread effect\relax }}{29}{}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Doppler spread effect\relax }}{30}{}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Single-port CSI-RS structure consisting of a single resource element within an RB/slot block. \relax }}{31}{}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces CSI-RS Frequency density \relax }}{32}{}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces CSI-RS Periodicity and slot offset \relax }}{32}{}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Channel estimation process \relax }}{33}{}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Single Tx Single Rx\relax }}{34}{}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces 2x2 MIMO setup\relax }}{34}{}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces pilot symbols for 2x2 MIMO channel\relax }}{35}{}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces DMRS Mapping type A \& type B \relax }}{36}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Single Tx Single Rx\relax }}{37}{}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Pilot signals in some REs\relax }}{37}{}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Correlation in time \& frequency\relax }}{38}{}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Delay spread effect\relax }}{38}{}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Doppler spread effect\relax }}{39}{}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Single-port CSI-RS structure consisting of a single resource element within an RB/slot block. \relax }}{40}{}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces CSI-RS Frequency density \relax }}{41}{}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces CSI-RS Periodicity and slot offset \relax }}{41}{}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Channel estimation process \relax }}{42}{}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Single Tx Single Rx\relax }}{43}{}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces 2x2 MIMO setup\relax }}{43}{}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces pilot symbols for 2x2 MIMO channel\relax }}{44}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Artificial Intelligence Map\relax }}{39}{}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Tic-Tac-Toe\relax }}{41}{}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces A sequence of tic-tac-toe moves.\relax }}{41}{}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces RL Taxonomy\relax }}{42}{}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Deterministic vs. Stochastic Policies\relax }}{43}{}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces 5x5 environment\relax }}{44}{}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Artificial Intelligence Map\relax }}{48}{}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Tic-Tac-Toe\relax }}{50}{}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces A sequence of tic-tac-toe moves.\relax }}{50}{}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces RL Taxonomy\relax }}{51}{}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Deterministic vs. Stochastic Policies\relax }}{52}{}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces 5x5 environment\relax }}{53}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces ACTOR-CRITIC Methods\relax }}{47}{}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces ACTOR-CRITIC\relax }}{48}{}%
-\contentsline {figure}{\numberline {7.3}{\ignorespaces DDPG Algorithm\relax }}{48}{}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces ACTOR-CRITIC Methods\relax }}{56}{}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces ACTOR-CRITIC\relax }}{57}{}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces DDPG Algorithm\relax }}{57}{}%
