@@ -26,3 +26,10 @@
 \contentsline {figure}{\numberline {4.12}{\ignorespaces 2x2 MIMO setup\relax }}{34}{}%
 \contentsline {figure}{\numberline {4.13}{\ignorespaces pilot symbols for 2x2 MIMO channel\relax }}{35}{}%
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Artificial Intelligence Map\relax }}{39}{}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Tic-Tac-Toe\relax }}{41}{}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces A sequence of tic-tac-toe moves.\relax }}{41}{}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces RL Taxonomy\relax }}{42}{}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Deterministic vs. Stochastic Policies\relax }}{43}{}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces 5x5 environment\relax }}{44}{}%

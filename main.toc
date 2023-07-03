@@ -47,3 +47,21 @@
 \contentsline {subsection}{\numberline {4.4.2}Minimum mean square error (MMSE) estimation}{35}{}%
 \contentsline {chapter}{\numberline {5}Simulations}{36}{}%
 \contentsline {part}{II\hspace {1em}Deep Reinforcement Learning Model}{37}{}%
+\contentsline {chapter}{\numberline {6}Introduction}{38}{}%
+\contentsline {section}{\numberline {6.1}Reinforcement Learning}{38}{}%
+\contentsline {subsection}{\numberline {6.1.1}Meaning}{38}{}%
+\contentsline {subsection}{\numberline {6.1.2}RL \& Machine Learning}{39}{}%
+\contentsline {subsection}{\numberline {6.1.3}Vocabulary of Reinforcement Learning}{40}{}%
+\contentsline {section}{\numberline {6.2}An Example: Tic-Tac-Toe}{40}{}%
+\contentsline {section}{\numberline {6.3}Problem Formulation}{42}{}%
+\contentsline {subsection}{\numberline {6.3.1}Reinforcement Learning Taxonomy}{42}{}%
+\contentsline {subsection}{\numberline {6.3.2}Problem Nature}{43}{}%
+\contentsline {subsubsection}{Continuous or Discrete}{43}{}%
+\contentsline {subsubsection}{Deterministic or Stochastic}{43}{}%
+\contentsline {subsection}{\numberline {6.3.3}Model Nature}{44}{}%
+\contentsline {subsubsection}{Model-Free RL}{44}{}%
+\contentsline {subsubsection}{Model-Based RL}{44}{}%
+\contentsline {subsection}{\numberline {6.3.4}Policy Learning Type}{45}{}%
+\contentsline {subsubsection}{ON Policy}{45}{}%
+\contentsline {subsubsection}{OFF Policy}{45}{}%
+\contentsline {subsection}{\numberline {6.3.5}Types of RL Gradients}{45}{}%
