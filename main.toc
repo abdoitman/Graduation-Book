@@ -65,3 +65,7 @@
 \contentsline {subsubsection}{ON Policy}{45}{}%
 \contentsline {subsubsection}{OFF Policy}{45}{}%
 \contentsline {subsection}{\numberline {6.3.5}Types of RL Gradients}{45}{}%
+\contentsline {chapter}{\numberline {7}Deep Deterministic Policy Gradient (DDPG)}{47}{}%
+\contentsline {section}{\numberline {7.1}ACTOR-CRITIC Method}{47}{}%
+\contentsline {section}{\numberline {7.2}DDPG Algorithm}{47}{}%
+\contentsline {subsection}{\numberline {7.2.1}Algorithm Steps}{47}{}%
