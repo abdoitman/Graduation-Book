@@ -11,27 +11,30 @@ Any channel affected by noise possesses a specific “channel capacity” C a ra
 The channel coding principle is to add redundancy to minimize error rate as illustrated in Figure~\ref{fig:channel coding principle}.
 \begin{figure}[ht]
     \centering
-    \includegraphics[width= 0.8\textwidth]{au-logo-bl.PNG}
+    \includegraphics[width= 0.8\textwidth]{E1.PNG}
     \caption{Illustration of the channel coding principle.}
     \label{fig:channel coding principle}
 \end{figure}
 
 \subsection{Channel Coding Gain}
-The bit error rate (BER) is the probability that a binary digit transmitted from the source received erroneously by the user. For required BER, the difference between the powers required for without and with coding is called the coding gain. A typical plot of BER versus Eb/No (bit energy to noise spectral density ratio) with and without channel coding is shown in Figure 2.2. It can be seen that coding can arrive at the same value of the BER at lower Eb/No than without coding. Thus, the channel coding yields coding gain which is usually measured in dB. Also, the coding gain usually increases with a decrease in BER.
+The bit error rate (BER) is the probability that a binary digit transmitted from the source received erroneously by the user. For required BER, the difference between the powers required for without and with coding is called the coding gain. A typical plot of BER versus Eb/No (bit energy to noise spectral density ratio) with and without channel coding is shown in Figure~\ref{fig:Coding gain}. It can be seen that coding can arrive at the same value of the BER at lower Eb/No than without coding. Thus, the channel coding yields coding gain which is usually measured in dB. Also, the coding gain usually increases with a decrease in BER.
 \begin{figure}[ht]
     \centering
-    \includegraphics[width= 0.8\textwidth]{au-logo-bl.PNG}
-    \caption{Coding gain.}
+    \includegraphics[width= 0.5\textwidth]{E2.PNG}
+    \caption{Coding gain}
+    \label{fig:Coding gain}
 \end{figure}
 %-------------------------%
 
 %--------- Linear --------%
 \section{Block Codes}
-The data stream is broken into blocks of $k$ bits and each k-bit block is encoded into a block of n bits with $n > k$ bits as illustrated in Figure 2.3. The n-bit block of the channel block encoder is called the code word. The code word is formed by adding $(n - k)$ parity check bits derived from the $k$ message bits.
+The data stream is broken into blocks of $k$ bits and each k-bit block is encoded into a block of n bits with $n > k$ bits as illustrated in Figure~\ref{fig:Coded data stream}. The n-bit block of the channel block encoder is called the code word. The code word is formed by adding $(n - k)$ parity check bits derived from the $k$ message bits.
 \begin{figure}[ht]
+    \label{}
     \centering
-    \includegraphics[width= 0.8\textwidth]{au-logo-bl.PNG}
-    \caption{Coded data stream.}
+    \includegraphics[width= 0.6\textwidth]{E3.PNG}
+    \caption{Coded data stream}
+    \label{fig:Coded data stream}
 \end{figure}
 
 \subsection*{Properties of Block Codes}
@@ -385,7 +388,6 @@ The corresponding syndrome $s = r \cdot H^T$ is \\
 The syndrome is the transposition of $7^{th}$ column of $H$. Inverting the $7^{th}$ coordinate of $r$, the following code word is obtained \\
 \[c = [001100001100000]\]
 
-
 \section{LDPC Coding}
 Low density parity check (LDPC) codes are forward error-correction codes, invented by Robert Gallager in his MIT Ph.D. dissertation, 1960. The LDPC codes are ignored for long time due to their high computational complexity and domination of highly structured algebraic block and convolutional codes for forward error correction. A number of researchers produced new irregular LDPC codes which are known as new generalizations of Gallager's LDPC codes that outperform the best turbo codes with certain practical advantages. LDPC codes have already been adopted in satellite based digital video broadcasting and long-haul optical communication standards. This chapter discusses LDPC Code Properties, construction of parity check matrix for regular and irregular LDPC codes, efficient Encoding and Decoding of LDPC Codes, performance analysis of LDPC Codes.
 
@@ -473,6 +475,8 @@ where $I_k$ is the $k \times k$ identity matrix. The codeword can be generated a
 \[H_2H_1^{-1}=\left[\begin{matrix}0\ 1\ 0\ 1\ 0\ 1\\0\ 1\ 0\ 0\ 1\ 1\\1\ 0\ 1\ 0\ 0\ 1\\0\ 0\ 1\ 0\ 1\ 1\\\end{matrix}\right]\left[\begin{matrix}0\ 0\ 1\ 0\ 1\ 1\\1\ 0\ 1\ 0\ 0\ 1\\1\ 1\ 1\ 0\ 0\ 0\\1\ 1\ 0\ 0\ 1\ 0\\0\ 1\ 0\ 0\ 1\ 1\\1\ 1\ 1\ 1\ 0\ 1\\\end{matrix}\right]=\left[\begin{matrix}1\ 0\ 0\ 1\ 1\ 0\\0\ 0\ 0\ 1\ 1\ 1\\0\ 0\ 1\ 1\ 1\ 1\\0\ 1\ 0\ 1\ 1\ 0\\\end{matrix}\right]\ \ \ \ \ \]
 The generator matrix
 \[G = [H_2 H_{1}^{-1} : I_k ] =\left[\begin{matrix}1\ 0\ 0\ 1\ 1\ 0\ \vdots1\ 0\ 0\ 0\\0\ 0\ 0\ 1\ 1\ 1\ \vdots0\ 1\ 0\ 0\\0\ 0\ 1\ 1\ 1\ 1\ \vdots0\ 0\ 1\ 0\\0\ 1\ 0\ 1\ 1\ 0\ \vdots0\ 0\ 0\ 1\\\end{matrix}\right] \]
+
+We will talk about the decoding of LDPC codes later in this chapter (Section~\ref{sec:LDPC decoding}).
 
 \subsection{LDPC in 5G NR standards} 
 Low-Density Parity-Check (LDPC) codes are linear error-correcting codes. According to the 3rd Generation Partnership Project (3GPP) TS 38.212, two channel coding codes, i.e., Polar codes and LDPC codes, are recommended for the Fifth-generation (5G) New Radio (NR). Polar codes are applied to 5G NR control channels. LDPC codes are suitable for 5G NR shared channels due to its high throughput, low latency, low decoding complexity and rate compatibility. \\
@@ -601,7 +605,7 @@ If $A \leq 292$ , or if $A \leq 3824$ and $R \leq 0.67$ , or if $R \leq 0.25$ , 
 Otherwise, LDPC base graph 1 is used.
 
 \subsection{Rate matching}
-The purpose of rate matching is to adapt different code rates
+The purpose of rate matching is to adapt different code rates. \\
 Rate matching is carried out on each code block independently. Assume that the input message to the $r_{th}$ code block is $d_1, d_2, \ldots , d_N$, where $N = 66Z_c$ for base graph 1 and $N = 50Z_c$ for base graph 2. $E_r$ is the length of rate matching output message of the $r_{th}$ code block. The output message after rate matching of the $r_{th}$ code block is $e_1, e_2, \ldots , e_{Er}$ which is calculated using equation
 \[e_k = d_k, if d_k \neq NULL, where  1 \leq k \leq Er\] 
 
@@ -631,3 +635,141 @@ New rows after rate matching:
     \label{eq:New rowa after rate matching}
     m_{bRM}=n_{bRM}-K_b
 \end{equation}
+
+\section{LDPC Decoding}
+\label{sec:LDPC decoding}
+LDPC decoding shown in Figure~\ref{fig:LDPC decoder} tries to correct errors using message iterative algorithms. There are two kinds of decoding algorithms for LDPC decoding. One decoding algorithm is called hard decision decoding, in which the message passed contains the actual value of bits, such as Bit Flipping Algorithm. The other decoding algorithm is called soft decision decoding, in which the message passed is the probability value associated with the occurrence of a particular bit. Soft decision decoding is based on the idea of belief propagation. For example, BP Algorithm is soft decision decoding. In this thesis project, soft decision decoding algorithms will be considered because soft decision decoding algorithms in the log domain provide better performance than hard decision decoding algorithms regardless of the SNR level.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{image001.png}
+    \caption{LDPC Decoder}
+    \label{fig:LDPC decoder}
+\end{figure}
+The LDPC codes are generally decoded by the message-passing algorithms such as the belief propagation (BP) algorithm, which iteratively exchanges the messages through the edges between variable nodes and check nodes. \\
+The BP algorithm achieves near-optimal decoding performance but suffers from high computational complexity. To ﬁnd a better trade-oﬀ between performance and complexity, some efficient decoding algorithms are proposed using Min-Sum (MS) approximation. A simple algorithm for implementation is the Min-Sum Algorithm (MSA), but the outputs from variable nodes in MSA decoding are overestimated compared to SPA. There are many methods to optimize MSA including OMSA, linear approximation, self-corrected min-sum (SCMS) algorithms. A decoding scheme using the linear approximation and the modified message passing can achieve performance very close to that of the BP decoding. But it is difficult to hardware implementation because of heavy row weights. A hybrid algorithm for the LDPC codes in 5G, where the NMSA decoding and the linear approximation are applied has only a slight increase in complexity concerning the NMSA and improved performance much closer to the BP decoding, especially for the low-rate codes. We will focus on min-sum algorithm-MSA however, before we start, we need to know more about \emph{soft decision decoding} and \emph{log log-likelihood ratio (LLR)}.
+
+\subsection{Important Concepts Before We Dig Deeper}
+\subsubsection{Soft Decoding}
+Soft decision decoding is a decoding technique used in error correction codes, such as forward error correction (FEC) codes. It involves making decisions about the transmitted data based on the received signal's strength or reliability, rather than relying solely on binary decisions (0 or 1).
+In soft decision decoding, the received signal is typically represented as a continuous value, often referred to as a "soft metric" or "soft value." This soft metric represents the likelihood or probability of each possible transmitted symbol given the received signal.
+
+Instead of making a hard decision and assigning a binary value to each symbol (e.g., 0 or 1), soft decision decoding takes into account the reliability of the received signal and assigns probabilities to different symbols. These probabilities are then used to make more accurate decisions about the transmitted data.
+
+Soft decision decoding algorithms use various techniques, such as maximum likelihood estimation (MLE) or maximum a posteriori (MAP) estimation, to determine the most likely transmitted symbols based on the soft metrics. These algorithms consider not only the received signal but also statistical properties of the channel and noise characteristics.
+
+Soft decision decoding can provide better error correction performance compared to hard decision decoding techniques, especially in channels with high noise levels or fading effects. By considering the reliability of each received symbol, soft decision decoding can effectively mitigate errors and improve overall system performance.
+
+\subsubsection{Log Likelihood Ratio (LLR)}
+The log-likelihood ratio (LLR) is a mathematical measure used in information theory and communication systems. It represents the logarithm of the ratio between the likelihoods of two competing hypotheses or decisions.
+In soft decision decoding, LLR is important because it provides a way to quantify the reliability or confidence of a decision made by a receiver in a communication system. By using LLR, the receiver can make more informed and accurate decisions about the received signal.
+
+The use of logarithm in LLR has several advantages:
+\begin{description}
+    \item[1. Compression:] Logarithms compress large dynamic ranges into smaller ones, making it easier to represent and process likelihood ratios.
+    \item[2. Numerical stability:] Logarithms help avoid numerical underflow or overflow issues that may occur when dealing with very small or very large probabilities.
+    \item[3. Additive property:] Logarithms convert multiplication operations into addition operations, simplifying calculations and reducing computational complexity. 
+\end{description}
+In soft decision decoding, LLR is used to estimate the likelihood that a particular transmitted symbol was received correctly. This information is then used to make more reliable decisions about the transmitted data, especially in scenarios where noise or interference may corrupt the received signal.
+
+\subsubsection{Repetition Soft Input Soft Output Decoding}
+\subsubsection{Single Parity Check Soft Input Soft Output Decoding}
+
+\subsection{Message Passing Algorithm}
+\subsubsection{Soft-Input Soft-Output Iterative Message Passing Decoder}
+\begin{wrapfigure}{h}{0.4\textwidth}
+    \centering
+    \includegraphics[width=0.4\textwidth]{image002.png}
+    \caption{Parity Check Matrix and Tanner Graph}
+    \label{fig:PCM and TG}
+\end{wrapfigure}
+LDPC codes can be represented using either parity matrix $H$ or Tanner graph introduced by Tanner. There are two sections in the tanner graph:
+\textit{variable nodes} and \textit{check nodes} corresponding to rows and columns in the parity-check matrix. An example is shown in Figure~\ref{fig:PCM and TG}.
+
+Tanner graph is an excellent way to illustrate iterative message passing decoding that messages are passed from variable nodes to check nodes, then from check nodes to variable nodes in each iteration. The message passing decoding can be divided into variable nodes operation, also called row operation, and check nodes operation, also called column operation. A message passing algorithm based on Pearl's belief algorithm describes the iterative decoding steps. There are different iterative message passing algorithms due to varying types of passed messages or different computations at the nodes, such as SPA and MSA. We will focus on MSA, LMSA and LOMSA. \\
+One iteration of message passing can be divided into two parts.
+One half-iteration is from variable nodes to check nodes shown in Figure~\ref{fig:variable and check nodes}(a),
+in which all the information v1 has is sent to check node c3 except for the information
+that check node c3 has already possessed. In this case, the information check node
+c3 possesses is called extrinsic information. The other half iteration is from check
+nodes to variable nodes, shown in Figure~\ref{fig:variable and check nodes}(b), in which check node c1 passes all
+information it has available to it to each of the variable nodes vi excluding
+the information the receiving node has already possessed. In this case, only information
+consistent with c1 + c3 + c4 + c5 = 0 is sent. The message probability passed between
+check nodes and variable nodes can be called belief, such as q13(b) in Figure~\ref{fig:variable and check nodes}(a).
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.55\textwidth]{image004.png}
+    \caption{Iteration between variable nodes and check nodes}
+    \label{fig:variable and check nodes}
+\end{figure}
+
+\subsubsection{Min-Sum Algorithm (MSA)} 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.4\textwidth]{image006.png}
+    \caption{Part of an LDPC matrix}
+    \label{fig:ldpc matrix}
+\end{figure}
+
+\begin{itemize}
+    \item Use the received value corresponding to Bit 1
+    \begin{itemize}
+        \item $1^{st}$ estimate, $l_{10} = \text{LLR} | r_1 = \frac{2r_1}{\sigma^2}$
+    \end{itemize}
+    \item Use parity checks that involves the bit
+    \begin{itemize}
+        \item Row 1: $c_1 + c_4 + c_8 + c_{12} = 0$; $2^{nd}$ estimate, $l_{11} = \text{LLR} | r_4 , r_8 , r_{12}$
+        \item Row 5: $c_1 + c_2 + c_{10} + c_{20} = 0$; $3^{rd}$ estimate, $l_{15} = \text{LLR} | r_2 , r_{10} , r_{20}$
+        \item Row 9: $c_1 + c_6 + c_{16} + c_{18} = 0$; $4^{th}$ estimate, $l_{19} = \text{LLR} | r_6 , r_{16} , r_{18}$
+    \end{itemize}
+\end{itemize}
+
+Figure~\ref{fig:tanner graph ldpc} shows the \textbf{first iteration} in tanner graph:
+\begin{itemize}
+    \item The first estimate $l_1$ comes from the channel
+    \item $l_i$ : passed from bit node $i$ to all neighboring check nodes.
+    \item Estimates for Bit 1: $l_{11}$, $l_{15}$, $l_{19}$ are calculated at check nodes $1$, $5$, $9$.
+    \item Estimates passed from check nodes to neighboring bit nodes.
+    \item This is done for all nodes in parallel.
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.25\textwidth]{image010.png}
+    \caption{Tanner Graph}
+    \label{fig:tanner graph ldpc}
+\end{figure}
+
+\begin{wrapfigure}{H}{0.35\textwidth}
+    \centering
+    \includegraphics[width=0.35\textwidth]{image012.png}
+    \caption{Second Iteration}
+    \label{fig:ldpc iteration 2}
+\end{wrapfigure}
+
+\textbf{Second iteration:} check-to-bit (as shown in Figure~\ref{fig:ldpc iteration 2})
+\begin{itemize}
+    \item Repeat computation of $l_{11}$, $l_{15}$ and $l_{19}$ using $\overrightarrow{m_{41}}$, $\overrightarrow{m_{81}}$ and $\overrightarrow{m_{12,1}}$.
+    \item Similar for all check nodes. 
+\end{itemize}
+
+\textbf{Summary of MSA} \\
+\textbf{Row iteration:} \\
+\begin{itemize}
+    \item Check node computation (SPC SISO).
+    \item Computes conditional LLRS for one bit.
+\end{itemize}
+\textbf{Column iteration:} \\
+\begin{itemize}
+    \item Bit node computation (Repetition SISO).
+    \item Consolidate conditional LLRs.
+\end{itemize}
+Repeat for multiple iterations (as shown in Figure~\ref{fig:MSA})
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{image014.png}
+    \caption{MSA}
+    \label{fig:MSA}
+\end{figure}
+
+\subsubsection{Optimized Min-Sum Decoding Algorithm}
