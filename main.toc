@@ -56,62 +56,66 @@
 \contentsline {section}{\numberline {3.4}MISO}{39}{}%
 \contentsline {section}{\numberline {3.5}MIMO}{39}{}%
 \contentsline {subsection}{\numberline {3.5.1}Diversity}{40}{}%
-\contentsline {subsection}{\numberline {3.5.2}Multiplexing}{40}{}%
-\contentsline {subsection}{\numberline {3.5.3}MIMO in Our Simulator}{40}{}%
-\contentsline {chapter}{\numberline {4}Reference Signals}{41}{}%
-\contentsline {section}{\numberline {4.1}Overview}{41}{}%
-\contentsline {section}{\numberline {4.2}Demodulation Reference signal (DMRS)}{42}{}%
-\contentsline {subsection}{\numberline {4.2.1}Pilot based DMRS channel estimation}{43}{}%
-\contentsline {section}{\numberline {4.3}Channel State Information Reference Signal (CSI-RS)}{45}{}%
-\contentsline {subsection}{\numberline {4.3.1}Basic CSI-RS structure}{46}{}%
-\contentsline {subsection}{\numberline {4.3.2}Frequency-Domain structure of CSI-RS configurations}{46}{}%
-\contentsline {subsection}{\numberline {4.3.3}Time-Domain structure of CSI-RS configurations}{47}{}%
-\contentsline {subsection}{\numberline {4.3.4}CSI-RS and DMRS for full channel estimation}{48}{}%
-\contentsline {section}{\numberline {4.4}Channel Estimation}{48}{}%
-\contentsline {subsection}{\numberline {4.4.1}Simple pilot based estimation}{49}{}%
-\contentsline {subsection}{\numberline {4.4.2}Minimum mean square error (MMSE) estimation}{50}{}%
-\contentsline {chapter}{\numberline {5}Simulations}{51}{}%
-\contentsline {part}{II\hspace {1em}Deep Reinforcement Learning Model}{52}{}%
-\contentsline {chapter}{\numberline {6}Introduction}{53}{}%
-\contentsline {section}{\numberline {6.1}Reinforcement Learning}{53}{}%
-\contentsline {subsection}{\numberline {6.1.1}Meaning}{53}{}%
-\contentsline {subsection}{\numberline {6.1.2}RL \& Machine Learning}{54}{}%
-\contentsline {subsection}{\numberline {6.1.3}Vocabulary of Reinforcement Learning}{55}{}%
-\contentsline {section}{\numberline {6.2}An Example: Tic-Tac-Toe}{55}{}%
-\contentsline {section}{\numberline {6.3}Problem Formulation}{57}{}%
-\contentsline {subsection}{\numberline {6.3.1}Reinforcement Learning Taxonomy}{57}{}%
-\contentsline {subsection}{\numberline {6.3.2}Problem Nature}{58}{}%
-\contentsline {subsubsection}{Continuous or Discrete}{58}{}%
-\contentsline {subsubsection}{Deterministic or Stochastic}{58}{}%
-\contentsline {subsection}{\numberline {6.3.3}Model Nature}{59}{}%
-\contentsline {subsubsection}{Model-Free RL}{59}{}%
-\contentsline {subsubsection}{Model-Based RL}{59}{}%
-\contentsline {subsection}{\numberline {6.3.4}Policy Learning Type}{60}{}%
-\contentsline {subsubsection}{ON Policy}{60}{}%
-\contentsline {subsubsection}{OFF Policy}{60}{}%
-\contentsline {subsection}{\numberline {6.3.5}Types of RL Gradients}{60}{}%
-\contentsline {chapter}{\numberline {7}Deep Deterministic Policy Gradient (DDPG)}{62}{}%
-\contentsline {section}{\numberline {7.1}ACTOR-CRITIC Methods}{62}{}%
-\contentsline {section}{\numberline {7.2}DDPG Algorithm}{63}{}%
-\contentsline {subsection}{\numberline {7.2.1}Algorithm Steps}{65}{}%
-\contentsline {subsection}{\numberline {7.2.2}DDPG Algorithm Pseudo Code}{66}{}%
-\contentsline {chapter}{\numberline {8}First Approach: Single User MISO}{68}{}%
-\contentsline {section}{\numberline {8.1}Problem Realization}{68}{}%
-\contentsline {subsection}{\numberline {8.1.1}Channel Model}{68}{}%
-\contentsline {subsection}{\numberline {8.1.2}Rate Equation}{69}{}%
-\contentsline {subsection}{\numberline {8.1.3}Optimization Formulation}{69}{}%
-\contentsline {section}{\numberline {8.2}RL Interpretation}{69}{}%
-\contentsline {subsection}{\numberline {8.2.1}Introduction}{69}{}%
-\contentsline {subsection}{\numberline {8.2.2}Problem Mapping}{69}{}%
-\contentsline {subsection}{\numberline {8.2.3}Algorithm Parameters}{70}{}%
-\contentsline {subsection}{\numberline {8.2.4}Evaluation}{70}{}%
-\contentsline {subsection}{\numberline {8.2.5}Optimization}{70}{}%
-\contentsline {subsubsection}{Reward Shape}{70}{}%
-\contentsline {subsubsection}{Phase Ambiguity Elimination}{71}{}%
-\contentsline {subsubsection}{Changing Seed}{72}{}%
-\contentsline {subsection}{\numberline {8.2.6}Challenges}{73}{}%
-\contentsline {subsubsection}{NNs Inputs}{73}{}%
-\contentsline {subsubsection}{Custom Layer}{73}{}%
-\contentsline {subsubsection}{Hyper-parameter Tunning}{74}{}%
-\contentsline {subsubsection}{General Comparasion}{74}{}%
-\contentsline {subsection}{\numberline {8.2.7}Pseudo Code}{74}{}%
+\contentsline {subsubsection}{Singular Value Decomposition of Channel}{40}{}%
+\contentsline {subsubsection}{Pre-coding at Transmitter}{41}{}%
+\contentsline {subsubsection}{Decoding at Transmitter}{42}{}%
+\contentsline {subsection}{\numberline {3.5.2}Multiplexing}{43}{}%
+\contentsline {subsection}{\numberline {3.5.3}MIMO in Our Simulator}{43}{}%
+\contentsline {subsection}{\numberline {3.5.4}Practical Implementation of MIMO}{43}{}%
+\contentsline {chapter}{\numberline {4}Reference Signals}{44}{}%
+\contentsline {section}{\numberline {4.1}Overview}{44}{}%
+\contentsline {section}{\numberline {4.2}Demodulation Reference signal (DMRS)}{45}{}%
+\contentsline {subsection}{\numberline {4.2.1}Pilot based DMRS channel estimation}{46}{}%
+\contentsline {section}{\numberline {4.3}Channel State Information Reference Signal (CSI-RS)}{48}{}%
+\contentsline {subsection}{\numberline {4.3.1}Basic CSI-RS structure}{49}{}%
+\contentsline {subsection}{\numberline {4.3.2}Frequency-Domain structure of CSI-RS configurations}{49}{}%
+\contentsline {subsection}{\numberline {4.3.3}Time-Domain structure of CSI-RS configurations}{50}{}%
+\contentsline {subsection}{\numberline {4.3.4}CSI-RS and DMRS for full channel estimation}{51}{}%
+\contentsline {section}{\numberline {4.4}Channel Estimation}{51}{}%
+\contentsline {subsection}{\numberline {4.4.1}Simple pilot based estimation}{52}{}%
+\contentsline {subsection}{\numberline {4.4.2}Minimum mean square error (MMSE) estimation}{53}{}%
+\contentsline {chapter}{\numberline {5}Simulations}{54}{}%
+\contentsline {part}{II\hspace {1em}Deep Reinforcement Learning Model}{55}{}%
+\contentsline {chapter}{\numberline {6}Introduction}{56}{}%
+\contentsline {section}{\numberline {6.1}Reinforcement Learning}{56}{}%
+\contentsline {subsection}{\numberline {6.1.1}Meaning}{56}{}%
+\contentsline {subsection}{\numberline {6.1.2}RL \& Machine Learning}{57}{}%
+\contentsline {subsection}{\numberline {6.1.3}Vocabulary of Reinforcement Learning}{58}{}%
+\contentsline {section}{\numberline {6.2}An Example: Tic-Tac-Toe}{58}{}%
+\contentsline {section}{\numberline {6.3}Problem Formulation}{60}{}%
+\contentsline {subsection}{\numberline {6.3.1}Reinforcement Learning Taxonomy}{60}{}%
+\contentsline {subsection}{\numberline {6.3.2}Problem Nature}{61}{}%
+\contentsline {subsubsection}{Continuous or Discrete}{61}{}%
+\contentsline {subsubsection}{Deterministic or Stochastic}{61}{}%
+\contentsline {subsection}{\numberline {6.3.3}Model Nature}{62}{}%
+\contentsline {subsubsection}{Model-Free RL}{62}{}%
+\contentsline {subsubsection}{Model-Based RL}{62}{}%
+\contentsline {subsection}{\numberline {6.3.4}Policy Learning Type}{63}{}%
+\contentsline {subsubsection}{ON Policy}{63}{}%
+\contentsline {subsubsection}{OFF Policy}{63}{}%
+\contentsline {subsection}{\numberline {6.3.5}Types of RL Gradients}{63}{}%
+\contentsline {chapter}{\numberline {7}Deep Deterministic Policy Gradient (DDPG)}{65}{}%
+\contentsline {section}{\numberline {7.1}ACTOR-CRITIC Methods}{65}{}%
+\contentsline {section}{\numberline {7.2}DDPG Algorithm}{66}{}%
+\contentsline {subsection}{\numberline {7.2.1}Algorithm Steps}{68}{}%
+\contentsline {subsection}{\numberline {7.2.2}DDPG Algorithm Pseudo Code}{69}{}%
+\contentsline {chapter}{\numberline {8}First Approach: Single User MISO}{71}{}%
+\contentsline {section}{\numberline {8.1}Problem Realization}{71}{}%
+\contentsline {subsection}{\numberline {8.1.1}Channel Model}{71}{}%
+\contentsline {subsection}{\numberline {8.1.2}Rate Equation}{72}{}%
+\contentsline {subsection}{\numberline {8.1.3}Optimization Formulation}{72}{}%
+\contentsline {section}{\numberline {8.2}RL Interpretation}{72}{}%
+\contentsline {subsection}{\numberline {8.2.1}Introduction}{72}{}%
+\contentsline {subsection}{\numberline {8.2.2}Problem Mapping}{72}{}%
+\contentsline {subsection}{\numberline {8.2.3}Algorithm Parameters}{73}{}%
+\contentsline {subsection}{\numberline {8.2.4}Evaluation}{73}{}%
+\contentsline {subsection}{\numberline {8.2.5}Optimization}{73}{}%
+\contentsline {subsubsection}{Reward Shape}{73}{}%
+\contentsline {subsubsection}{Phase Ambiguity Elimination}{74}{}%
+\contentsline {subsubsection}{Changing Seed}{75}{}%
+\contentsline {subsection}{\numberline {8.2.6}Challenges}{76}{}%
+\contentsline {subsubsection}{NNs Inputs}{76}{}%
+\contentsline {subsubsection}{Custom Layer}{76}{}%
+\contentsline {subsubsection}{Hyper-parameter Tunning}{77}{}%
+\contentsline {subsubsection}{General Comparasion}{77}{}%
+\contentsline {subsection}{\numberline {8.2.7}Pseudo Code}{77}{}%

@@ -71,7 +71,6 @@ For a SISO channel (we drop the time index for now)
 \end{equation}
 The noise power is $N_o$. The minimum distance between Constellation points without fading is $2a$, where $a$ is the smallest transmitted amplitude per constellation points.
 Now, with fading coefficient $h$, minimum distance becomes $d_{min}=2|h|a$. There, for this CSI value, we can upper bound the probability of error as
-
 \begin{equation}
     \label{eq:upper bound Pe for SISO}
     P_e\left(\bar{h}\right)\le\ k\ Q\left(\frac{d_{min}}{\sqrt{2N_o}}\right)=\ k\ Q\left(\sqrt{\frac{4\left|h\right|^2a^2}{N_o}}\right)=k\ Q\left(\sqrt{2\left|h\right|^2\text{SNR}}\right)
@@ -79,7 +78,6 @@ Now, with fading coefficient $h$, minimum distance becomes $d_{min}=2|h|a$. Ther
 
 We assume that $h$ is Rayleigh (as described in equation~\ref{eq:h channel}) with $\sigma^2= 1$.
 Then, we want to compute the "average" $P_e$ over CSI realization. This turns out to be
-
 \begin{equation}
     \label{eq:avg Pe for SISO}
     P_{e\ }=\mathbb{E}_{\left|h\right|^2}\{P_e\left(h\right)\} \le k \left(\frac{1}{2}-\frac{1}{2}\sqrt{\frac{\text{SNR}}{1+\text{SNR}}}\right) =\frac{k}{2}\left(1-\mu\right)
@@ -157,13 +155,117 @@ We can represent the above equation in matrix form for all received symbols $\ba
     \vdots \\
     n_N     
 \end{array} \right] \]
+and $\bar{n} \in \mathcal{N} \mathcal{C}\left( 0, N_o \cdot I_{N \times N} \right)$
 
 \subsection{Diversity}
 \label{subsection:MIMO-Diversity}
-A simple example of diversity is multiple antennas trying to receive the same signal. The received signal on the two antennas is corrupted by noise that is uncorrelated between antennas, therefore by combining the two signals a better quality signal can be reconstructed. The analogy here is that by looking at the same object from two different vantage points, richer information on the object can be obtained.
+In MIMO diversity, multiple antennas are trying to receive the same signal. The received signal on the two antennas is corrupted by noise that is uncorrelated between antennas, therefore by combining the two signals a better quality signal can be reconstructed. The analogy here is that by looking at the same object from two different vantage points, richer information on the object can be obtained.
+
+\subsubsection{Singular Value Decomposition of Channel}
+To achieve this effect, the message must be encoded at the transmitter and decoded at the receiver. This is done with the help of SVD (Theorem~\ref{theo:SVD}).
+
+\newtcbtheorem[auto counter,number within=section]{SVD_theo}
+  {Theorem}{fonttitle=\bfseries\upshape, fontupper=\slshape,
+     arc=0mm, colback=black!5!white,colframe=black!75!white}{theorem}
+
+\begin{SVD_theo}{Singular Value Decomposition}{}
+    For any arbitrary matrix $A \in \mathbb{R}^{m \times n}$ admits a decomposition of the form
+    \begin{equation}
+        \label{theo:SVD}
+        \begin{aligned}
+            A &= \sum_{i=1}^{r} \sigma_i u_i v^T_i \\
+            &= U \tilde{S} V^T \\
+            \tilde{S} &:= \left( \begin{array}{c c}
+                S & 0 \\
+                0 & 0
+            \end{array} \right)
+        \end{aligned}
+    \end{equation}
+    where $U \in \mathbb{R}^{m \times m}$ , $V \in \mathbb{R}^{n \times n}$ are both orthogonal matrices, and the matrix $S$ is a diagonal:
+    \[ S = \text{diag}\left( \sigma_1 , \ldots , \sigma_r \right) \]
+    where the positive numbers $\sigma_1 \ge \ldots \ge \sigma_r >0$ are unique, and are called the \emph{singular values} of $A$.
+    The number $r \leq \min(m,n)$ is equal to the \emph{rank} of $A$, and the triplet $(U,\tilde{{S}},V)$ is called a \emph{singular value decomposition (SVD)} of $A$.
+    The first $r$ columns of $U: u_i, i=1,\ldots,r$ (resp. $V: v_i, i=1,\ldots,r$) are called left (resp. right) \emph{singular vectors} of $A$, and satisfy
+    \[ Av_i = \sigma_i u_i \quad , \quad u_i^T A = \sigma_i v_i \quad , \quad i = 1,\ldots,r \]
+
+\end{SVD_theo}
+
+Applying SVD to the channel gain matrix $\bar{\bar{H}}$ we get
+\begin{equation}
+    \label{eq:SVD H}
+    \bar{\bar{H}} = \bar{\bar{U}} \bar{\bar{S}} \bar{\bar{V}}^H
+\end{equation}
+where $\bar{\bar{U}}$ and $\bar{\bar{V}}$ are unitary matrices ($\bar{\bar{U}}^H\bar{\bar{U}} = I$) and $S$ is a diagonal matrix with the singular values of $\bar{\bar{H}}$.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.65\textwidth]{MIMOdiv.PNG}
+    \caption{MIMO setup used for diversity}
+    \label{fig:MIMOdiv}
+\end{figure}
+
+\subsubsection{Pre-coding at Transmitter}
+Now, we will use the decomposition of the channel to pre-code the signal sent at the transmitter. Let $\bar{x_p}$ denotes the raw signal before being sent at the transmitter, then 
+\begin{equation}
+    \label{eq:pre-coded x}
+    \bar{x} = \bar{\bar{V}} \bar{x_p}
+\end{equation}
+where
+\[ \bar{x_p} = \frac{1}{\sqrt{M}} \left[ \begin{array}{c}
+    x \\
+    \vdots \\
+    x
+\end{array} \right]_{M \times 1} \]
+and $x$ denotes the input message desired to be sent over all the antennas.
+
+\subsubsection{Decoding at Transmitter}
+At the receiver, the antennas have received $\bar{y}$ following the channel model in Equation~\ref{eq:y_bar MIMO}. Let $\bar{y_d}$ denotes the decoded received message where $\bar{y_d} = \bar{\bar{U}}^H \bar{y}$.
+\begin{equation}
+    \label{eq:decoding y_bar}
+    \begin{aligned}
+        \bar{y_d} &= \bar{\bar{U}}^H \bar{y} \\
+        &= \bar{\bar{U}}^H \left[ \bar{\bar{U}} \bar{\bar{S}} \bar{\bar{V}}^H \bar{x} + \bar{n} \right] \\
+        &= \bar{\bar{U}}^H \bar{\bar{U}} \bar{\bar{S}} \bar{\bar{V}}^H \bar{x} + \bar{\bar{U}}^H \bar{n} \\
+        &= \bar{\bar{U}}^H \bar{\bar{U}} \bar{\bar{S}} \bar{\bar{V}}^H \bar{\bar{V}} \bar{x_p} + \tilde{n} && \text{from \ref{eq:pre-coded x}} \\
+        &= \bar{\bar{S}} \bar{x_p} + \tilde{n}
+    \end{aligned}
+\end{equation}
+Therefore by simplifying Equation~\ref{eq:decoding y_bar}, we deduce that each received symbol
+\[ y_{d_i} = \sigma_i \frac{1}{\sqrt{M}} x + \tilde{n}_i \]
+and the total received signal becomes
+\begin{equation}
+    \label{eq:y for mimo div}
+    \bar{y_d} =  \frac{1}{\sqrt{M}} \left[ \begin{array}{c}
+        \sigma_1 \\
+        \vdots \\
+        \sigma_r
+    \end{array} \right] x + \tilde{n}
+\end{equation}
+
+This setup yields an improvement in SNR that is equal to $\|H\|_F^2 \cdot \frac{1}{M}$ where
+\[\|H\|_F^2 = \sum_{i=1}^{M} \sum_{j=1}^{N} |h_{ij}|^2\]
+This improvement is the \emph{diversity gain}, and obtained due to the usage of MIMO system.  
+\begin{GrayBox}
+    \textbf{Diversity gain} is the increase in signal-to-interference ratio due to some diversity scheme, or how much the transmission power can be reduced when a diversity scheme is introduced, without a performance loss.
+\end{GrayBox}
+
+The probability of error in the MIMO setup have an upper bound as follows
+\[ P_e \left( \bar{\bar{H}} \right) \leq k Q\left( \sqrt{ 2 \|H\|_F^2 \frac{\text{SNR}}{M} } \right) \] 
+We can then calculate the average $Pe$ as follows
+\begin{equation}
+    \label{eq:avg Pe mimo}
+    \begin{aligned}
+        P_e &= \mathbb{E}_{\|H\|_F^2} \left\{ P_e \left( \bar{\bar{H}} \right) \right\} \\
+        & \leq \text{const.} \cdot \frac{1}{\text{SNR}^{NM}}
+    \end{aligned}
+\end{equation}
+We can see that using MIMO setup also improves $P_e$ of the system drastically.
 
 \subsection{Multiplexing}
 \label{subsection:MIMO-Multiplexing}
 The second major MIMO technique is Spatial Multiplexing. Spatial multiplexing enables a MIMO transmitter/receiver pair to increase its throughput without increasing bandwidth usage or transmit power. Multiplexing increases throughput linearly with the number of transmit or receive antennas, whichever is lower. The transmitter sends signals carrying different bit streams from each of its antennas. Each receiver antenna receives a linear combination of the transmitted signals.
 
 \subsection{MIMO in Our Simulator}
+
+\subsection{Practical Implementation of MIMO}
+All we have talked about so far was under the assumption that both the transmitter and the receiver have perfect knowledge of the channel state at all times. This was a way to ease explaining the concept, but can not be implemented in the simulator.\\
+Therefore, we had to implement another way to decode the received signal using $\bar{\bar{U}}$ from the SVD of $\bar{\bar{H}}$ (in Equation~\ref{eq:decoding y_bar}).
