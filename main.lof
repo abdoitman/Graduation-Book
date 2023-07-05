@@ -1,30 +1,31 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces 4G vs 5G connections \relax }}{3}{}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces 5G Use cases classification\relax }}{5}{}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces 5G Frame structure\relax }}{6}{}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces 5G Downlink logical, transport and physical channel mapping\relax }}{10}{}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces 5G Uplink logical, transport and physical channel mapping\relax }}{10}{}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces 4G vs 5G connections \relax }}{2}{}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces 5G Use cases classification\relax }}{4}{}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces 5G Frame structure\relax }}{5}{}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces 5G Downlink logical, transport and physical channel mapping\relax }}{9}{}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces 5G Uplink logical, transport and physical channel mapping\relax }}{9}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Illustration of the channel coding principle.\relax }}{13}{}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Coding gain\relax }}{14}{}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Coded data stream\relax }}{14}{}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Tanner graph of $H$ matrix of the above example.\relax }}{24}{}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Table sets of LDPC lifting size\relax }}{28}{}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Base graphs block structure\relax }}{28}{}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Base graph 1 with iLS = 1\relax }}{29}{}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Base graph B\relax }}{30}{}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Parity-check matrix H\relax }}{30}{}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces LDPC channel coding chain\relax }}{30}{}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces LDPC Decoder\relax }}{32}{}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Parity Check Matrix and Tanner Graph\relax }}{33}{}%
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Iteration between variable nodes and check nodes\relax }}{34}{}%
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Part of an LDPC matrix\relax }}{34}{}%
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Tanner Graph\relax }}{35}{}%
-\contentsline {figure}{\numberline {2.16}{\ignorespaces Second Iteration\relax }}{35}{}%
-\contentsline {figure}{\numberline {2.17}{\ignorespaces MSA\relax }}{36}{}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Illustration of the channel coding principle.\relax }}{12}{}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Coding gain\relax }}{13}{}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Coded data stream\relax }}{13}{}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Tanner graph of $H$ matrix of the above example.\relax }}{23}{}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Table sets of LDPC lifting size\relax }}{27}{}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Base graphs block structure\relax }}{27}{}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Base graph 1 with iLS = 1\relax }}{28}{}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Base graph B\relax }}{29}{}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Parity-check matrix H\relax }}{29}{}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces LDPC channel coding chain\relax }}{29}{}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces LDPC Decoder\relax }}{31}{}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Parity Check Matrix and Tanner Graph\relax }}{32}{}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Iteration between variable nodes and check nodes\relax }}{33}{}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Part of an LDPC matrix\relax }}{33}{}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Tanner Graph\relax }}{34}{}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Second Iteration\relax }}{34}{}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces MSA\relax }}{35}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Rayleigh random variable\relax }}{38}{}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces AWGN vs Rayleigh fading BER for SISO\relax }}{39}{}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Rayleigh random variable\relax }}{37}{}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces AWGN vs Rayleigh fading BER for SISO\relax }}{38}{}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces MIMO Setup\relax }}{39}{}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces DMRS Mapping type A \& type B \relax }}{42}{}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Single Tx Single Rx\relax }}{43}{}%

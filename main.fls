@@ -501,6 +501,12 @@ INPUT .\images\23.PNG
 INPUT .\images\23.PNG
 INPUT .\images\23.PNG
 INPUT .\images\23.PNG
+INPUT .\images\MIMO.PNG
+INPUT .\images\MIMO.PNG
+INPUT .\images\MIMO.PNG
+INPUT .\images\MIMO.PNG
+INPUT .\images\MIMO.PNG
+INPUT .\images\MIMO.PNG
 INPUT .\chapters\reference_signals.tex
 INPUT .\chapters\reference_signals.tex
 OUTPUT chapters\reference_signals.aux

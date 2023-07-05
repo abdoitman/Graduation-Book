@@ -65,7 +65,10 @@ The figure shows a Rayleigh distribution for different values of $\sigma$. This 
 \section{SISO}
 SISO stands for \textbf{"Single Input, Single Output"}. In communication engineering, SISO is the simplest way to describe a communication link between a transmitter and a receiver. It is used to describe the case where both the transmitter and receiver have single antennas. Pre-coding is not typically used in SISO communication systems. \\
 For a SISO channel (we drop the time index for now)
-\[y = hx + n\]
+\begin{equation}
+    \label{eq:simplest channel model}
+    y = hx + n
+\end{equation}
 The noise power is $N_o$. The minimum distance between Constellation points without fading is $2a$, where $a$ is the smallest transmitted amplitude per constellation points.
 Now, with fading coefficient $h$, minimum distance becomes $d_{min}=2|h|a$. There, for this CSI value, we can upper bound the probability of error as
 
@@ -112,10 +115,55 @@ This looks like the linear decrease behavior we saw above in Figure~\ref{fig:BER
 \section{MISO}
 
 \section{MIMO}
+MIMO stands for \emph{Multiple-In Multiple-Out}, referring to the fact that when a packet is transmitted into the channel it transmitted on more than one antenna and when it comes out of the channel it is received on multiple antennas. This is in contrast to a Single-In Single-Out system with one antenna on both ends of the link, or a SIMO system which would include some types of radios that use diversity combining at the receive end but still transmit over only a single antenna.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{MIMO.PNG}
+    \caption{MIMO Setup}
+    \label{fig:MIMO}
+\end{figure}
 
+Multiple antennas at the transmitter and receiver introduces signaling degrees of freedom that were absent in SISO systems. This is referred to as the spatial degree of freedom. The spatial degrees of freedom can either be exploited for “diversity” or “multiplexing” (will be discussed later in this chapter in Sec~\ref{subsection:MIMO-Diversity} \& Sec~\ref{subsection:MIMO-Multiplexing}).
+
+\begin{GrayBox}
+    \textbf{Alternative View:} \\
+    We can think of MIMO as if it were to be a Multi-user MISO system with \emph{one BS} with multiple antennas and \emph{multiple} users with single antennas.
+\end{GrayBox}
+
+For any MIMO setup with $m$ transmitting antennas and $n$ receiving antennas (shown in Figure~\ref{fig:MIMO}), the channel model shown in Equation~\ref{eq:simplest channel model} will not hold simply because we have multiple antennas for both Tx and Rx, instead each received symbol $y_i$ is described as:
+\begin{equation}
+    \label{eq:y_i MIMO}
+    y_i = h_{i1} x_1 + h_{i2} x_2 + \ldots + h_{iM} x_M + n_i \qquad \text{for } i=1,\ldots,N
+\end{equation}
+We can represent the above equation in matrix form for all received symbols $\bar{y}$
+\begin{equation}
+    \label{eq:y_bar MIMO}
+    \bar{y} = \bar{\bar{H}} \bar{x} + \bar{n}
+\end{equation}
+\[ \text{where}: \quad \bar{y} = \left[ \begin{array}{c}
+    y_1 \\
+    \vdots \\
+    y_N
+\end{array} \right] , \bar{\bar{H}} = \left[ \begin{array}{c c c}
+    h_{11} & \cdots & h_{1M} \\
+    \vdots & h_{ij} & \vdots \\
+    h_{N1} & \cdots & h_{NM}
+\end{array} \right] , \bar{x} = \left[ \begin{array}{c}
+    x_1 \\
+    \vdots \\
+    x_M
+\end{array} \right] , \bar{n} = \left[ \begin{array}{c}
+    n_1 \\
+    \vdots \\
+    n_N     
+\end{array} \right] \]
 
 \subsection{Diversity}
 \label{subsection:MIMO-Diversity}
+A simple example of diversity is multiple antennas trying to receive the same signal. The received signal on the two antennas is corrupted by noise that is uncorrelated between antennas, therefore by combining the two signals a better quality signal can be reconstructed. The analogy here is that by looking at the same object from two different vantage points, richer information on the object can be obtained.
 
 \subsection{Multiplexing}
 \label{subsection:MIMO-Multiplexing}
+The second major MIMO technique is Spatial Multiplexing. Spatial multiplexing enables a MIMO transmitter/receiver pair to increase its throughput without increasing bandwidth usage or transmit power. Multiplexing increases throughput linearly with the number of transmit or receive antennas, whichever is lower. The transmitter sends signals carrying different bit streams from each of its antennas. Each receiver antenna receives a linear combination of the transmitted signals.
+
+\subsection{MIMO in Our Simulator}
