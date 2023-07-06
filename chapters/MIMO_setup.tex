@@ -305,8 +305,53 @@ We can see that using MIMO setup also improves $P_e$ of the system drastically.
 \subsection{Spatial Multiplexing}
 \label{subsection:MIMO-Multiplexing}
 The second major MIMO technique is Spatial Multiplexing. Spatial multiplexing enables a MIMO transmitter/receiver pair to increase its capacity without increasing bandwidth usage or transmit power. Multiplexing increases throughput linearly with the number of transmit or receive antennas, whichever is lower. The transmitter sends signals carrying different bit streams from each of its antennas. Each receiver antenna receives a linear combination of the transmitted signals.
+\subsubsection{Shannon's Law}
+Like in many other scientific fields, there are theoretical limits that must be respected. This is valid for the maximum quantity of data that may be transmitted over a given channel when there is noise. Shannon's Law, after the person who created it, is the law that controls this. This is particularly significant since MIMO wireless technology offers a way to increase data speeds above those achievable on a single channel without its use without violating the law. \\
+Shannon's law defines the maximum rate at which error free data can be transmitted over a given bandwidth in the presence of noise. It is usually expressed in the form:
+\begin{equation}
+    \label{eq:Shannon rate law}
+    C = W \log_2 \left( 1 + \frac{P}{W \sigma_N^2} \right)
+\end{equation}
+Where $C$ is the channel capacity in bps and $W$ is the bandwidth in Hz.\\
 
+From this it can be seen that there is an ultimate limit on the capacity of a channel with a given bandwidth. However before this point is reached, the capacity is also limited by the signal to noise ratio of the received signal.\\
+
+Numerous choices must be taken regarding the way in which a transmission is made in light of these restrictions. This is when the modulation strategy can really come into play. greater order modulation techniques can increase channel capacity, but they need a greater signal to noise ratio than lower order modulation schemes do. As a result, there is a balance between the data rate and the permitted error rate, signal to noise ratio, and transmit power.\\
+\subsubsection{MIMO Spatial Multiplexing}
+As mentioned, the main idea behind using MIMO in spatial diversity is to utilize the multiple channels at the transmitter and the receiver to increase the total capacity of the system (recall the channel model in Equation~\ref{eq:y_bar MIMO}). \\
+
+To maximize the channel in the MIMO, we use the same method explained in the diversity with the same encoding and decoding techniques with the only difference is sending different input signals not just a repeated signal. \\
+Following on the received $y_{d_i}$ equation (\ref{eq:decoding y_bar}) from the channel decoding in the diversity case we get that for each received signal at the receiver
+\[ \tilde{y_i} = \sigma_i \tilde{x_i} + \tilde{n_i} \qquad i=1,\ldots,r \]
+where $\sigma_i$ is the singular value of the channel gain matrix $\bar{\bar{H}}$ and $r$ is the the rank of $\bar{\bar{H}}$.\\
+This method will help us think of the MIMO system as $r$-parallel gaussian channels with each channel having a noise power of $N_o$ and received power of $\sigma_i^2 p_i$ which will increase the capacity of the whole system. \\
+The total achievable capacity in the this system is
+\begin{equation}
+    \label{eq:C sum in perfect knowledge}
+    \begin{aligned}
+        C_{total} &= \sum_{i=1}^{r} c_i \\
+        &= \sum_{i=1}^{r} \log_2 \left( 1 + \frac{\sigma_2 p_i}{N_o} \right)
+    \end{aligned}
+\end{equation}
 
 \subsection{Practical Implementation of MIMO}
 All we have talked about so far was under the assumption that both the transmitter and the receiver have perfect knowledge of the channel state at all times. This was a way to ease explaining the concept, but can not be implemented in the simulator.\\
-Therefore, we had to implement another way to decode the received signal using $\bar{\bar{U}}$ from the SVD of $\bar{\bar{H}}$ (in Equation~\ref{eq:decoding y_bar}).
+
+In reality, the channel state information can not be perfectly known at both the transmitter and the receiver or even the technique used in encoding the signal. Therefore, using $\bar{\bar{U}}$ from the SVD of $\bar{\bar{H}}$ (in Equation~\ref{eq:decoding y_bar}) to decode the received signal is not possible.\\
+
+\subsubsection{MIMO Diversity}
+In this case, the receiver ignores or does not have enough information about the pre-coding method used at the transmitter but can an estimation about the channel using a DMRS signal (discussed in the next chapter), hence we use MRC to decode the signal. \\
+Let $d$ denotes the raw input symbol, $x$ denotes the transmitted signal, $y$ denotes the received signal and $y_d$ denotes the decoded signal at the receiver.
+\begin{equation}
+    \label{eq: MIMO div using MRC}
+    \begin{aligned}
+        y &= Hx + n \\
+        &= H \cdot 1 \cdot d + n \\
+        &= \left( \sum_i^N h_i \right) d + n \\
+        \\
+        y_d &= \left[ \left( \sum_j^N h^H_j \right) / \left( 1^T \cdot H^H \cdot H \cdot 1 \right) \right] y \\
+        &= \frac{ \sum_i^N \sum_j^N h^H_j h_i }{1^T \cdot H^H \cdot H \cdot 1} (d + n) \\
+        &= d + \tilde{n}
+    \end{aligned}
+\end{equation}
+Then, we can retrieve the sent symbol.
