@@ -109,6 +109,48 @@ This probability is found to can be approximated to
 This looks like the linear decrease behavior we saw above in Figure~\ref{fig:BER SISO}.
 
 \section{SIMO}
+The SIMO or Single Input Multiple Output version of MIMO occurs where the transmitter has a single antenna and the receiver has multiple antennas. This is also known as receive diversity. It is often used to enable a receiver system that receives signals from a number of independent sources to combat the effects of fading. It has been used for many years with short wave listening / receiving stations to combat the effects of ionospheric fading and interference.\\
+
+SIMO has the advantage that it is relatively easy to implement although it does have some disadvantages in that the processing is required in the receiver. The use of SIMO may be quite acceptable in many applications, but where the receiver is located in a mobile device such as a cellphone handset, the levels of processing may be limited by size, cost and battery drain. \\
+
+\textbf{How can SIMO help?}\\
+If we have multiple receive antennas, then it is less likely that all of them is in deep fading at the same time.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.45\textwidth]{44.PNG}
+\caption{Single Input Multiple Output (SIMO) channel model}
+\label{fig:SIMO}
+\end{figure}
+
+SIMO channel configuration is characterized by 1 transmit antenna and multiple receiver antennas. SIMO configuration is used to provide receive diversity, where the same information is received across independent fading channels to combat fading. When multiple copies of the same data are received across independently fading channels, the amount of fade suffered by each copy of the data will be different. This guarantees that at least one of the copy will suffer less fading compared to rest of the copies. Thus, the chance of properly receiving the transmitted data increases. In effect, this improves the reliability of the entire system. \\
+We have $N$ receive antennas. The channel coefficient between the receive antenna and the transmit antenna is $h_i$ .Then we can write the received signal as a vector $\bar{y}$ with the element $y_i$ corresponding to the received signal on the received antenna.
+\[\left[\begin{matrix}y_1\\\vdots\\y_N\\\end{matrix}\right]=\ \left[\begin{matrix}h_1\\\vdots\\h_N\\\end{matrix}\right]x+\ \left[\begin{matrix}n_1\\\vdots\\n_N\\\end{matrix}\right]\  \]
+\[\bar{y}=\ \bar{h}x+\bar{n}\]
+Using this received signal, two techniques can be used to combat deep fading.
+
+\subsection{Selection Combining}
+The way proposed here is to select the antenna with the highest received signal.
+In this case, the received signal r will have power
+\[|r|^2= \max_i{|h_i|^2 a^2}\]
+Now let's look at the probability of deep fading
+\begin{equation}
+    \label{eq:p of deep fading in SIMO}
+    \begin{aligned}
+        \mathbf{P}\left\{|r|^2 \leq \sigma^2 \right\} &= \mathbf{P}\left\{\max_i{|h_i|^2 \leq \frac{1}{\text{SNR}}}\right\} \\
+        & =\left[1- \exp \left( \frac{1}{2\text{SNR}} \right) \right]^N
+    \end{aligned}
+\end{equation}
+
+And at high SNR, we have 
+\[\exp \left( \frac{-1}{2\text{SNR}} \right) \approx 1-\frac{1}{2\text{SNR}}\]
+\[P\left\{\max_i{\left|h_i\right|^2\le\frac{1}{\text{SNR}}}\right\}\approx\frac{1}{2^N}\frac{1}{\left(\text{SNR}\right)^N}\]
+In dB 
+\[P\left\{\max_i{\left|h_i\right|^2\le\frac{1}{\text{SNR}}}\right\}_{dB}= \text{const.} - N \cdot \text{SNR}_{dB}\]
+The slope is increased by a factor of N 
+This increase in the slope is called “Diversity gain”.
+It is the most useful benefit in having multiple copies of the received signal passing through
+Independent fading channel.
+\[\hat{w}=\ hh\]
 
 \section{MISO}
 
@@ -203,8 +245,8 @@ where $\bar{\bar{U}}$ and $\bar{\bar{V}}$ are unitary matrices ($\bar{\bar{U}}^H
     \label{fig:MIMOdiv}
 \end{figure}
 
-\subsubsection{Pre-coding at Transmitter}
-Now, we will use the decomposition of the channel to pre-code the signal sent at the transmitter. Let $\bar{x_p}$ denotes the raw signal before being sent at the transmitter, then 
+\subsubsection{Encoding at Transmitter}
+Now, we will use the decomposition of the channel to encode the signal sent at the transmitter. Let $\bar{x_p}$ denotes the raw signal before being sent at the transmitter, then 
 \begin{equation}
     \label{eq:pre-coded x}
     \bar{x} = \bar{\bar{V}} \bar{x_p}
@@ -260,11 +302,10 @@ We can then calculate the average $Pe$ as follows
 \end{equation}
 We can see that using MIMO setup also improves $P_e$ of the system drastically.
 
-\subsection{Multiplexing}
+\subsection{Spatial Multiplexing}
 \label{subsection:MIMO-Multiplexing}
-The second major MIMO technique is Spatial Multiplexing. Spatial multiplexing enables a MIMO transmitter/receiver pair to increase its throughput without increasing bandwidth usage or transmit power. Multiplexing increases throughput linearly with the number of transmit or receive antennas, whichever is lower. The transmitter sends signals carrying different bit streams from each of its antennas. Each receiver antenna receives a linear combination of the transmitted signals.
+The second major MIMO technique is Spatial Multiplexing. Spatial multiplexing enables a MIMO transmitter/receiver pair to increase its capacity without increasing bandwidth usage or transmit power. Multiplexing increases throughput linearly with the number of transmit or receive antennas, whichever is lower. The transmitter sends signals carrying different bit streams from each of its antennas. Each receiver antenna receives a linear combination of the transmitted signals.
 
-\subsection{MIMO in Our Simulator}
 
 \subsection{Practical Implementation of MIMO}
 All we have talked about so far was under the assumption that both the transmitter and the receiver have perfect knowledge of the channel state at all times. This was a way to ease explaining the concept, but can not be implemented in the simulator.\\
