@@ -4,7 +4,7 @@
 
 \subsection{Channel Model}
 We assume that our channel model is Rayleigh fading channel model.\\
-Consider the centralized massive MISO system, in which the BS is deployed $n_{tx}$ transmitter antennas and there are $K$ users being randomly distributed in the circular-shape cell. In this scenario, the $n_{tx}$ transmitter serves to $K$ single-antenna users at the same time frequency resources.\\
+Consider the centralized massive MISO system, in which the BS is deployed $n_{T_x}$ transmitter antennas and there are $K$ users being randomly distributed in the circular-shape cell. In this scenario, the $n_{T_x}$ transmitter serves to $K$ single-antenna users at the same time frequency resources.\\
 Before all users received the transmitted date, the BS shall use some simple linear pre-coding techniques pre-process, which realizes the signal term maximization and interfere term minimization as much as possible. For the $K$ users, the received vector is given by
 \[ y = \sqrt{\rho} H W^H s + n \]
 where $\rho$ is the input SNR, $\mathbf{H}\in\mathbb{C}^{{K \times n}_{T_x}}$ denotes channel matrix between $n_{T_x}$ transmitter antenna and $K$ users, $\mathbf{s}\in{\mathbb{C}}^{1 \times K}$ denotes a signal vector, $\mathbf{W}\in{\mathbb{C}}^{{K \times n}_{T_x}}$ the pre-coder  matrix, which enables to boosts the total achievable rate of massive multi-user MISO system, $n$ denotes complex-valued additive white Gaussian noise (AWGN) at user, distributed as $\mathcal{N} \mathcal{C} (0, \sigma^\mathbf{2}_\mathbf{n})$.
@@ -89,7 +89,7 @@ Now let's define the state, action and reward to map our optimization problem to
 \end{description}
 \subsection{Algorithm Parameters}
 \begin{enumerate}
-    \item 3 hidden layers model with neurons [1024,512,] respectively.
+    \item 3 hidden layers model with neurons [1024,512,128] respectively.
     \item Actor learning rate = 0.001 and Critic learning rate = 0.002 with decaying reaches to 0.0001 and 0.0002 respectively.
     \item Channel noise = 0.2 in case of low input SNR.
     \item Exploration noise variance \[ \sigma^2_\epsilon = \frac{0.1}{\text{episode number}} \]

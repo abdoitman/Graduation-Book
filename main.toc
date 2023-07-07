@@ -36,7 +36,7 @@
 \contentsline {subsubsection}{Goals}{26}{}%
 \contentsline {subsubsection}{NR Base graphs and parity-check matrix}{26}{}%
 \contentsline {subsubsection}{LDPC channel coding chain}{29}{}%
-\contentsline {subsubsection}{LDPC base graph selection}{29}{}%
+\contentsline {subsubsection}{LDPC base graph selection}{30}{}%
 \contentsline {subsection}{\numberline {2.4.5}Rate matching}{30}{}%
 \contentsline {section}{\numberline {2.5}LDPC Decoding}{30}{}%
 \contentsline {subsection}{\numberline {2.5.1}Important Concepts Before We Dig Deeper}{31}{}%

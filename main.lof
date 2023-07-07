@@ -9,25 +9,24 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Coding gain\relax }}{13}{}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Coded data stream\relax }}{13}{}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Tanner graph of $H$ matrix of the above example.\relax }}{23}{}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Table sets of LDPC lifting size\relax }}{27}{}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Base graphs block structure\relax }}{27}{}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Base graph 1 with iLS = 1\relax }}{28}{}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Base graph B\relax }}{29}{}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Parity-check matrix H\relax }}{29}{}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces LDPC channel coding chain\relax }}{29}{}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces LDPC Decoder\relax }}{31}{}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Flow of Repetition Soft Input Soft Output Decoding\relax }}{32}{}%
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Flow of Single Parity Check Soft Input Soft Output Decoding\relax }}{34}{}%
-\contentsline {figure}{\numberline {2.14}{\ignorespaces f(x)\relax }}{36}{}%
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Parity Check Matrix and Tanner Graph\relax }}{38}{}%
-\contentsline {figure}{\numberline {2.16}{\ignorespaces Iteration between variable nodes and check nodes\relax }}{38}{}%
-\contentsline {figure}{\numberline {2.17}{\ignorespaces Part of an LDPC matrix\relax }}{39}{}%
-\contentsline {figure}{\numberline {2.18}{\ignorespaces Tanner Graph\relax }}{39}{}%
-\contentsline {figure}{\numberline {2.19}{\ignorespaces Second Iteration\relax }}{40}{}%
-\contentsline {figure}{\numberline {2.20}{\ignorespaces MSA\relax }}{40}{}%
-\contentsline {figure}{\numberline {2.21}{\ignorespaces Steps for MSA Algorithm\relax }}{44}{}%
-\contentsline {figure}{\numberline {2.22}{\ignorespaces Layered message passing example\relax }}{45}{}%
-\contentsline {figure}{\numberline {2.23}{\ignorespaces Implementation steps of LNMSA and LOMSA\relax }}{50}{}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Base graphs block structure\relax }}{27}{}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Base graph 1 with iLS = 1\relax }}{28}{}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Base graph B\relax }}{29}{}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Parity-check matrix H\relax }}{29}{}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces LDPC channel coding chain\relax }}{29}{}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces LDPC Decoder\relax }}{31}{}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Flow of Repetition Soft Input Soft Output Decoding\relax }}{32}{}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Flow of Single Parity Check Soft Input Soft Output Decoding\relax }}{34}{}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces f(x)\relax }}{36}{}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Parity Check Matrix and Tanner Graph\relax }}{38}{}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Iteration between variable nodes and check nodes\relax }}{39}{}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Part of an LDPC matrix\relax }}{39}{}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Tanner Graph\relax }}{39}{}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Second Iteration\relax }}{40}{}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces MSA\relax }}{40}{}%
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Steps for MSA Algorithm\relax }}{44}{}%
+\contentsline {figure}{\numberline {2.21}{\ignorespaces Layered message passing example\relax }}{45}{}%
+\contentsline {figure}{\numberline {2.22}{\ignorespaces Implementation steps of LNMSA and LOMSA\relax }}{50}{}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Rayleigh random variable\relax }}{52}{}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces AWGN vs Rayleigh fading BER for SISO\relax }}{53}{}%
