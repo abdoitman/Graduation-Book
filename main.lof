@@ -16,50 +16,55 @@
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Parity-check matrix H\relax }}{29}{}%
 \contentsline {figure}{\numberline {2.10}{\ignorespaces LDPC channel coding chain\relax }}{29}{}%
 \contentsline {figure}{\numberline {2.11}{\ignorespaces LDPC Decoder\relax }}{31}{}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Parity Check Matrix and Tanner Graph\relax }}{32}{}%
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Iteration between variable nodes and check nodes\relax }}{33}{}%
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Part of an LDPC matrix\relax }}{33}{}%
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Tanner Graph\relax }}{34}{}%
-\contentsline {figure}{\numberline {2.16}{\ignorespaces Second Iteration\relax }}{34}{}%
-\contentsline {figure}{\numberline {2.17}{\ignorespaces MSA\relax }}{35}{}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Flow of Repetition Soft Input Soft Output Decoding\relax }}{32}{}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Flow of Single Parity Check Soft Input Soft Output Decoding\relax }}{34}{}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces f(x)\relax }}{36}{}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Parity Check Matrix and Tanner Graph\relax }}{38}{}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Iteration between variable nodes and check nodes\relax }}{38}{}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Part of an LDPC matrix\relax }}{39}{}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Tanner Graph\relax }}{39}{}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Second Iteration\relax }}{40}{}%
+\contentsline {figure}{\numberline {2.20}{\ignorespaces MSA\relax }}{40}{}%
+\contentsline {figure}{\numberline {2.21}{\ignorespaces Steps for MSA Algorithm\relax }}{44}{}%
+\contentsline {figure}{\numberline {2.22}{\ignorespaces Layered message passing example \relax }}{45}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Rayleigh random variable\relax }}{37}{}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces AWGN vs Rayleigh fading BER for SISO\relax }}{38}{}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Single Input Multiple Output (SIMO) channel model\relax }}{39}{}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces MIMO Setup\relax }}{41}{}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces MIMO setup used for diversity\relax }}{42}{}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Rayleigh random variable\relax }}{47}{}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces AWGN vs Rayleigh fading BER for SISO\relax }}{48}{}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Single Input Multiple Output (SIMO) channel model\relax }}{49}{}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces MIMO Setup\relax }}{51}{}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces MIMO setup used for diversity\relax }}{52}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces DMRS Mapping type A \& type B \relax }}{48}{}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Single Tx Single Rx\relax }}{49}{}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Pilot signals in some REs\relax }}{49}{}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Correlation in time \& frequency\relax }}{50}{}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Delay spread effect\relax }}{50}{}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Doppler spread effect\relax }}{51}{}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Single-port CSI-RS structure consisting of a single resource element within an RB/slot block. \relax }}{52}{}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces CSI-RS Frequency density \relax }}{53}{}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces CSI-RS Periodicity and slot offset \relax }}{53}{}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Channel estimation process \relax }}{54}{}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Single Tx Single Rx\relax }}{55}{}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces 2x2 MIMO setup\relax }}{55}{}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces pilot symbols for 2x2 MIMO channel\relax }}{56}{}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces DMRS Mapping type A \& type B \relax }}{58}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Single Tx Single Rx\relax }}{59}{}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Pilot signals in some REs\relax }}{59}{}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Correlation in time \& frequency\relax }}{60}{}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Delay spread effect\relax }}{60}{}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Doppler spread effect\relax }}{61}{}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Single-port CSI-RS structure consisting of a single resource element within an RB/slot block. \relax }}{62}{}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces CSI-RS Frequency density \relax }}{63}{}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces CSI-RS Periodicity and slot offset \relax }}{63}{}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Channel estimation process \relax }}{64}{}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Single Tx Single Rx\relax }}{65}{}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces 2x2 MIMO setup\relax }}{65}{}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces pilot symbols for 2x2 MIMO channel\relax }}{66}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Artificial Intelligence Map\relax }}{60}{}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Tic-Tac-Toe\relax }}{62}{}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces A sequence of tic-tac-toe moves.\relax }}{62}{}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces RL Taxonomy\relax }}{63}{}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Deterministic vs. Stochastic Policies\relax }}{64}{}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces 5x5 environment\relax }}{65}{}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Artificial Intelligence Map\relax }}{70}{}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Tic-Tac-Toe\relax }}{72}{}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces A sequence of tic-tac-toe moves.\relax }}{72}{}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces RL Taxonomy\relax }}{73}{}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Deterministic vs. Stochastic Policies\relax }}{74}{}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces 5x5 environment\relax }}{75}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces ACTOR-CRITIC Methods\relax }}{68}{}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces ACTOR-CRITIC\relax }}{69}{}%
-\contentsline {figure}{\numberline {7.3}{\ignorespaces DDPG Algorithm\relax }}{69}{}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces ACTOR-CRITIC Methods\relax }}{78}{}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces ACTOR-CRITIC\relax }}{79}{}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces DDPG Algorithm\relax }}{79}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Achievable linear reward\relax }}{76}{}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Achievable log reward\relax }}{77}{}%
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Linear \& log rewarding techniques comparison\relax }}{77}{}%
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Achievable rewards with and without PAE\relax }}{78}{}%
-\contentsline {figure}{\numberline {8.5}{\ignorespaces Training on random and fixed seeds\relax }}{79}{}%
-\contentsline {figure}{\numberline {8.6}{\ignorespaces Real and imaginary NNs\relax }}{79}{}%
-\contentsline {figure}{\numberline {8.7}{\ignorespaces Effect of decreasing neurons\relax }}{80}{}%
-\contentsline {figure}{\numberline {8.8}{\ignorespaces All versions of the model\relax }}{80}{}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Achievable linear reward\relax }}{86}{}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Achievable log reward\relax }}{87}{}%
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Linear \& log rewarding techniques comparison\relax }}{87}{}%
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Achievable rewards with and without PAE\relax }}{88}{}%
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Training on random and fixed seeds\relax }}{89}{}%
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Real and imaginary NNs\relax }}{89}{}%
+\contentsline {figure}{\numberline {8.7}{\ignorespaces Effect of decreasing neurons\relax }}{90}{}%
+\contentsline {figure}{\numberline {8.8}{\ignorespaces All versions of the model\relax }}{90}{}%

@@ -672,7 +672,160 @@ The use of logarithm in LLR has several advantages:
 In soft decision decoding, LLR is used to estimate the likelihood that a particular transmitted symbol was received correctly. This information is then used to make more reliable decisions about the transmitted data, especially in scenarios where noise or interference may corrupt the received signal.
 
 \subsubsection{Repetition Soft Input Soft Output Decoding}
+We will take the $(3, 1)$ repetition code as example to explain repetition SISO decoder and we will assume BPSK representation of bits and AWGN channel.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.55\textwidth]{ldpc_dec.jpg}
+    \caption{Flow of Repetition Soft Input Soft Output Decoding}
+    \label{fig:flow of LDPC RSISOD}
+\end{figure}
+We have a message bit m okay it goes through the encoder, produce a code word which is m , m , m  , then we do BPSK we all know what it is by now 0 to plus 1, 1 to  minus 1 and we get a symbol vector S okay and then this goes through noise and get a receive vector r which is r1, r2, r3.\\
+Using gaussian distributions
+\[ p\left({\ r}_i\ \middle| c_i=0\right)=\frac{1}{\sqrt{2\sigma^2}}\ast e^{{-\frac{1}{{2\sigma}^2}({\ r}_i-1)}^2} \]
+\[ p\left({\ r}_i\ \middle| c_i=1\right)=\frac{1}{\sqrt{2\sigma^2}}\ast e^{{-\frac{1}{{2\sigma}^2}({\ r}_i+1)}^2} \]
+Using bay's theorem ,
+\[p\left({\ r}_i\ \middle| c_i=0\right)=\frac{p\left({\ r}_i\ \middle| c_i=0\right).p(c_i=0)}{p(r_i)}\]
+\[LLR=\log\frac{p\left(c_i=0\middle| r_i\right)}{p\left(c_i=1\middle| r_i\right)}\]
+\[LLR=\frac{-1}{{2\sigma}^2}\left(\left(\ r_i-1\right)^2-\left(\ r_i+1\right)^2\right)\]
+\[{LLR}_{intrinsic}= \frac{2}{\sigma^2} \ast r_i\]
+\textbf{Note:} BPSK: $0 \rightarrow 1$ , $1 \rightarrow -1$.\\
+$\frac{2}{\sigma^2}$ is a positive factor, practically in most cases we usually ignore this factor.\\
+
+Output LLR (Beliefs $L$):
+\[L_i=\log\frac{p\left(c_i=0\middle| r_{1,}r_2{,r}_3\right)}{p\left(c_i=1\middle| r_1{,r}_2,r_3\right)}\]
+\[p\left(c_1=0\middle| r_1{,r}_2{,r}_3\right)=\frac{f\left(r_1{,r}_2{,r}_3\middle| c_1=0\right).p(c_1=0)}{f(r_1{,r}_2{,r}_3)}\]
+\[p\left(c_1=1\middle| r_1{,r}_2{,r}_3\right)=\frac{f\left(r_1{,r}_2{,r}_3\middle| c_1=1\right).p(c_1=1)}{f(r_1{,r}_2{,r}_3)}\]
+Assuming $p\left(c_1=0\right)=p\left(c_1=1\right)=.5$
+\[\frac{p\left(c_1=0\middle| r_{1,}r_2{,r}_3\right)}{p\left(c_1=1\middle| r_1{,r}_2,r_3\right)}=\frac{f\left(r_1{,r}_2{,r}_3\middle| c_1=0\right)}{f\left(r_1{,r}_2{,r}_3\middle| c_1=1\right)}\]
+When $c_1=0 \rightarrow S=[1 1 1] \rightarrow  r_1=1+N_1(0,\sigma^2)$ , $r_2=1+N_2(0,\sigma^2)$ , $r_3=1+N_3(0,\sigma^2)$: $N_1$, $N_2$, $N_3$ are \emph{independent}.
+\[\frac{p\left(c_1=0\middle| r_{1,}r_2{,r}_3\right)}{p\left(c_1=1\middle| r_1{,r}_2,r_3\right)}=\frac{\exp \left( {\frac{{-(r_1-1)}^2}{{2\sigma}^2}}\right) \cdot \exp \left( {\frac{{-(r_2-1)}^2}{{2\sigma}^2}}\right) \cdot \exp \left( {\frac{{-(r_3-1)}^2}{{2\sigma}^2}}\right)}{\exp \left( {\frac{{-(r_1+1)}^2}{{2\sigma}^2}}\right)\cdot\exp \left( {\frac{{-(r_2+1)}^2}{{2\sigma}^2}}\right)\cdot\exp \left( {\frac{{-(r_3+1)}^2}{{2\sigma}^2}}\right)}=\exp \left( {\frac{2}{\sigma^2}(r_1+r_2+r_3)}\right)\]
+\[L_1=log\frac{p\left(c_1=0\middle| r_{1,}r_2{,r}_3\right)}{p\left(c_1=1\middle| r_1{,r}_2,r_3\right)}=\frac{2}{\sigma^2}(r_1+r_2+r_3)\]
+\[L_1=\frac{2}{\sigma^2}(r_1+r_2+r_3)\]
+Intrinsic belief of $L_1=\frac{2}{\sigma^2}\ast r_1$ and extrinsic belief of $L_1=\frac{2}{\sigma^2}\ast(r_2+r_3)$ and it is valid for $L_{2},L_3 $.\\
+The intrinsic belief that we have based on what we received for that symbol $r_1$ directly and then extrinsic what comes from $r_2$ and $r_3$ , so the intrinsic one is what we receive from the Channel corresponding to that particular symbol and extrinsic is what we gain or clean out of the other received values about this particle symbol.
+We can generalize it Intrinsic belief of $L_i=\frac{2}{\sigma^2}\ast r_i$ and extrinsic belief of $L_i=\frac{2}{\sigma^2}\ast \sum \left( \text{other beleifs except }r_i \right)$
+\[L_{i=}L_{intrinsic}+L_{extrinsic\ }\]
+\begin{GrayBox}
+    \textbf{Note:} Intrinsic belief is what we have based on what we received for that symbol $r_1$ directly and then extrinsic what comes from $r_2$ and $r_3$ so the intrinsic one is what we receive from the Channel corresponding to that particular symbol and extrinsic is what we gain or clean out of the other received values about this particle symbol.
+\end{GrayBox}
+Let us take simple example for illustration:
+If we receive $r = [.01 -2.4 -1.5]$ the output from SISO decoder will be:
+\[[L, L, L] = [-3.89, -3.89, -3.89] \ast \frac{2}{\sigma^2} \] 
+( $\frac{2}{\sigma^2}$ :is a positive factor, practically in most cases we usually ignore this factor). 
+Then we can apply hard decision $\rightarrow [1, 1, 1]$ (for BPSK).
 \subsubsection{Single Parity Check Soft Input Soft Output Decoding}
+A single parity-check code is a linear systematic code where a single parity-check is added at the end of the data word. Its generator and parity check matrices are :
+\begin{equation*}
+    G = \left[ \begin{array}{c c c c}
+        1 & 0 & \cdots & 1 \\
+        0 & 1 & \cdots & 1 \\
+        \vdots & \vdots & \ddots & \vdots \\
+        0 & 0 & \cdots & 1
+    \end{array} \right] \qquad H = \left[ 1, 1, 1, \cdots, 1 \right]
+\end{equation*}
+For SPC$(n,n-1)$:\\
+If $m=[m_1,m_2,m_3,m_4, \ldots, m_{n-1}]$, Encoder $\rightarrow  c=[ m_1,m_2,m_3,m_4, \ldots, m_{n-1}, p]$, where $p$:is the parity bit. $p = m_1 \oplus m_2 \oplus m_3 \oplus \ldots \oplus m_{n-1}$ (XOR of all massage bits).\\
+\textbf{Example:} SPC$(3,2)$
+\[C=\left[\begin{matrix}m_1&m_2&p\\0&0&0\\0&1&1\\1&0&1\\1&1&0\\\end{matrix}\right]\]
+\textbf{Note:} we can consider each row as a possible code word and we noticed that number of 1's of any SPC code word is even. So, we can say that SPC code consist of all even weighted vectors of length $n$.\\
+We will take the $(3, 2)$ SPC code as example to explain repetition SISO decoder and we will assume BPSK representation of bits and AWGN channel.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.55\textwidth]{ldpc_dec2.jpg}
+    \caption{Flow of Single Parity Check Soft Input Soft Output Decoding}
+    \label{fig:flow of LDPC SPC}
+\end{figure}
+We have a message bits $m_1$ and $m_2$ okay they go through the encoder, produce a code word which is $m_1 , m_2 , p$ , then we do BPSK we all know what it is by now 0 to +1, 1 to -1 and we get a symbol vector $S$ okay and then this goes through noise and get a receive vector $r$ which is $r_1, r_2, r_3$.\\
+The output beliefs from decoder $L_1$, $L_2$ and $L_3$ 
+\[L_{i}=l_\text{intrinsic}+l_\text{extrinsic}\]
+To get the intrinsic belief we can do same calculation we have done before in repetition code and we will get same result:
+\[l_{intrinsic(i)}=\frac{2}{\sigma^2}\ast r_i\]
+The challenge here is to get extrinsic belief, we know now that $c_1 = c_2 \oplus c_3$\\
+Let us say that: 
+\[l_1=\log\frac{p\left(c_i=0\middle| r_{1,}\right)}{p\left(c_i=1\middle| r_1\right)}   	, p_1=p\left(c_1=0\middle| r_{1,}\right)\ \ \ \ \ ,p_2=p\left(c_2=0\middle| r_{2,}\right)\ \ ,p_3=p\left(c_3=0\middle| r_{3,}\right)\]
+So we can say that:
+\[l_1=\log\frac{p_1}{1-p_1}\]
+And the same with $l_2$ and $l_3$.\\
+Given $p_2, p_3$, what is $p(c1=0|r_2, r_3)$?
+\[\begin{matrix}c1&c2&c3\\0&0&0\\0&1&1\\1&0&1\\1&1&0\\\end{matrix}\]
+From previous table 
+\[p_1=p_2\ p_3\ +\left(1-p_2\right)\left(1-p_3\right) \qquad (1)\]
+\[1-p_1=p_2\ \left(1-p_3\right)+\left(1-p_2\right)p_3 \qquad (2)\]
+$1-2:$
+\[p_1-\left(1-p_1\right)=\left(p_2-\left(1-p_2\right)\right).(p_3-\left(1-p_3\right))\]
+Using algebraic tricks:
+\[\frac{p_1-\left(1-p_1\right)}{p_1+\left(1-p_1\right)}=\frac{\left(p_2-\left(1-p_2\right)\right)}{p_2+\left(1-p_2\right)}.\frac{(p_3-\left(1-p3\right))}{p_3+\left(1-p_3\right)}\]
+\[\frac{1-\frac{1-p_1}{p_1}}{1+\frac{1-p_1}{p_1}}=\frac{1-\frac{1-p_2}{p_2}}{1-\frac{1-p_2}{p_2}}.\frac{1-\frac{1-p_3}{p_3}}{1-\frac{1-p_2}{p_2}}\]
+\[l_{\text{extrinsic}(1)}=\log\frac{p_1}{1-p_1} \quad , \quad \frac{1-p_1}{p_1}=e^{-l_{extrinsic\ (1)}}\]
+\[\frac{1-e^{-l_{extrinsic\ (1)}}}{1+e^{-l_{extrinsic\ (1)}}}=\frac{1-e^{-l_{(2)}}}{1+e^{-l_{\ (2)}}}.\frac{1-e^{-l_{(3)}}}{1+e^{-l_{\ (3)}}}\]
+And we know that: 
+\[\tanh{\left(x\right)}=\frac{e^x-e^{-x}}{e^x+e^{-x}}=\frac{1-e^{-2x}}{1+e^{-2x}} \quad,\quad l_{(2)}=\frac{2}{\sigma^2}\ast r_2\ \quad,\quad l_{(3)}=\frac{2}{\sigma^2}\ast r_3\]
+$C_1=C_2 \oplus C_3 \rightarrow \tanh{\left(\frac{l_{extrinsic\ (1)}}{2}\right)=\tanh{\left(\frac{l_{(2)}}{2}\right) \cdot \tanh{\left(\frac{l_{(3)}}{2}\right)}}}$
+Since tanh is an odd function it can be divided into absolute value and sign \\
+Sign:			
+\[\text{sign}\left(l_{extrinsic\ \left(1\right)}\right)=sign\left(l_{\left(2\right)}\right).sign(l_{\left(3\right)})\]
+Absolute Value:
+\[\tanh{\left(\frac{\left|l_{extrinsic\ (1)}\right|}{2}\right)=\tanh{\left(\frac{\left|l_{(2)}\right|}{2}\right).\tanh{\left(\frac{\left|l_{(3)}\right|}{2}\right)}}}\]
+\[\log\tanh{\left(\frac{\left|l_{extrinsic\ (1)}\right|}{2}\right)=log\tanh{\left(\frac{\left|l_{(2)}\right|}{2}\right)+log\tanh{\left(\frac{\left|l_{(3)}\right|}{2}\right)}}}\]
+Assume that:
+\[x>0 \quad,\quad f\left(x\right)=\left|\log{\left(\tanh{\left(\frac{x}{2}\right)}\right)}\right|\]
+\[f^{-1}\left(x\right)\approx f\left(x\right)\]
+\[f\left(\left|l_{extrinsic\ \left(1\right)}\right|\right)=f\left(\left|l_{\left(2\right)}\right|\right)+f(\left|l_{\left(3\right)}\right|)\]
+\[\left|l_{extrinsic\ \left(1\right)}\right|=f(f\left(\left|l_{\left(2\right)}\right|\right)+f\left(\left|l_{\left(3\right)}\right|\right))\]
+\[ \left|l_{extrinsic\ \left(1\right)}\right|=f(f\left(\left|l_{\left(2\right)}\right|\right)+f\left(\left|l_{\left(3\right)}\right|\right)) \]
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{tanh.png}
+    \caption{f(x)}
+    \label{fig:logtanh}
+\end{figure}
+Figure~\ref{fig:logtanh} shows $f\left(x\right)=|\log\left(\tanh{\left(\frac{x}{2}\right)}\right)|$. We can see that for small values of $x$ the value of $f(x)$ will be very large and for large values of $x$ the value of $f(x)$ will be very small so we can use very popular approximation for this this equation.
+\[f(f\left(\left|l_{\left(2\right)}\right|\right)+f\left(\left|l_{\left(3\right)}\right|\right))\approx f(\min{\left(\left|l_{\left(2\right)}\right|,\left|l_{\left(3\right)}\right|\right)})\]
+So we can say that 
+\[\left|l_{extrinsic\ \left(1\right)}\right|=f(f(\min\left(\left|l_{\left(2\right)}\right|,\left|l_{\left(3\right)}\right|\right)))\]
+\[f(f(\min\left(\left|l_{\left(3\right)}\right|,\left|l_{\left(2\right)}\right|\right)))\approx\min\left(\left|l_{\left(2\right)}\right|,\left|l_{\left(3\right)}\right|\right)\]
+\[\left|l_{extrinsic\ \left(1\right)}\right|\approx\min\left(\left|l_{\left(2\right)}\right|,\left|l_{\left(3\right)}\right|\right)\]
+And this is called \textbf{Min-Sum approximation}.
+\begin{GrayBox}
+    \[ \text{sign}\left(l_{extrinsic\ \left(1\right)}\right)=\text{sign}\left(l_{\left(2\right)}\right)\cdot \text{sign}(l_{\left(3\right)}) \]
+    \[ \left|l_{\text{extrinsic} \left(1\right)}\right|\approx\min\left(\left|l_{\left(2\right)}\right|,\left|l_{\left(3\right)}\right|\right) \]
+\end{GrayBox}
+Now we can generalize these equations, if we have $n-1$ massage bits and the output code word length is $n$.
+\[ l_{extrinsic\ \left(1\right)}=sign\left(l_{\left(2\right)}\right)\cdot sign\left(l_{\left(3\right)}\right) \cdot \ldots \cdot sign\left(l_{\left(n\right)}\right)\ast \min\left(\left|l_{\left(2\right)}\right|,\left|l_{\left(3\right)}\right|,\ldots,\left|l_{\left(n\right)}\right|\right) \]
+\[ l_{extrinsic\ \left(2\right)}=sign\left(l_{\left(1\right)}\right)\cdot sign\left(l_{\left(3\right)}\right) \cdot \ldots \cdot sign\left(l_{\left(n\right)}\right)\ast \min\left(\left|l_{\left(2\right)}\right|,\left|l_{\left(3\right)}\right|,\ldots,\left|l_{\left(n\right)}\right|\right) \]
+\[ l_{extrinsic\ \left(n\right)}=sign\left(l_{\left(1\right)}\right)\cdot sign\left(l_{\left(2\right)}\right) \cdot \ldots \cdot sign\left(l_{\left(n-1\right)}\right)\ast \min\left(\left|l_{\left(1\right)}\right|,\left|l_{\left(2\right)}\right|,\ldots,\left|l_{\left(n-1\right)}\right|\right) \]
+instead of all these min we can do that:
+\[ M_1=\min\left(\left|l_{\left(1\right)}\right|,\left|l_{\left(2\right)}\right|,\left|l_{\left(3\right)}\right|,\ldots,\left|l_{\left(n\right)}\right|\right) \]
+where $M_1$ is the first absolute min.\\
+\textbf{Where does first min occur?}\\
+\textbf{Answer:}
+\[ pos=\arg{\min\left(\left|l_{\left(1\right)}\right|,\left|l_{\left(2\right)}\right|,\left|l_{\left(3\right)}\right|,\ldots,\left|l_{\left(n\right)}\right|\right)} \]
+\[ M_2=\min\left(\left|l_{\left(1\right)}\right|,\left|l_{\left(2\right)}\right|,\ldots,\left|l_{\left(pos-1\right)}\right|,\left|l_{\left(pos+1\right)}\right|,\ldots,\left|l_{\left(n\right)}\right|\right) \]
+where $M_2$ is the second absolute min.
+\[\left|l_{\text{extrinsic}\left(\text{pos}\right)}\right|=M_2\]
+\[\left|l_{\text{extrinsic}\left(i\right)}\right|_{i\neq \text{pos}}=M_1\]
+and assume that 
+\[ S_{(\text{over all parity})}=sign\left(l_{\left(1\right)}\right) \cdot sign\left(l_{\left(2\right)}\right) \cdot sign\left(l_{\left(3\right)}\right)\cdot\ldots\cdot sign\left(l_{\left(n\right)}\right) \]
+So we can say that
+\[ sign\left(l_{extrinsic\ \left(1\right)}\right)=S \cdot sign\left(l_{\left(1\right)}\right) \]
+\[ sign\left(l_{extrinsic\ \left(2\right)}\right)=S \cdot sign\left(l_{\left(2\right)}\right) \]
+\[ sign\left(l_{extrinsic\ \left(n\right)}\right)=S \cdot sign\left(l_{\left(n\right)}\right) \]
+And if
+\begin{equation*}
+    Sign\left(l_{extrinsic\ \left(1\right)}\right)
+    \begin{cases}
+        -Sign\left(l_{\ \left(i\right)}\right), & S < 0 \\
+        Sign\left(l_{\ \left(i\right)}\right), & S > 0
+    \end{cases}
+\end{equation*}
+Again, this approximation is very very important.\\
+Repetition and single parity check (SPC) soft decoding are two important techniques used in LDPC belief propagation decoding. So, we need to know more about soft input soft output repetition and (SPC) decoding.
+\begin{description}
+    \item[Repetition:] In LDPC belief propagation decoding, repetition is used to improve the reliability of received bits. It involves transmitting the same information multiple times to increase the chances of correct reception. This redundancy helps in error detection and correction. By repeating the information, LDPC codes can achieve higher error correction capabilities.
+    \item[Single Parity Check (SPC) Soft Decoding:] SPC is a simple error detection code that checks for parity errors in a block of data. In LDPC belief propagation decoding, SPC soft decoding is used as an initial step to estimate the likelihoods (or probabilities) of bit values based on received noisy signals. These likelihoods are then used as input to the belief propagation algorithm.
+\end{description}
+The belief propagation algorithm is a message-passing algorithm that iteratively updates the probabilities of bit values based on the received signals and the probabilities from neighboring bits. The SPC soft decoding provides an initial estimate of these probabilities, which helps in initializing the belief propagation process.\\
+By combining repetition and SPC soft decoding with belief propagation, LDPC codes can achieve efficient error correction capabilities while maintaining low complexity. The repetition provides redundancy for error detection and correction, while SPC soft decoding helps in estimating initial probabilities for efficient belief propagation decoding.
 
 \subsection{Message Passing Algorithm}
 \subsubsection{Soft-Input Soft-Output Iterative Message Passing Decoder}
@@ -771,5 +924,128 @@ Repeat for multiple iterations (as shown in Figure~\ref{fig:MSA})
     \caption{MSA}
     \label{fig:MSA}
 \end{figure}
+\textbf{Toy example fro illustration:}\\
+\[ H=\left[\begin{matrix}1&1&1&0&1&0&0\\0&1&1&1&0&1&0\\1&1&0&1&0&0&1\\1&0&1&0&1&1&1\\\end{matrix}\right] \]
+We will use the above matrix for illustration. Typically , a much larger matrix is used in 5G !\\
+\textbf{Storage matrix($L$)}:\\
+$L$: Sparse matrix of same dimensions as parity-check matrix
+\begin{itemize}
+    \item NR, rate-1/2: $L$ is a $(22 \times 46) \times 48$ sparse matrix.
+    \item For the toy example: $L$ is a $4 \times 7$ matrix.
+    \item $L[i , j] = 0$ if $H[i , j] = 0$
+    \item $L[i , j]$ can be nonzero only if $H[i , j] = 1$
+\end{itemize}
+\[ L=\left[\begin{matrix}x&x&x&0&x&0&0\\0&x&x&x&0&x&0\\x&x&0&x&0&0&x\\x&0&x&0&x&x&x\\\end{matrix}\right] \]
+\textbf{1-Initialization Step}
+\[ r= \left[\begin{matrix}r_1&r_2&r_3&r_4&r_5&r_6&r_7\\\end{matrix}\right] \]
+\[ L=\left[\begin{matrix}r_1&r_2&r_3&0&r_5&0&0\\0&r_2&r_3&r_4&0&r_6&0\\r_1&r_2&0&r_4&0&0&r_7\\r_1&0&r_3&0&r_5&r_6&r_7\\\end{matrix}\right] \]
+\[ r= \left[\begin{matrix}0.2&-0.3&1.2&-0.5&0.8&0.6&-1.1\\\end{matrix}\right] \]
+\[ L=\left[\begin{matrix}0.2&-0.3&1.2&0&0.8&0&0\\0&-0.3&1.2&-0.5&0&0.6&0\\0.2&-0.3&0&-0.5&0&0&-1.1\\0.2&0&1.2&0&0.8&0.6&-1.1\\\end{matrix}\right] \]
+\textbf{2-Row Operation: (SPC SISO)}
+In-place computation using $L$, for each row:
+\begin{itemize}
+    \item Magnitude
+    \begin{itemize}
+        \item Min1 = minimum absolute value of all nonzero entries in row
+        \item Min2 = next higher absolute value (second Min)
+        \item Set magnitude of all values (except minimum (Min 1) = Min1)
+        \item Set magnitude of minimum value (Min1) = Min2
+    \end{itemize}
+    \item Sign
+    \begin{itemize}
+        \item Parity = product of signs of entries in row
+        \item New sign of an entry = (Old Sign) $\times$ (Parity)
+    \end{itemize}
+\end{itemize}
+Row Operation on Row 1
+\[ L=\left[\begin{matrix}-0.3&0.2&-0.2&0&-0.2&0&0\\0&-0.3&1.2&-0.5&0&0.6&0\\0.2&-0.3&0&-0.5&0&0&-1.1\\0.2&0&1.2&0&0.8&0.6&-1.1\\\end{matrix}\right] \]
+After Row Operation On All Rows
+\[ L=\left[\begin{matrix}-0.3&0.2&-0.2&0&-0.2&0&0\\0&-0.5&0.3&-0.3&0&0.3&0\\-0.3&0.2&0&0.2&0&0&0.2\\-0.6&0&-0.2&0&-0.2&-0.2&0.2\\\end{matrix}\right] \]
+\textbf{3-Column Operation: (Repetition SISO)} \\
+In-place computation using $L$, for each column:
+\begin{itemize}
+    \item New Values
+    \begin{itemize}
+        \item Sum j = r j+ sum of all entries in Column \[ Sum \rightarrow \text{updated values} \]
+        \item New Entry = Sum - (Old entry)
+    \end{itemize}
+\end{itemize}
+After Column Operation
+\[ r_{old\ received\ values}=[\begin{matrix}0.2&-0.3&1.2&-0.5&0.8&0.6&-1.1\\\end{matrix}] \]
+\[ L=\left[\begin{matrix}-0.3&0.2&-0.2&0&-0.2&0&0\\0&-0.5&0.3&-0.3&0&0.3&0\\-0.3&0.2&0&0.2&0&0&0.2\\-0.6&0&-0.2&0&-0.2&-0.2&0.2\\\end{matrix}\right] \]
+\[ {Sum}_{updated\ values} = \begin{matrix} [-1&-0.4&1.1&-0.6&0.4&0.7&-0.7\\\end{matrix}] \]
+\[ L_{new}=\left[\begin{matrix}-0.7&-0.6&1.3&0&0.6&0&0\\0&0.1&0.8&-0.3&0&0.4&0\\-0.7&-0.6&0&-0.8&0&0&-0.9\\-0.4&0&1.3&0&0.6&0.9&-0.9\\\end{matrix}\right] \]
+Now, for the hard decision
+\begin{equation*}
+    \text{BPSK}
+    \begin{cases}
+        1, & c=0 \\
+        -1, & c=1
+    \end{cases}
+\end{equation*}
+If $Sum > 0$, Decision on Bit $j = 0$, If $Sum < 0$, Decision on Bit $j = 1$.
+\[ \begin{matrix}\text{sum}=[-1&-0.4&1.1&-0.6&0.4&0.7&-0.7\\\end{matrix}] \]
+\[ \begin{matrix}\text{DEC}=[1&1&0&1&0&0&1\\\end{matrix}] \]
+
+Same example can be represented using \emph{tanner graph}:\\
+\textbf{1-Initialization Step}\\
+Variable nodes sending messages to their connected check nodes. These messages contain information about the likelihood of each possible value of the variable given its neighboring check nodes.
+\[ r=[\begin{matrix}0.2&-0.3&1.2&-0.5&0.8&0.6&-1.1\\\end{matrix}] \]
+\begin{figure*}[ht]
+    \centering
+    \includegraphics[width=0.55\textwidth]{46.png}
+\end{figure*}
+
+\textbf{2-Variable Node to Check Node:}\\
+In first iteration each variable node has only the initial value so each variable node sends only the value of the variable node itself (initial value) however , after 1st iteration The message sent from variable node $i$ to check node $j$ is calculated as the sum of the incoming messages from all other neighboring check nodes except $j$, plus the value of the variable node itself. This can be represented as:
+\[Message[i \rightarrow j] = Variable[i] + \sum(Message[k -> i]) \qquad \forall k \neq j \]
+\begin{figure*}[ht]
+    \centering
+    \includegraphics[width=0.55\textwidth]{47.png}
+\end{figure*}
+
+\textbf{3-Check to Variable Message Update:}\\
+After receiving messages from all its neighboring variable nodes, each check node updates its outgoing messages to the variable nodes. The message sent from check node $j$ to variable node $i$ is calculated by Applying (Min-Sum) operation the operation on the incoming messages from all other neighboring variable nodes.
+\begin{figure*}[ht]
+    \centering
+    \includegraphics[width=0.55\textwidth]{48.png}
+\end{figure*}
+
+\textbf{4-Iteration:}\\ 
+Steps 2 and 3 are repeated iteratively until convergence or for a fixed number of iterations. Convergence is typically determined by checking if there is no significant change in the messages between consecutive iterations.\\
+Now we can say we know why it was called massage passing algorithm Because the messages (belief) are actually passed between Variable nodes and check nodes also we can call it belief propagation.\\
+The steps required to implement MSA algorithm can be summarized in Figure~\ref{fig:MSA Algorithm}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.85\textwidth]{image075.png}
+    \caption{Steps for MSA Algorithm}
+    \label{fig:MSA Algorithm}
+\end{figure}
 
 \subsubsection{Optimized Min-Sum Decoding Algorithm}
+The outputs from variable nodes in MSA decoding are overestimated compared to SPA (sum of product algorithm) due to MSA uses  numerical approximation. There are several methods to optimize Min-Sum Algorithms (MSA) to make the approximation more accurate. The two most popular methods are Normalized Min-Sum Algorithm (NMSA) and Offset Min-Sum Algorithm (OMSA). The idea behind NMSA and OMSA is to reduce the magnitude of variable node.\\
+Assume that the magnitudes of variable nodes output of MSA , NMSA and OMSA are $L^{MSA}$, $L^{NMSA}$, $L^{OMSA}$ \\
+For Normalized Min-Sum Algorithm
+\[ L^{NMSA}=\alpha L^{MSA} \]
+Where $\alpha$ is called normalization factor and $0 < \alpha < 1$. \\
+For Offset Min-Sum Algorithm,
+\[ \ L^{OMSA}=\max\left(L^{MSA}-\beta,0\right) \]
+Where $\beta$ is called offset factor and $\beta > 0$.
+
+\subsubsection{Layered Message Passing Algorithm}
+Suppose the parity check matrix H can be grouped into several subsets, and each subset follows the property that the column weight of each subset is at most 1 and one subset after another. In that case, layered decoding can be used. Layered message passing decoding can expedite convergence time. Because the check nodes operations can be processed when the variable nodes operations in one layer are done instead of waiting for all variable nodes operations in the whole parity-check matrix done.\\
+
+The layered message passing can be illustrated using Figure 2.12. Each layer processes variable nodes operation and check nodes operation independently. The input LLR of the current layer is the output of previous LLR. Figure 3.12 shows layered message passing procedure of three layers. The initial LLR is assigned to Layer1. LLR1 is the output LLR of Layer1 and input LLR of Layer2. LLR2 is the output LLR of Layer2 and input LLR of Layer3. The output LLR of the last layer is the output LLR of the decoding algorithm and will be used to make the decision.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{image046.png}
+    \caption{Layered message passing example }
+    \label{fig:Layered message passing example }
+\end{figure}
+The variable nodes operation and check nodes operation in each layer are the same with  MSA. The diﬀerence is the updated LLR for each layer. The current layer input LLR can be updated.
+\[ l_{layer_k+1,i}=L_{layer_k+1,i}-l_{layer_k+1,i^\prime} \]
+Where $l_{layer_k+1,i}$ is the updated input LLR of layer $k+1$, $L_{layer_k+1,i}$ is the output LLR of previous layer , $l_{layer_k+1,i^\prime}$ is old input LLR of layer $k+1$.\\
+\begin{GrayBox}
+    \textbf{Note:} In order to apply the layered decoding algorithm, the parity check matrix must satisfy that in each layer the column weight is 1 and As we have seen in Figure~\ref{fig:H parity} this condition is met by 5G parity check matrix.
+\end{GrayBox}

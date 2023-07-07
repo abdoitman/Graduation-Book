@@ -337,8 +337,7 @@ The total achievable capacity in the this system is
 \subsection{Practical Implementation of MIMO}
 All we have talked about so far was under the assumption that both the transmitter and the receiver have perfect knowledge of the channel state at all times. This was a way to ease explaining the concept, but can not be implemented in the simulator.\\
 
-In reality, the channel state information can not be perfectly known at both the transmitter and the receiver or even the technique used in encoding the signal. Therefore, using $\bar{\bar{U}}$ from the SVD of $\bar{\bar{H}}$ (in Equation~\ref{eq:decoding y_bar}) to decode the received signal is not possible.\\
-
+In reality, the channel state information can not be perfectly known at both the transmitter and the receiver or even the technique used in encoding the signal. Therefore, using $\bar{\bar{U}}$ from the SVD of $\bar{\bar{H}}$ (in Equation~\ref{eq:decoding y_bar}) to decode the received signal is not possible.
 \subsubsection{MIMO Diversity}
 In this case, the receiver ignores or does not have enough information about the pre-coding method used at the transmitter but can an estimation about the channel using a DMRS signal (discussed in the next chapter), hence we use MRC to decode the signal. \\
 Let $d$ denotes the raw input symbol, $x$ denotes the transmitted signal, $y$ denotes the received signal and $y_d$ denotes the decoded signal at the receiver.
@@ -355,3 +354,4 @@ Let $d$ denotes the raw input symbol, $x$ denotes the transmitted signal, $y$ de
     \end{aligned}
 \end{equation}
 Then, we can retrieve the sent symbol.
+\subsubsection{MIMO Spatial Multiplexing}

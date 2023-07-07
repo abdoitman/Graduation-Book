@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.29)  7 JUL 2023 00:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.29)  7 JUL 2023 05:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -913,66 +913,136 @@ File: ./images/image001.png Graphic file (type png)
 Package pdftex.def Info: ./images/image001.png  used on input line 644.
 (pdftex.def)             Requested size: 241.84842pt x 51.86256pt.
  [30] [31 <./images/image001.png>]
-<./images/image002.png, id=209, 556.0775pt x 490.83376pt>
+<./images/ldpc_dec.jpg, id=209, 745.28438pt x 329.73187pt>
+File: ./images/ldpc_dec.jpg Graphic file (type jpg)
+<use ./images/ldpc_dec.jpg>
+Package pdftex.def Info: ./images/ldpc_dec.jpg  used on input line 678.
+(pdftex.def)             Requested size: 266.03473pt x 117.69711pt.
+ [32 <./images/ldpc_dec.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 690--693
+
+ []
+
+
+Overfull \hbox (1.79973pt too wide) detected at line 701
+[] \OT1/cmr/m/n/12 = [] = [] []
+ []
+
+[33]
+<./images/ldpc_dec2.jpg, id=217, 750.55406pt x 347.04657pt>
+File: ./images/ldpc_dec2.jpg Graphic file (type jpg)
+<use ./images/ldpc_dec2.jpg>
+Package pdftex.def Info: ./images/ldpc_dec2.jpg  used on input line 734.
+(pdftex.def)             Requested size: 266.03473pt x 123.01439pt.
+ [34 <./images/ldpc_dec2.jpg>] [35]
+<./images/tanh.png, id=224, 642.90187pt x 550.30594pt>
+File: ./images/tanh.png Graphic file (type png)
+<use ./images/tanh.png>
+Package pdftex.def Info: ./images/tanh.png  used on input line 778.
+(pdftex.def)             Requested size: 193.47577pt x 165.60527pt.
+ [36 <./images/tanh.png>]
+<./images/image002.png, id=230, 556.0775pt x 490.83376pt>
 File: ./images/image002.png Graphic file (type png)
 <use ./images/image002.png>
-Package pdftex.def Info: ./images/image002.png  used on input line 681.
+Package pdftex.def Info: ./images/image002.png  used on input line 834.
 (pdftex.def)             Requested size: 193.47577pt x 170.7758pt.
-<./images/image004.png, id=210, 730.73pt x 337.26pt>
+ [37]
+<./images/image004.png, id=234, 730.73pt x 337.26pt>
 File: ./images/image004.png Graphic file (type png)
 <use ./images/image004.png>
-Package pdftex.def Info: ./images/image004.png  used on input line 701.
+Package pdftex.def Info: ./images/image004.png  used on input line 854.
 (pdftex.def)             Requested size: 266.03473pt x 122.78238pt.
- [32 <./images/image002.png>]
-<./images/image006.png, id=214, 427.5975pt x 164.86594pt>
+<./images/image006.png, id=235, 427.5975pt x 164.86594pt>
 File: ./images/image006.png Graphic file (type png)
 <use ./images/image006.png>
-Package pdftex.def Info: ./images/image006.png  used on input line 709.
+Package pdftex.def Info: ./images/image006.png  used on input line 862.
 (pdftex.def)             Requested size: 193.47577pt x 74.5965pt.
- [33 <./images/image004.png> <./images/image006.png>]
-<./images/image010.png, id=220, 216.81pt x 297.36093pt>
+ [38 <./images/image002.png> <./images/image004.png>]
+<./images/image010.png, id=239, 216.81pt x 297.36093pt>
 File: ./images/image010.png Graphic file (type png)
 <use ./images/image010.png>
-Package pdftex.def Info: ./images/image010.png  used on input line 738.
+Package pdftex.def Info: ./images/image010.png  used on input line 891.
 (pdftex.def)             Requested size: 120.92421pt x 165.85399pt.
-<./images/image012.png, id=221, 414.04688pt x 197.98969pt>
+<./images/image012.png, id=240, 414.04688pt x 197.98969pt>
 File: ./images/image012.png Graphic file (type png)
 <use ./images/image012.png>
-Package pdftex.def Info: ./images/image012.png  used on input line 745.
+Package pdftex.def Info: ./images/image012.png  used on input line 898.
 (pdftex.def)             Requested size: 169.29684pt x 80.95575pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 756--758
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 762--763
+ [39 <./images/image006.png> <./images/image010.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 909--911
 
  []
 
-<./images/image014.png, id=222, 764.8575pt x 301.125pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 915--916
+
+ []
+
+<./images/image014.png, id=246, 764.8575pt x 301.125pt>
 File: ./images/image014.png Graphic file (type png)
 <use ./images/image014.png>
-Package pdftex.def Info: ./images/image014.png  used on input line 770.
+Package pdftex.def Info: ./images/image014.png  used on input line 923.
 (pdftex.def)             Requested size: 290.22105pt x 114.25867pt.
-) [34 <./images/image010.png> <./images/image012.png>] [35 <./images/image014.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--928
+
+ []
+
+[40 <./images/image012.png> <./images/image014.png>] [41]
+<./images/46.png, id=254, 909.3975pt x 450.9347pt>
+File: ./images/46.png Graphic file (type png)
+<use ./images/46.png>
+Package pdftex.def Info: ./images/46.png  used on input line 996.
+(pdftex.def)             Requested size: 266.03473pt x 131.91678pt.
+<./images/47.png, id=255, 899.61093pt x 408.77719pt>
+File: ./images/47.png Graphic file (type png)
+<use ./images/47.png>
+Package pdftex.def Info: ./images/47.png  used on input line 1004.
+(pdftex.def)             Requested size: 266.03473pt x 120.88138pt.
+<./images/48.png, id=256, 893.58844pt x 411.78844pt>
+File: ./images/48.png Graphic file (type png)
+<use ./images/48.png>
+Package pdftex.def Info: ./images/48.png  used on input line 1011.
+(pdftex.def)             Requested size: 266.03473pt x 122.59497pt.
+ [42 <./images/46.png>]
+<./images/image075.png, id=262, 640.3925pt x 672.5125pt>
+File: ./images/image075.png Graphic file (type png)
+<use ./images/image075.png>
+Package pdftex.def Info: ./images/image075.png  used on input line 1021.
+(pdftex.def)             Requested size: 411.14526pt x 431.77133pt.
+ [43 <./images/47.png> <./images/48.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1037--1038
+
+ []
+
+<./images/image046.png, id=268, 292.09125pt x 206.27063pt>
+File: ./images/image046.png Graphic file (type png)
+<use ./images/image046.png>
+Package pdftex.def Info: ./images/image046.png  used on input line 1042.
+(pdftex.def)             Requested size: 241.84842pt x 170.7954pt.
+[44 <./images/image075.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1047--1051
+
+ []
+
+) [45 <./images/image046.png>]
 \openout2 = `chapters/MIMO_setup.aux'.
 
  (chapters/MIMO_setup.tex
 Chapter 3.
-[36
+[46
 
 
 
 
 ]
-<./images/22.PNG, id=235, 803.0pt x 602.25pt>
+<./images/22.PNG, id=280, 803.0pt x 602.25pt>
 File: ./images/22.PNG Graphic file (type png)
 <use ./images/22.PNG>
 Package pdftex.def Info: ./images/22.PNG  used on input line 57.
 (pdftex.def)             Requested size: 193.47577pt x 145.10352pt.
- [37 <./images/22.PNG>]
-<./images/23.PNG, id=241, 526.96875pt x 395.22656pt>
+ [47 <./images/22.PNG>]
+<./images/23.PNG, id=285, 526.96875pt x 395.22656pt>
 File: ./images/23.PNG Graphic file (type png)
 <use ./images/23.PNG>
 Package pdftex.def Info: ./images/23.PNG  used on input line 91.
@@ -982,7 +1052,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--101
 
  []
 
-[38 <./images/23.PNG (PNG copy)>]
+[48 <./images/23.PNG (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
@@ -992,25 +1062,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
 
-<./images/44.PNG, id=246, 363.759pt x 268.00125pt>
+<./images/44.PNG, id=291, 363.759pt x 268.00125pt>
 File: ./images/44.PNG Graphic file (type png)
 <use ./images/44.PNG>
 Package pdftex.def Info: ./images/44.PNG  used on input line 120.
 (pdftex.def)             Requested size: 217.6621pt x 160.36441pt.
-[39 <./images/44.PNG>]
-<./images/MIMO.PNG, id=251, 360.59718pt x 215.30438pt>
+[49 <./images/44.PNG>]
+<./images/MIMO.PNG, id=296, 360.59718pt x 215.30438pt>
 File: ./images/MIMO.PNG Graphic file (type png)
 <use ./images/MIMO.PNG>
 Package pdftex.def Info: ./images/MIMO.PNG  used on input line 161.
 (pdftex.def)             Requested size: 241.84842pt x 144.40102pt.
- [40] [41 <./images/MIMO.PNG>]
+ [50] [51 <./images/MIMO.PNG>]
 \c@tcb@cnt@SVD_theo=\count342
-<./images/MIMOdiv.PNG, id=259, 965.6075pt x 325.215pt>
+<./images/MIMOdiv.PNG, id=304, 965.6075pt x 325.215pt>
 File: ./images/MIMOdiv.PNG Graphic file (type png)
 <use ./images/MIMOdiv.PNG>
 Package pdftex.def Info: ./images/MIMOdiv.PNG  used on input line 243.
 (pdftex.def)             Requested size: 314.39998pt x 105.88715pt.
- [42 <./images/MIMOdiv.PNG>] [43]
+ [52 <./images/MIMOdiv.PNG>] [53]
 Underfull \hbox (badness 10000) in paragraph at lines 314--316
 
  []
@@ -1030,54 +1100,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 321--322
 
  []
 
-[44]
+[54]
 Underfull \hbox (badness 10000) in paragraph at lines 338--339
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 340--341
-
- []
-
-[45]) [46]
+[55]) [56]
 \openout2 = `chapters/reference_signals.aux'.
 
  (chapters/reference_signals.tex
 Chapter 4.
-[47
+[57
 
 
 
 
 ]
-<./images/6-2.jpg, id=280, 1433.355pt x 621.07031pt>
+<./images/6-2.jpg, id=325, 1433.355pt x 621.07031pt>
 File: ./images/6-2.jpg Graphic file (type jpg)
 <use ./images/6-2.jpg>
 Package pdftex.def Info: ./images/6-2.jpg  used on input line 37.
 (pdftex.def)             Requested size: 290.22105pt x 125.74709pt.
- [48 <./images/6-2.jpg>]
-<./images/7.png, id=285, 804.00375pt x 313.17pt>
+ [58 <./images/6-2.jpg>]
+<./images/7.png, id=329, 804.00375pt x 313.17pt>
 File: ./images/7.png Graphic file (type png)
 <use ./images/7.png>
 Package pdftex.def Info: ./images/7.png  used on input line 47.
 (pdftex.def)             Requested size: 193.47577pt x 75.35825pt.
-<./images/8.PNG, id=286, 616.704pt x 279.444pt>
+<./images/8.PNG, id=330, 616.704pt x 279.444pt>
 File: ./images/8.PNG Graphic file (type png)
 <use ./images/8.PNG>
 Package pdftex.def Info: ./images/8.PNG  used on input line 63.
 (pdftex.def)             Requested size: 467.58951pt x 170.55865pt.
-<./images/9.PNG, id=287, 602.25pt x 259.56975pt>
+<./images/9.PNG, id=331, 602.25pt x 259.56975pt>
 File: ./images/9.PNG Graphic file (type png)
 <use ./images/9.PNG>
 Package pdftex.def Info: ./images/9.PNG  used on input line 74.
 (pdftex.def)             Requested size: 193.47577pt x 83.38878pt.
-<./images/10.PNG, id=288, 626.34pt x 270.41025pt>
+<./images/10.PNG, id=332, 626.34pt x 270.41025pt>
 File: ./images/10.PNG Graphic file (type png)
 <use ./images/10.PNG>
 Package pdftex.def Info: ./images/10.PNG  used on input line 80.
 (pdftex.def)             Requested size: 193.47577pt x 83.52922pt.
-<./images/11.PNG, id=289, 598.03426pt x 269.20575pt>
+<./images/11.PNG, id=333, 598.03426pt x 269.20575pt>
 File: ./images/11.PNG Graphic file (type png)
 <use ./images/11.PNG>
 Package pdftex.def Info: ./images/11.PNG  used on input line 86.
@@ -1087,61 +1152,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--95
 
  []
 
-<./images/12.PNG, id=290, 314.3745pt x 205.9695pt>
+<./images/12.PNG, id=334, 314.3745pt x 205.9695pt>
 File: ./images/12.PNG Graphic file (type png)
 <use ./images/12.PNG>
 Package pdftex.def Info: ./images/12.PNG  used on input line 105.
 (pdftex.def)             Requested size: 193.47577pt x 126.76318pt.
-<./images/13.PNG, id=291, 304.7385pt x 207.174pt>
+<./images/13.PNG, id=335, 304.7385pt x 207.174pt>
 File: ./images/13.PNG Graphic file (type png)
 <use ./images/13.PNG>
 Package pdftex.def Info: ./images/13.PNG  used on input line 111.
 (pdftex.def)             Requested size: 193.47577pt x 131.53189pt.
-[49 <./images/7.png> <./images/8.PNG>]
-<./images/14.PNG, id=296, 295.70474pt x 202.356pt>
+[59 <./images/7.png> <./images/8.PNG>]
+<./images/14.PNG, id=340, 295.70474pt x 202.356pt>
 File: ./images/14.PNG Graphic file (type png)
 <use ./images/14.PNG>
 Package pdftex.def Info: ./images/14.PNG  used on input line 129.
 (pdftex.def)             Requested size: 193.47577pt x 132.39748pt.
-<./images/15.PNG, id=297, 290.2845pt x 198.7425pt>
+<./images/15.PNG, id=341, 290.2845pt x 198.7425pt>
 File: ./images/15.PNG Graphic file (type png)
 <use ./images/15.PNG>
 Package pdftex.def Info: ./images/15.PNG  used on input line 135.
 (pdftex.def)             Requested size: 193.47577pt x 132.46231pt.
- [50 <./images/9.PNG> <./images/10.PNG> <./images/11.PNG> <./images/12.PNG> <./images/13.PNG>] [51 <./images/14.PNG> <./images/15.PNG>]
-<./images/16.PNG, id=312, 346.896pt x 116.8365pt>
+ [60 <./images/9.PNG> <./images/10.PNG> <./images/11.PNG> <./images/12.PNG> <./images/13.PNG>] [61 <./images/14.PNG> <./images/15.PNG>]
+<./images/16.PNG, id=357, 346.896pt x 116.8365pt>
 File: ./images/16.PNG Graphic file (type png)
 <use ./images/16.PNG>
 Package pdftex.def Info: ./images/16.PNG  used on input line 174.
 (pdftex.def)             Requested size: 346.9163pt x 117.07687pt.
-<./images/17.PNG, id=313, 373.833pt x 181.0035pt>
+<./images/17.PNG, id=358, 373.833pt x 181.0035pt>
 File: ./images/17.PNG Graphic file (type png)
 <use ./images/17.PNG>
 Package pdftex.def Info: ./images/17.PNG  used on input line 193.
 (pdftex.def)             Requested size: 373.65523pt x 181.398pt.
- [52 <./images/16.PNG>]
-<./images/18.PNG, id=318, 437.2335pt x 98.16675pt>
+ [62 <./images/16.PNG>]
+<./images/18.PNG, id=363, 437.2335pt x 98.16675pt>
 File: ./images/18.PNG Graphic file (type png)
 <use ./images/18.PNG>
 Package pdftex.def Info: ./images/18.PNG  used on input line 210.
 (pdftex.def)             Requested size: 467.59503pt x 104.79321pt.
- [53 <./images/17.PNG> <./images/18.PNG>]
-<./images/19.PNG, id=324, 604.05675pt x 258.36525pt>
+ [63 <./images/17.PNG> <./images/18.PNG>]
+<./images/19.PNG, id=369, 604.05675pt x 258.36525pt>
 File: ./images/19.PNG Graphic file (type png)
 <use ./images/19.PNG>
 Package pdftex.def Info: ./images/19.PNG  used on input line 229.
 (pdftex.def)             Requested size: 438.69035pt x 187.90332pt.
- [54 <./images/19.PNG>]
+ [64 <./images/19.PNG>]
 File: ./images/7.png Graphic file (type png)
 <use ./images/7.png>
 Package pdftex.def Info: ./images/7.png  used on input line 256.
 (pdftex.def)             Requested size: 193.47577pt x 75.35825pt.
-<./images/20.PNG, id=330, 278.84175pt x 109.00725pt>
+<./images/20.PNG, id=374, 278.84175pt x 109.00725pt>
 File: ./images/20.PNG Graphic file (type png)
 <use ./images/20.PNG>
 Package pdftex.def Info: ./images/20.PNG  used on input line 269.
 (pdftex.def)             Requested size: 193.47577pt x 75.63756pt.
-<./images/21.PNG, id=331, 329.43076pt x 198.14024pt>
+<./images/21.PNG, id=375, 329.43076pt x 198.14024pt>
 File: ./images/21.PNG Graphic file (type png)
 <use ./images/21.PNG>
 Package pdftex.def Info: ./images/21.PNG  used on input line 284.
@@ -1151,17 +1216,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 292--297
 
  []
 
-[55 <./images/20.PNG>]) [56 <./images/21.PNG>]
+[65 <./images/20.PNG>]) [66 <./images/21.PNG>]
 \openout2 = `chapters/simulations.aux'.
 
  (chapters/simulations.tex
 Chapter 5.
-) [57
+) [67
 
 
 
 
-] [58
+] [68
 
 
 
@@ -1170,17 +1235,17 @@ Chapter 5.
 
  (chapters/RL_Intro.tex
 Chapter 6.
-[59
+[69
 
 
 ]
-<./images/35.PNG, id=349, 241.90375pt x 238.22333pt>
+<./images/35.PNG, id=394, 241.90375pt x 238.22333pt>
 File: ./images/35.PNG Graphic file (type png)
 <use ./images/35.PNG>
 Package pdftex.def Info: ./images/35.PNG  used on input line 34.
 (pdftex.def)             Requested size: 193.47577pt x 190.53893pt.
- [60 <./images/35.PNG>] [61]
-<./images/36.jpeg, id=358, 2055.68pt x 2055.68pt>
+ [70 <./images/35.PNG>] [71]
+<./images/36.jpeg, id=402, 2055.68pt x 2055.68pt>
 File: ./images/36.jpeg Graphic file (type jpg)
 <use ./images/36.jpeg>
 Package pdftex.def Info: ./images/36.jpeg  used on input line 103.
@@ -1190,45 +1255,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--124
 
  []
 
-<./images/37.PNG, id=359, 480.79625pt x 445.665pt>
+<./images/37.PNG, id=403, 480.79625pt x 445.665pt>
 File: ./images/37.PNG Graphic file (type png)
 <use ./images/37.PNG>
 Package pdftex.def Info: ./images/37.PNG  used on input line 126.
 (pdftex.def)             Requested size: 193.47577pt x 179.33728pt.
-[62 <./images/36.jpeg> <./images/37.PNG>]
-<./images/38.PNG, id=364, 988.69376pt x 509.905pt>
+[72 <./images/36.jpeg> <./images/37.PNG>]
+<./images/38.PNG, id=409, 988.69376pt x 509.905pt>
 File: ./images/38.PNG Graphic file (type png)
 <use ./images/38.PNG>
 Package pdftex.def Info: ./images/38.PNG  used on input line 168.
 (pdftex.def)             Requested size: 338.5863pt x 174.61806pt.
- [63 <./images/38.PNG>]
-<./images/39.PNG, id=369, 1459.4525pt x 1063.975pt>
+ [73 <./images/38.PNG>]
+<./images/39.PNG, id=414, 1459.4525pt x 1063.975pt>
 File: ./images/39.PNG Graphic file (type png)
 <use ./images/39.PNG>
 Package pdftex.def Info: ./images/39.PNG  used on input line 183.
 (pdftex.def)             Requested size: 193.47577pt x 141.04907pt.
- [64 <./images/39.PNG>]
-<./images/40.PNG, id=374, 301.125pt x 301.125pt>
+ [74 <./images/39.PNG>]
+<./images/40.PNG, id=419, 301.125pt x 301.125pt>
 File: ./images/40.PNG Graphic file (type png)
 <use ./images/40.PNG>
 Package pdftex.def Info: ./images/40.PNG  used on input line 206.
 (pdftex.def)             Requested size: 106.4139pt x 106.41536pt.
- [65 <./images/40.PNG>]
+ [75 <./images/40.PNG>]
 Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
 
-[66]
+[76]
 Underfull \hbox (badness 10000) in paragraph at lines 244--246
 
  []
 
-) [67]
+) [77]
 \openout2 = `chapters/DDPG.aux'.
 
  (chapters/DDPG.tex
 Chapter 7.
-<./images/41.PNG, id=386, 1105.12875pt x 722.7pt>
+<./images/41.PNG, id=430, 1105.12875pt x 722.7pt>
 File: ./images/41.PNG Graphic file (type png)
 <use ./images/41.PNG>
 Package pdftex.def Info: ./images/41.PNG  used on input line 8.
@@ -1253,13 +1318,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--17
 
  []
 
-[68
+[78
 
 
 
 
  <./images/41.PNG>]
-<./images/42.PNG, id=390, 1003.75pt x 768.8725pt>
+<./images/42.PNG, id=435, 1003.75pt x 768.8725pt>
 File: ./images/42.PNG Graphic file (type png)
 <use ./images/42.PNG>
 Package pdftex.def Info: ./images/42.PNG  used on input line 27.
@@ -1269,23 +1334,23 @@ Overfull \hbox (1.33252pt too wide) in paragraph at lines 32--33
 [][]\OT1/cmr/m/n/12 Estimated gra-di-ent in Pol-icy Gra-di-ent method
  []
 
-<./images/43.PNG, id=391, 757.83125pt x 536.0025pt>
+<./images/43.PNG, id=436, 757.83125pt x 536.0025pt>
 File: ./images/43.PNG Graphic file (type png)
 <use ./images/43.PNG>
 Package pdftex.def Info: ./images/43.PNG  used on input line 37.
 (pdftex.def)             Requested size: 241.84842pt x 171.04993pt.
-[69 <./images/42.PNG> <./images/43.PNG>] [70] [71]) [72] [73]
+[79 <./images/42.PNG> <./images/43.PNG>] [80] [81]) [82] [83]
 \openout2 = `chapters/single_user.aux'.
 
  (chapters/single_user.tex
 Chapter 8.
-[74
+[84
 
 
 
 
-] [75]
-<./images/H1.PNG, id=416, 462.528pt x 346.896pt>
+] [85]
+<./images/H1.PNG, id=461, 462.528pt x 346.896pt>
 File: ./images/H1.PNG Graphic file (type png)
 <use ./images/H1.PNG>
 Package pdftex.def Info: ./images/H1.PNG  used on input line 83.
@@ -1335,12 +1400,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--90
 
  []
 
-<./images/H2.PNG, id=417, 462.528pt x 346.896pt>
+<./images/H2.PNG, id=462, 462.528pt x 346.896pt>
 File: ./images/H2.PNG Graphic file (type png)
 <use ./images/H2.PNG>
 Package pdftex.def Info: ./images/H2.PNG  used on input line 92.
 (pdftex.def)             Requested size: 241.84842pt x 181.38736pt.
-[76 <./images/H1.PNG>]
+[86 <./images/H1.PNG>]
 Underfull \hbox (badness 3088) in paragraph at lines 96--98
 \OT1/cmr/m/n/12 ear re-ward, and it gives bet-ter re-sults
  []
@@ -1360,7 +1425,7 @@ Underfull \hbox (badness 3291) in paragraph at lines 99--102
 \OT1/cmr/m/n/12 The max per-cent-age in case of \OT1/cmr/m/it/12 lin-ear\OT1/cmr/m/n/12 :
  []
 
-<./images/H3.png, id=422, 462.528pt x 346.896pt>
+<./images/H3.png, id=467, 462.528pt x 346.896pt>
 File: ./images/H3.png Graphic file (type png)
 <use ./images/H3.png>
 Package pdftex.def Info: ./images/H3.png  used on input line 105.
@@ -1370,12 +1435,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--119
 
  []
 
-[77 <./images/H2.PNG> <./images/H3.png>]
+[87 <./images/H2.PNG> <./images/H3.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 120--123
 
  []
 
-<./images/H4.PNG, id=428, 462.528pt x 346.896pt>
+<./images/H4.PNG, id=473, 462.528pt x 346.896pt>
 File: ./images/H4.PNG Graphic file (type png)
 <use ./images/H4.PNG>
 Package pdftex.def Info: ./images/H4.PNG  used on input line 131.
@@ -1385,7 +1450,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--134
 
  []
 
-<./images/H5.PNG, id=429, 462.528pt x 346.896pt>
+<./images/H5.PNG, id=474, 462.528pt x 346.896pt>
 File: ./images/H5.PNG Graphic file (type png)
 <use ./images/H5.PNG>
 Package pdftex.def Info: ./images/H5.PNG  used on input line 147.
@@ -1395,24 +1460,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--150
 
  []
 
-[78 <./images/H4.PNG>]
-<./images/H6.png, id=435, 1206.75844pt x 365.86688pt>
+[88 <./images/H4.PNG>]
+<./images/H6.png, id=479, 1206.75844pt x 365.86688pt>
 File: ./images/H6.png Graphic file (type png)
 <use ./images/H6.png>
 Package pdftex.def Info: ./images/H6.png  used on input line 165.
 (pdftex.def)             Requested size: 386.95894pt x 117.31425pt.
-<./images/H7.PNG, id=436, 462.528pt x 346.896pt>
+<./images/H7.PNG, id=480, 462.528pt x 346.896pt>
 File: ./images/H7.PNG Graphic file (type png)
 <use ./images/H7.PNG>
 Package pdftex.def Info: ./images/H7.PNG  used on input line 182.
 (pdftex.def)             Requested size: 241.84842pt x 181.38736pt.
- [79 <./images/H5.PNG> <./images/H6.png>]
-<./images/H8.png, id=442, 462.528pt x 346.896pt>
+ [89 <./images/H5.PNG> <./images/H6.png>]
+<./images/H8.png, id=486, 462.528pt x 346.896pt>
 File: ./images/H8.png Graphic file (type png)
 <use ./images/H8.png>
 Package pdftex.def Info: ./images/H8.png  used on input line 205.
 (pdftex.def)             Requested size: 338.5863pt x 253.95184pt.
-) [80 <./images/H7.PNG> <./images/H8.png>] [81]
+) [90 <./images/H7.PNG> <./images/H8.png>] [91]
 \openout2 = `chapters/multi_user.aux'.
 
  (chapters/multi_user.tex) (main.aux (chapters/intro.aux) (chapters/pdsch_intro.aux) (chapters/channel_coding.aux) (chapters/MIMO_setup.aux) (chapters/reference_signals.aux) (chapters/simulations.aux) (chapters/RL_Intro.aux) (chapters/DDPG.aux) (chapters/single_user.aux) (chapters/multi_user.aux))
@@ -1426,17 +1491,17 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 24368 strings out of 476037
- 521583 string characters out of 5779845
+ 24449 strings out of 476037
+ 523471 string characters out of 5779845
  1885763 words of memory out of 5000000
- 44622 multiletter control sequences out of 15000+600000
+ 44703 multiletter control sequences out of 15000+600000
  524483 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  93i,14n,99p,1270b,750s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\abdoi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/abdoi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (88 pages, 4133149 bytes).
+Output written on main.pdf (98 pages, 4608179 bytes).
 PDF statistics:
- 528 PDF objects out of 1000 (max. 8388607)
+ 573 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 462 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 502 words of extra memory for PDF output out of 10000 (max. 10000000)
 
