@@ -23,3 +23,75 @@ According to the signal model, we can write the rate equation for the user $k$, 
 Where our goal to find the best pre-coding vector $w_k$ which maximizes the overall rate.
 
 \section{Different Pre-coder Constrain Assumption}
+\subsection{Model 1 (Power Allocation)}
+\subsubsection{Model Constraints}
+\begin{itemize}
+    \item We impose the power constraint \[\mathbb{E} \left\{ |s_k| \right\} = 1\] where $\mathbb{E}\left\{\cdot\right\}$ denotes the expectation with respect to the distribution of the underlying random variable.
+    \item We assume that \[ \sum_{k=1}^{K}\|w_k\|^2_2 = 1\] which means BS sends different power to different users according to its channel coefficient.
+\end{itemize}
+\subsubsection{Model Optimization Formulation}
+As we have mentioned our goal to maximize the sum rate so now we formulate our problem as a standard optimization problem:
+\begin{equation}
+    \label{eq:multi-user opt pa}
+    \begin{aligned}
+        \max_{w_k} \quad & \sum_{k=1}^{K} R_k = \sum_{k=1}^{K} \log_2 \left( 1 + \frac{\rho | h_k w_k^H |^2}{1 + \rho \sum_{j=1, 1\neq k}^{K}| h_j w_j^H |^2} \right) \\
+        \text{s.t.} \quad &  \sum_{k=1}^{K}\|w_k\|^2_2 \leq 1 \\
+        & \|s_k\|_2 =1 \quad , \quad k \in [1, \ldots , K] \\
+        & h_k, w_k \in \mathbb{C}^{1 \times n_{T_x}}
+    \end{aligned}
+\end{equation}
+since we have constraint on pre-coder where the 2-norm square of pre-coding vector for each user is equal to one, then \[ p_t = \sum_{k=1}^{K}\|w_k s_k\|^2_2 = 1 \] since we have assumed that $\sigma_s =1$
+\subsubsection{Achievable Rate for Multi-User MISO System}
+We used the known linear pre-coder techniques like MRT (Maximum Ratio Transmission) and ZF (Zero forcing) as the achievable rate analysis for massive MIMO system in this model:
+\begin{description}
+    \item[Maximum Ratio Transmission (MRT):] \[ w_{\text{MRT}} = \frac{H}{\sqrt{\|h_1\|_2^2 + \ldots + \|h_k\|_2^2}} \]
+    \item[Zero Forcing (ZF):] Let $G = \left( H H^H \right)^{-1} H$ \[ w_{\text{ZF}} = \frac{G}{\sqrt{\|g_1\|_2^2 + \ldots + \|g_k\|_2^2}} \]where $H, G, w \in \mathbb{C}^{K \times n_{T_x}}$ and $h_k, g_k \in \mathbb{C}^{1 \times n_{T_x}}$.
+\end{description}
+So, $w_{\text{MRT}}$ and $w_{\text{ZF}}$ achieve the constraint $\sum_{k=1}^{K}\|w_k\|^2_2 = 1$.
+
+\subsection{Model 2 (Equally Transmitted Power to All Users)}
+\subsubsection{Model Constraints}
+\begin{itemize}
+    \item We impose the power constraint \[\mathbb{E} \left\{ |s_k| \right\} = 1\] where $\mathbb{E}\left\{\cdot\right\}$ denotes the expectation with respect to the distribution of the underlying random variable.
+    \item We assume that \[ \|w_k\|_2 = 1\] which means each user takes the same power from BS.
+\end{itemize}
+\subsubsection{Model Optimization Formulation}
+As we have mentioned our goal to maximize the sum rate so now we formulate our problem as a standard optimization problem:
+\begin{equation}
+    \label{eq:multi-user opt sp}
+    \begin{aligned}
+        \max_{w_k} \quad & \sum_{k=1}^{K} R_k = \sum_{k=1}^{K} \log_2 \left( 1 + \frac{\rho | h_k w_k^H |^2}{1 + \rho \sum_{j=1, 1\neq k}^{K}| h_j w_j^H |^2} \right) \\
+        \text{s.t.} \quad &  \|w_k\|_2 = 1 \\
+        & \|s_k\|_2 =1 \quad , \quad k \in [1, \ldots , K] \\
+        & h_k, w_k \in \mathbb{C}^{1 \times n_{T_x}}
+    \end{aligned}
+\end{equation}
+since we have constraint on pre-coding where the 2-norm square of pre-coding vector for each user is equal to one, then
+\[ p_t = \sum_{k=1}^{K}\|w_k s_k\|^2_2 = 4 \]
+since we have assumed that $\sigma_s =1$
+\subsubsection{Achievable Rate for Multi-User MISO System}
+We used the known linear pre-coder techniques like MRT (Maximum Ratio Transmission) and ZF (Zero forcing) as the achievable rate analysis for massive MIMO system in this model:
+\begin{description}
+    \item[Maximum Ratio Transmission (MRT):] \[ w_k^{\text{MRT}} = \frac{h_k}{\|h_k\|_2} \quad , \quad k \in [1, \ldots , K] \]
+    \item[Zero Forcing (ZF):] Let $G = \left( H H^H \right)^{-1} H$ \[ w_k^{\text{ZF}} = \frac{g_k}{\|g_k\|_2} \quad , \quad k \in [1, \ldots , K] \]where $H, G, w \in \mathbb{C}^{K \times n_{T_x}}$ and $h_k, g_k \in \mathbb{C}^{1 \times n_{T_x}}$.
+\end{description}
+So, $w_{\text{MRT}}$ and $w_{\text{ZF}}$ achieve the constraint $\|w_k\|_2 = 1$.
+
+\section{RL Interpretation}
+\subsection{Introduction}
+The problem of assignment precoder for multi user to maximize the rate with low interference doesn't have the optimal solution, so we use DRL techniques especially DDPG to try to find the best solution for this problem because RL uses the reward to search about the action which give the high cumulative reward.
+\subsection{Problem Mapping}
+Now let's define the state, action and reward to map our optimization problem to RL.
+\begin{description}
+    \item[State:] $S_t=H_t$, but $H_t$ is a complex matrix which has a size $({K \times n}_{T_x})$, and as we have mentioned that neural networks don't take a complex as input so we define the state \[ S_t = \left[ \Re(H_t) , \Im(H_t) \right] \]So $S_t \in \mathbb{R}^{k \times 2n_{T_x}}$
+    \item[Action:] $A_t = actor_{\theta^a} (S_t)$ where $A_t \in \mathbb{R}^{k \times 2n_{T_x}}$ but the pre-coder must be a complex so we will turn $A_t$ to complex by split $A_t$ to two halves by columns \[ W_t = A_{1:n_{T_x}} + \jmath A_{n_{T_x}+1 : 2n_{T_x}} \]where $A_{1:n_{T_x}}$ has a size of $(k \times n_{T_x})$
+    \item[Reward:] Sum average reward, where $R_k$ is the rate us the user.\[r_t = \frac{\sum_{k=1}^{K}R_k}{K} \quad , \quad K, r_t \in \mathbb{R}\]
+\end{description}
+\subsection{Algorithm Parameters}
+\begin{enumerate}
+    \item 3 hidden layers model with neurons [1024,512,] respectively.
+    \item Actor learning rate = 0.001 and Critic learning rate = 0.002 with decaying reaches to 0.0001 and 0.0002 respectively.
+    \item Channel noise = 0.2 in case of low input SNR.
+    \item Exploration noise variance \[ \sigma^2_\epsilon = \frac{0.1}{\text{episode number}} \]
+    \item $\alpha, \beta, \gamma \in [0,1]$
+\end{enumerate}

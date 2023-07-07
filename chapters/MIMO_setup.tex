@@ -153,6 +153,24 @@ Independent fading channel.
 \[\hat{w}=\ hh\]
 
 \section{MISO}
+In this case we have $M$ transmit antennas transmitting to a single receive antenna, we denote the fading coefficient between the $i^{th}$ transmit antenna and the receive antenna as $h_i^\ast$ so the  received signal becomes 
+\begin{equation}
+    \label{eq:MISO y}
+    \begin{aligned}
+        y &= \sum_{i=1}^{M} h_i^\ast\ x_i \\
+        &= \left[ h_1^\ast \  \cdots \ h_M^\ast \right] \left[ \begin{array}{c}
+            x_1 \\
+            \vdots \\
+            x_M
+        \end{array} \right] + n \\
+        &= \bar{h}^H \bar{x} + n
+    \end{aligned}
+\end{equation}
+where $x_i$ is the transmitted signal from the $i^{th}$ antenna.\\
+For the transmitter to determine $\bar{x}$ which achieves good decoding performance of the transmitted symbol $x$: \\
+Lets write $\bar{x}\ =\hat{w}x$ where $\hat{w}$ is called the pre-coding vector which specifies what each antenna transmits, we have to note however that $\hat{w}$ must be a unit vector so that the total transmit power from the transmitter is not changed by the choice of the pre-coding. The received signal becomes
+\[ \bar{h}^H \hat{w} x + n \]
+As in the case of SIMO, we want to maximize the received signal power $\left|{\bar{h}}^H\hat{w}\right|^2$. Similar to MRC, this is achieved by choosing $\hat{w}=\frac{\bar{h}}{\|\bar{h}\|}$ , hence the performance of this pre-coding operation is similar to MRC in case of SIMO.
 
 \section{MIMO}
 MIMO stands for \emph{Multiple-In Multiple-Out}, referring to the fact that when a packet is transmitted into the channel it transmitted on more than one antenna and when it comes out of the channel it is received on multiple antennas. This is in contrast to a Single-In Single-Out system with one antenna on both ends of the link, or a SIMO system which would include some types of radios that use diversity combining at the receive end but still transmit over only a single antenna.
@@ -244,7 +262,6 @@ where $\bar{\bar{U}}$ and $\bar{\bar{V}}$ are unitary matrices ($\bar{\bar{U}}^H
     \caption{MIMO setup used for diversity}
     \label{fig:MIMOdiv}
 \end{figure}
-
 \subsubsection{Encoding at Transmitter}
 Now, we will use the decomposition of the channel to encode the signal sent at the transmitter. Let $\bar{x_p}$ denotes the raw signal before being sent at the transmitter, then 
 \begin{equation}
@@ -258,7 +275,6 @@ where
     x
 \end{array} \right]_{M \times 1} \]
 and $x$ denotes the input message desired to be sent over all the antennas.
-
 \subsubsection{Decoding at Transmitter}
 At the receiver, the antennas have received $\bar{y}$ following the channel model in Equation~\ref{eq:y_bar MIMO}. Let $\bar{y_d}$ denotes the decoded received message where $\bar{y_d} = \bar{\bar{U}}^H \bar{y}$.
 \begin{equation}
@@ -316,7 +332,7 @@ Where $C$ is the channel capacity in bps and $W$ is the bandwidth in Hz.\\
 
 From this it can be seen that there is an ultimate limit on the capacity of a channel with a given bandwidth. However before this point is reached, the capacity is also limited by the signal to noise ratio of the received signal.\\
 
-Numerous choices must be taken regarding the way in which a transmission is made in light of these restrictions. This is when the modulation strategy can really come into play. greater order modulation techniques can increase channel capacity, but they need a greater signal to noise ratio than lower order modulation schemes do. As a result, there is a balance between the data rate and the permitted error rate, signal to noise ratio, and transmit power.\\
+Numerous choices must be taken regarding the way in which a transmission is made in light of these restrictions. This is when the modulation strategy can really come into play. greater order modulation techniques can increase channel capacity, but they need a greater signal to noise ratio than lower order modulation schemes do. As a result, there is a balance between the data rate and the permitted error rate, signal to noise ratio, and transmit power.
 \subsubsection{MIMO Spatial Multiplexing}
 As mentioned, the main idea behind using MIMO in spatial diversity is to utilize the multiple channels at the transmitter and the receiver to increase the total capacity of the system (recall the channel model in Equation~\ref{eq:y_bar MIMO}). \\
 
@@ -353,5 +369,12 @@ Let $d$ denotes the raw input symbol, $x$ denotes the transmitted signal, $y$ de
         &= d + \tilde{n}
     \end{aligned}
 \end{equation}
-Then, we can retrieve the sent symbol.
+Then, we can retrieve the sent symbol.\\
+\textbf{Note:} The better the estimation was, the less noisy the symbol $d$ is (ignoring the uncontrollable error $\tilde{n}$).
 \subsubsection{MIMO Spatial Multiplexing}
+As stated before, the received signal at the receiver \[ y = Hx + n \] must be decoded to avoid the interference of other channels on the desired signal. The decoding vector $w$ in \[ r = w y \] can be generated using 3 decoding techniques:
+\begin{description}
+    \item[Maximum Ratio Combining (MRC):] The simplest way to decode $y$ but has the worst performance. \[ w_{\text{MRC}} = H^H \]
+    \item[Zero Forcing (ZF):] Fairly more complex that MRC but has better performance. \[ w_{\text{ZF}} = \left(H^H H\right)^{-1} H^H \]
+    \item[Minimum Mean Square Error (MMSE):] The most complex technique of the three but has the best performance among them. \[ w_{\text{MMSE}} = \left(H^H H + \frac{1}{\text{SNR}} I_{M \times M} \right)^{-1} H^H \]\textbf{Note:} Theoretically, when $\text{SNR} \rightarrow \infty$ , MMSE technique becomes ZF. 
+\end{description}
