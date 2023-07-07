@@ -924,7 +924,7 @@ Repeat for multiple iterations (as shown in Figure~\ref{fig:MSA})
     \caption{MSA}
     \label{fig:MSA}
 \end{figure}
-\textbf{Toy example fro illustration:}\\
+\textbf{Toy example for illustration:}\\
 \[ H=\left[\begin{matrix}1&1&1&0&1&0&0\\0&1&1&1&0&1&0\\1&1&0&1&0&0&1\\1&0&1&0&1&1&1\\\end{matrix}\right] \]
 We will use the above matrix for illustration. Typically , a much larger matrix is used in 5G !\\
 \textbf{Storage matrix($L$)}:\\
@@ -975,7 +975,7 @@ After Column Operation
 \[ L=\left[\begin{matrix}-0.3&0.2&-0.2&0&-0.2&0&0\\0&-0.5&0.3&-0.3&0&0.3&0\\-0.3&0.2&0&0.2&0&0&0.2\\-0.6&0&-0.2&0&-0.2&-0.2&0.2\\\end{matrix}\right] \]
 \[ {Sum}_{updated\ values} = \begin{matrix} [-1&-0.4&1.1&-0.6&0.4&0.7&-0.7\\\end{matrix}] \]
 \[ L_{new}=\left[\begin{matrix}-0.7&-0.6&1.3&0&0.6&0&0\\0&0.1&0.8&-0.3&0&0.4&0\\-0.7&-0.6&0&-0.8&0&0&-0.9\\-0.4&0&1.3&0&0.6&0.9&-0.9\\\end{matrix}\right] \]
-Now, for the hard decision
+Now, for the hard decision:
 \begin{equation*}
     \text{BPSK}
     \begin{cases}
@@ -988,7 +988,7 @@ If $Sum > 0$, Decision on Bit $j = 0$, If $Sum < 0$, Decision on Bit $j = 1$.
 \[ \begin{matrix}\text{DEC}=[1&1&0&1&0&0&1\\\end{matrix}] \]
 
 Same example can be represented using \emph{tanner graph}:\\
-\textbf{1-Initialization Step}\\
+\textbf{1- Initialization Step}\\
 Variable nodes sending messages to their connected check nodes. These messages contain information about the likelihood of each possible value of the variable given its neighboring check nodes.
 \[ r=[\begin{matrix}0.2&-0.3&1.2&-0.5&0.8&0.6&-1.1\\\end{matrix}] \]
 \begin{figure*}[ht]
@@ -996,7 +996,7 @@ Variable nodes sending messages to their connected check nodes. These messages c
     \includegraphics[width=0.55\textwidth]{46.png}
 \end{figure*}
 
-\textbf{2-Variable Node to Check Node:}\\
+\textbf{2- Variable Node to Check Node:}\\
 In first iteration each variable node has only the initial value so each variable node sends only the value of the variable node itself (initial value) however , after 1st iteration The message sent from variable node $i$ to check node $j$ is calculated as the sum of the incoming messages from all other neighboring check nodes except $j$, plus the value of the variable node itself. This can be represented as:
 \[Message[i \rightarrow j] = Variable[i] + \sum(Message[k -> i]) \qquad \forall k \neq j \]
 \begin{figure*}[ht]
@@ -1004,14 +1004,14 @@ In first iteration each variable node has only the initial value so each variabl
     \includegraphics[width=0.55\textwidth]{47.png}
 \end{figure*}
 
-\textbf{3-Check to Variable Message Update:}\\
+\textbf{3- Check to Variable Message Update:}\\
 After receiving messages from all its neighboring variable nodes, each check node updates its outgoing messages to the variable nodes. The message sent from check node $j$ to variable node $i$ is calculated by Applying (Min-Sum) operation the operation on the incoming messages from all other neighboring variable nodes.
 \begin{figure*}[ht]
     \centering
     \includegraphics[width=0.55\textwidth]{48.png}
 \end{figure*}
 
-\textbf{4-Iteration:}\\ 
+\textbf{4- Iteration:}\\ 
 Steps 2 and 3 are repeated iteratively until convergence or for a fixed number of iterations. Convergence is typically determined by checking if there is no significant change in the messages between consecutive iterations.\\
 Now we can say we know why it was called massage passing algorithm Because the messages (belief) are actually passed between Variable nodes and check nodes also we can call it belief propagation.\\
 The steps required to implement MSA algorithm can be summarized in Figure~\ref{fig:MSA Algorithm}
@@ -1040,7 +1040,7 @@ The layered message passing can be illustrated using Figure 2.12. Each layer pro
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{image046.png}
-    \caption{Layered message passing example }
+    \caption{Layered message passing example}
     \label{fig:Layered message passing example }
 \end{figure}
 The variable nodes operation and check nodes operation in each layer are the same with  MSA. The diﬀerence is the updated LLR for each layer. The current layer input LLR can be updated.
@@ -1049,3 +1049,96 @@ Where $l_{layer_k+1,i}$ is the updated input LLR of layer $k+1$, $L_{layer_k+1,i
 \begin{GrayBox}
     \textbf{Note:} In order to apply the layered decoding algorithm, the parity check matrix must satisfy that in each layer the column weight is 1 and As we have seen in Figure~\ref{fig:H parity} this condition is met by 5G parity check matrix.
 \end{GrayBox}
+\textbf{Toy example for illustration:}\\
+We will not use a 5G parity check matrix in our example because it is very large So here is the toy example we have split this parity check matrix into two layers, layer 1 and layer 2 and these are the two layers, okay we can see the first layer has just a single 1 in each column, (column weight is 1), similarly the second layer also has a column weight 1 these two together specify the overall parity check matrix.
+\[ H=\left[\begin{matrix}1&1&1&0&1&0&0\\0&0&0&1&0&1&1\\\cdots&\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\\1&1&0&1&0&0&1\\0&0&1&0&1&1&0\\\end{matrix}\right] \]
+\textbf{1- Initialization Step}\\
+We initialize only the first layer
+\[  r=[\begin{matrix}0.2&-0.3&1.2&-0.5&0.8&0.6&-1.1\\\end{matrix}] \]
+\[ L=\left[\begin{matrix}0.2&-0.3&1.2&0&0.8&0&0\\0&0&0&-0.5&0&0.6&-1.1\\\cdots&\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\\\blacksquare&\blacksquare&0&\blacksquare&0&0&\blacksquare\\0&0&\blacksquare&0&\blacksquare&\blacksquare&0\\\end{matrix}\right] \]
+\textbf{2- Row Operation on Layer 1}\\
+Min-Sum on row $1,2$ (first layer)\\
+Iteration 1 layer 1:\\
+\[ L=\left[\begin{matrix}0.2&-0.3&1.2&0&0.8&0&0\\0&0&0&-0.5&0&0.6&-1.1\\\cdots&\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\\\blacksquare&\blacksquare&0&\blacksquare&0&0&\blacksquare\\0&0&\blacksquare&0&\blacksquare&\blacksquare&0\\\end{matrix}\right] \]
+Min-sum on first layer: Row $1, 2$\\
+\[ r=[\begin{matrix}0.2&-0.3&1.2&-0.5&0.8&0.6&-1.1\\\end{matrix}] \]
+\[ L=\left[\begin{matrix}-0.3&0.2&-0.2&0&-0.2&0&0\\0&0&0&-0.6&0&0.5&-0.5\\\cdots&\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\\\blacksquare&\blacksquare&0&\blacksquare&0&0&\blacksquare\\0&0&\blacksquare&0&\blacksquare&\blacksquare&0\\\end{matrix}\right] \]
+\textbf{3- Update The Messages (Column Operation)}\\
+So first step was initialization, second step was this min sum which we did in layer 1 for iteration 1, and then we immediately update messages,
+$\text{Sum} j = r j + \text{entry in Column}$
+Here we update massages not after one iteration but after only one layer and this explains why layered MSA  converge faster than MSA
+\[ \text{Sum} = [\begin{matrix}-0.1&-0.1&1&-0.1&0.6&1.1&-1.6\\\end{matrix}] \]
+\textbf{4- Layer 2 Initialization}\\
+Now that layer 1 is done and we will use the output beliefs (massages) from layer 1 as a input beliefs (massages) for  layer 2. And then we will do same.
+Then we will apply the same operations that we did in the first layer to the second layer
+\begin{enumerate}
+    \item Initialization step.
+    \item Row operation on layer 2 (Min Sum)
+    \item Update the messages (column operation)
+\end{enumerate}
+Iteration 1, layer 2 initialization:
+\[ \text{Sum} =  [\begin{matrix}-0.1&-0.1&1&-0.1&0.6&1.1&-1.6\\\end{matrix}] \]
+\[ L=\left[\begin{matrix}-0.3&0.2&-0.2&0&-0.2&0&0\\0&0&0&-0.6&0&0.5&-0.5\\\cdots&\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\\-0.1&-0.1&0&-0.1&0&0&-1.6\\0&0&0.6&0&0.6&1.1&0\\\end{matrix}\right] \]
+Min sum on layer 2: Rows $3, 4$
+\[ \text{Sum} =  [\begin{matrix}-0.1&-0.1&1&-1.1&0.6&1.1&-1.6\\\end{matrix}] \]
+\[ L=\left[\begin{matrix}-0.3&0.2&-0.2&0&-0.2&0&0\\0&0&0&-0.6&0&0.5&-0.5\\\cdots&\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\\-0.1&-0.1&0&-0.1&0&0&-0.1\\0&0&0.6&0&1&0.6&0\\\end{matrix}\right] \]
+Then we will update our beliefs.
+\[ \text{Sum} = [\begin{matrix}-0.2&-0.2&1.6&-1.2&1.6&1.7&-1.7\\\end{matrix}] \]
+\textbf{5- Iteration 2}\\
+We will do same operations that we did in iteration 1 but there will be one minor difference in the next iteration because already $L$ matrix have some values, okay so what do we do in this case? the first step is we will subtract,
+incoming beliefs from previous round has to be subtracted out before we do fresh processing and this step is very important, if we do not do this correctly a lot of instability will happen in our decoder because the incoming belief actually had some input from layer 1 itself in the previous iteration there was some input from layer 1 which was used in updating incoming belief so, we have to subtract this influence to avoid resend or reuse information.\\
+Iteration 2, layer 1,subtraction:
+\[ \text{Sum} = [\begin{matrix}-0.2&-0.2&1.6&-1.2&1.6&1.7&-1.7\\\end{matrix}] \]
+\[ L=\left[\begin{matrix}-0.3&0.2&-0.2&0&-0.2&0&0\\0&0&0&-0.6&0&0.5&-0.5\\\cdots&\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\\-0.1&-0.1&0&-0.1&0&0&-0.1\\0&0&0.6&0&1&0.6&0\\\end{matrix}\right] \]
+After subtraction (sum$-L$):
+\[ \text{Sum} =  [\begin{matrix}0.1&-0.4&1.8&-0.6&1.8&1.2&-1.2\\\end{matrix}] \]
+Then initialization for layer 1:
+\[ L=\left[\begin{matrix}0.1&-0.4&1.8&0&1.8&0&0\\0&0&0&-0.6&0&1.2&-1.2\\\cdots&\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\\-0.1&-0.1&0&-0.1&0&0&-0.1\\0&0&0.6&0&1&0.6&0\\\end{matrix}\right] \]
+Then we will do same operations that we did in iteration 1.\\
+Iteration 2, layer 1: Min-sum \\
+After layer 1 row operation:
+\[ L=\left[\begin{matrix}-0.4&0.1&-0.1&0&-0.1&0&0\\0&0&0&-1.2&0&0.6&-0.6\\\cdots&\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\\-0.1&-0.1&0&-0.1&0&0&-0.1\\0&0&0.6&0&1&0.6&0\\\end{matrix}\right] \]
+Then Update in Layer 1 : Rows $1,2$ $(Sum_{new} = sum_{old}+ entry in column)$
+\[ \text{Sum} = [\begin{matrix}0.1&-0.4&1.8&-0.6&1.8&1.2&-1.2\\\end{matrix}] \]
+\[ L=\left[\begin{matrix}-0.4&0.1&-0.1&0&-0.1&0&0\\0&0&0&-1.2&0&0.6&-0.6\\\cdots&\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\\-0.1&-0.1&0&-0.1&0&0&-0.1\\0&0&0.6&0&1&0.6&0\\\end{matrix}\right] \]
+\[ \text{Sum}_{new} =  [\begin{matrix}-0.3&-0.3&1.7&-1.8&1.7&1.8&-1.8\\\end{matrix}] \]
+Like we did in the first layer, when we found that the L matrix already had values, we do subtraction operation it to avoid resend or reuse information we will do same operations that we did in layer 1.\\
+Iteration 2, layer 2 : Subtraction
+\[ \text{Sum} =  [\begin{matrix}-0.3&-0.3&1.7&-1.8&1.7&1.8&-1.8\\\end{matrix}] \]
+\[ L=\left[\begin{matrix}-0.4&0.1&-0.1&0&-0.1&0&0\\0&0&0&-1.2&0&0.6&-0.6\\\cdots&\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\\-0.1&-0.1&0&-0.1&0&0&-0.1\\0&0&0.6&0&1&0.6&0\\\end{matrix}\right] \]
+Subtraction in Layer 2: Rows $3,4$
+\[ \text{Sum} =  [\begin{matrix}-0.2&-0.2&1.1&-1.7&0.7&1.2&-1.7\\\end{matrix}] \]
+\[ L=\left[\begin{matrix}-0.4&0.1&-0.1&0&-0.1&0&0\\0&0&0&-1.2&0&0.6&-0.6\\\cdots&\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\\-0.2&-0.2&0&-1.7&0&0&-1.7\\0&0&1.1&0&0.7&1.2&0\\\end{matrix}\right] \]
+Iteration 2, layer 2: Min-sum
+\[ \text{Sum} = [\begin{matrix}-0.2&-0.2&1.1&-1.7&0.7&1.2&-1.7\\\end{matrix}] \]
+\[ L=\left[\begin{matrix}-0.4&0.1&-0.1&0&-0.1&0&0\\0&0&0&-1.2&0&0.6&-0.6\\\cdots&\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\\-0.2&-0.2&0&-1.7&0&0&-1.7\\0&0&1.1&0&0.7&1.2&0\\\end{matrix}\right] \]
+Min-sum in layer 2 :Rows $3,4$
+\[ L=\left[\begin{matrix}-0.4&0.1&-0.1&0&-0.1&0&0\\0&0&0&-1.2&0&0.6&-0.6\\\cdots&\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\\-0.2&-0.2&0&-0.2&0&0&-0.2\\0&0&0.7&0&1.1&0.7&0\\\end{matrix}\right] \]
+Iteration 2, layer 2 : Update
+\[ \text{Sum} = [\begin{matrix}-0.2&-0.2&1.1&-1.7&0.7&1.2&-1.7\\\end{matrix}] \]
+Update in Layer 2 : Rows $3,4$
+\[ L=\left[\begin{matrix}-0.4&0.1&-0.1&0&-0.1&0&0\\0&0&0&-1.2&0&0.6&-0.6\\\cdots&\cdots&\cdots&\cdots&\cdots&\cdots&\cdots\\-0.2&-0.2&0&-0.2&0&0&-0.2\\0&0&0.7&0&1.1&0.7&0\\\end{matrix}\right] \]
+\[ \text{Sum} = [\begin{matrix}-0.4&-0.4&1.8&-1.9&1.8&1.9&-1.9\\\end{matrix}] \]
+Now time for hard decision:
+\begin{equation*}
+    \text{BPSK}
+    \begin{cases}
+        1, & c=0 \\
+        -1, & c=1
+    \end{cases}
+\end{equation*}
+If Sum$ > 0$, Decision on Bit $j = 0$, If Sum$ < 0$, Decision on Bit $j = 1$.
+\[ \text{Sum} = [\begin{matrix}-0.4&-0.4&1.8&-1.9&1.8&1.9&-1.9\\\end{matrix}] \]
+\[ \begin{matrix}\text{DEC}=[1&1&0&1&0&0&1\\\end{matrix}] \]
+\begin{GrayBox}
+    \textbf{The operations that we do in LMSA can be summarized as:}\\
+    Subtraction $\rightarrow$ Min-Sum $\rightarrow$ Update
+\end{GrayBox}
+In our project, we have implemented LOMSA to avoid over estimation of MSA we implement  offset min sum algorithm to reduce the magnitude of variable node and layered MSA to expedite convergence time. \\
+The steps required to implement Layered Normalized Min-Sum Algorithm and Layered Oﬀset Min-Sum Algorithm can be summarized in Figure~\ref{fig:LOMSA Algorithm}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.85\textwidth]{image077.png}
+    \caption{Steps for LOMSA Algorithm}
+    \label{fig:LOMSA Algorithm}
+\end{figure}
