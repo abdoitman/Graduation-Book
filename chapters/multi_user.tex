@@ -1,0 +1,25 @@
+\chapter{Second Approach: Multi-User MISO}
+
+\section{Problem realization}
+
+\subsection{Channel Model}
+We assume that our channel model is Rayleigh fading channel model.\\
+Consider the centralized massive MISO system, in which the BS is deployed $n_{tx}$ transmitter antennas and there are $K$ users being randomly distributed in the circular-shape cell. In this scenario, the $n_{tx}$ transmitter serves to $K$ single-antenna users at the same time frequency resources.\\
+Before all users received the transmitted date, the BS shall use some simple linear pre-coding techniques pre-process, which realizes the signal term maximization and interfere term minimization as much as possible. For the $K$ users, the received vector is given by
+\[ y = \sqrt{\rho} H W^H s + n \]
+where $\rho$ is the input SNR, $\mathbf{H}\in\mathbb{C}^{{K \times n}_{T_x}}$ denotes channel matrix between $n_{T_x}$ transmitter antenna and $K$ users, $\mathbf{s}\in{\mathbb{C}}^{1 \times K}$ denotes a signal vector, $\mathbf{W}\in{\mathbb{C}}^{{K \times n}_{T_x}}$ the pre-coder  matrix, which enables to boosts the total achievable rate of massive multi-user MISO system, $n$ denotes complex-valued additive white Gaussian noise (AWGN) at user, distributed as $\mathcal{N} \mathcal{C} (0, \sigma^\mathbf{2}_\mathbf{n})$.
+We assume that the perfect and instantaneous channel state information (CSI) is available at the BS, which can potentially be obtained for massive MISO system, such as in frequency division duplex (FDD) mode, where the BS acquires the perfect CSI through exploiting uplink channel feedback. In time division duplex (TDD) mode, the perfect CSI is acquired by the BS through open-loop uplink pilot training. Before the transmitter symbol, the BS adopts the three different linear pre-coding schemes.\\
+At the user's terminal, each user receives a symbol via pre-coding, thus the received signal at the user k is given by:
+\begin{equation}
+    y_k=h_k\ w_k^H\ s_k+\sum_{j=1,j \neq k}^{K}{h_k\ w_j^H\ s_j}+n_k
+\end{equation}
+where $h_k \in \mathbb{C}^{1 \times n_{T_x}}$ represents the $k^{th}$ row of the channel matrix $H$, whose entries are i.i.d. complex Gaussian random variable under the Rayleigh fading channel. Similarly, $w_k$ denotes the $k^{th}$ row vector of pre-coding matrix $W$ that satisfies limited condition $s_k$ and $s_j$ represent transmit symbols for the user $k$ and $j$, and $n_k\in \mathcal{N} \mathcal{C}(0,\sigma^\mathbf{2}_n)$.
+
+\subsection{Rate equation}
+According to the signal model, we can write the rate equation for the user $k$, which is calculated as
+\begin{equation}
+    R_k=\log_2\left(1+\frac{{\rho\left|h_k w_k^H\right|}^2}{1+\rho \sum_{j=1,j\neq k}^{K}{\left|h_k w_j^H\right|^2}}\right)
+\end{equation}
+Where our goal to find the best pre-coding vector $w_k$ which maximizes the overall rate.
+
+\section{Different Pre-coder Constrain Assumption}

@@ -27,7 +27,7 @@
 \contentsline {figure}{\numberline {2.20}{\ignorespaces MSA\relax }}{40}{}%
 \contentsline {figure}{\numberline {2.21}{\ignorespaces Steps for MSA Algorithm\relax }}{44}{}%
 \contentsline {figure}{\numberline {2.22}{\ignorespaces Layered message passing example\relax }}{45}{}%
-\contentsline {figure}{\numberline {2.23}{\ignorespaces Steps for LOMSA Algorithm\relax }}{50}{}%
+\contentsline {figure}{\numberline {2.23}{\ignorespaces Implementation steps of LNMSA and LOMSA\relax }}{50}{}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Rayleigh random variable\relax }}{52}{}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces AWGN vs Rayleigh fading BER for SISO\relax }}{53}{}%
@@ -69,3 +69,4 @@
 \contentsline {figure}{\numberline {8.6}{\ignorespaces Real and imaginary NNs\relax }}{94}{}%
 \contentsline {figure}{\numberline {8.7}{\ignorespaces Effect of decreasing neurons\relax }}{95}{}%
 \contentsline {figure}{\numberline {8.8}{\ignorespaces All versions of the model\relax }}{95}{}%
+\addvspace {10\p@ }

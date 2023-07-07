@@ -124,3 +124,8 @@
 \contentsline {subsubsection}{Hyper-parameter Tunning}{95}{}%
 \contentsline {subsubsection}{General Comparasion}{95}{}%
 \contentsline {subsection}{\numberline {8.2.7}Pseudo Code}{95}{}%
+\contentsline {chapter}{\numberline {9}Second Approach: Multi-User MISO}{97}{}%
+\contentsline {section}{\numberline {9.1}Problem realization}{97}{}%
+\contentsline {subsection}{\numberline {9.1.1}Channel Model}{97}{}%
+\contentsline {subsection}{\numberline {9.1.2}Rate equation}{98}{}%
+\contentsline {section}{\numberline {9.2}Different Pre-coder Constrain Assumption}{98}{}%
