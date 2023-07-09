@@ -620,7 +620,7 @@ Otherwise, LDPC base graph 1 is used.
 \subsection{Rate matching}
 The purpose of rate matching is to adapt different code rates. \\
 Rate matching is carried out on each code block independently. Assume that the input message to the $r_{th}$ code block is $d_1, d_2, \ldots , d_N$, where $N = 66Z_c$ for base graph 1 and $N = 50Z_c$ for base graph 2. $E_r$ is the length of rate matching output message of the $r_{th}$ code block. The output message after rate matching of the $r_{th}$ code block is $e_1, e_2, \ldots , e_{Er}$ which is calculated using equation
-\[e_k = d_k, if d_k \neq NULL, where  1 \leq k \leq Er\] 
+\[e_k = d_k, \qquad \text{if}\ d_k \neq \text{null},\ \text{where}\  1 \leq k \leq E_r\] 
 
 In our project we make rate matching by puncturing as follows
 \begin{equation}
@@ -692,7 +692,7 @@ We will take the $(3, 1)$ repetition code as example to explain repetition SISO 
     \caption{Flow of Repetition Soft Input Soft Output Decoding}
     \label{fig:flow of LDPC RSISOD}
 \end{figure}
-We have a message bit m okay it goes through the encoder, produce a code word which is m , m , m  , then we do BPSK we all know what it is by now 0 to plus 1, 1 to  minus 1 and we get a symbol vector S okay and then this goes through noise and get a receive vector r which is r1, r2, r3.\\
+We have a message bit $m$ okay it goes through the encoder, produce a code word which is $[m , m , m]$ , then we do BPSK we all know what it is by now $0 \rightarrow +1$, $1 \rightarrow -1$ and we get a symbol vector $S$ okay and then this goes through noise and get a receive vector $r$ which is $r_1, r_2, r_3$.\\
 Using gaussian distributions
 \[ p\left({\ r}_i\ \middle| c_i=0\right)=\frac{1}{\sqrt{2\sigma^2}}\ast e^{{-\frac{1}{{2\sigma}^2}({\ r}_i-1)}^2} \]
 \[ p\left({\ r}_i\ \middle| c_i=1\right)=\frac{1}{\sqrt{2\sigma^2}}\ast e^{{-\frac{1}{{2\sigma}^2}({\ r}_i+1)}^2} \]
