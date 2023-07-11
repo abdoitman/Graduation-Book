@@ -7,7 +7,7 @@ As mentioned before, our system is OFDM based using a block fading channel.
 \end{GrayBox}
 The shown graphs in this chapter depicts relationship of (BER and BLER) vs $E_b$/$No$ for various setups of our simulator.\\
 The simulation parameters per $E_b$/$No$ is shown in Table~\ref{tbl:ch parameters}.
-\begin{table}[ht]
+\begin{table}[H]
     \centering
     \caption{Simulation Parameters per $E_b$/$N_o$}
     \label{tbl:ch parameters}
@@ -52,3 +52,66 @@ Other facts about reference signals and channel estimation in the system are:
 \end{itemize}
 
 \section{Results}
+Here we take a look at the results of the simulation in the following cases:
+\begin{itemize}
+    \item 16 QAM SISO linear vs ldpc with rate = $4/7$
+    \item BPSK SISO linear, channel variance = $0.03$ vs $1$
+    \item LDPC rate $4/7$ SIMO $1 \times 2$ (all modulation orders: BPSK, QPSK, 16 QAM \& 64 QAM)
+    \item BPSK SISO LDPC rate = $1/3$ vs $4/7$
+\end{itemize}
+
+\subsection{16 QAM SISO: Linear vs LDPC with rate = $4/7$}
+\subsubsection{BER}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{Results/1/BER.png}
+    \caption{16 QAM SISO BER: Linear vs LDPC with rate = 4/7}
+\end{figure}
+\subsubsection{BLER}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{Results/1/BLER.png}
+    \caption{16 QAM SISO BLER: Linear vs LDPC with rate = 4/7}
+\end{figure}
+
+\subsection{BPSK SISO Linear: channel variance = $0.03$ vs $1$}
+\subsubsection{BER}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{Results/2/BER.png}
+    \caption{BPSK SISO Linear BER: channel variance = 0.03 vs 1}
+\end{figure}
+\subsubsection{BLER}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{Results/2/BLER.png}
+    \caption{BPSK SISO Linear BLER: channel variance = 0.03 vs 1}
+\end{figure}
+
+\subsection{LDPC rate $4/7$ SIMO $1 \times 2$ (all modulation orders: BPSK, QPSK, 16 QAM \& 64 QAM)}
+\subsubsection{BER}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{Results/3/BER.png}
+    \caption{BER: LDPC rate 4/7 SIMO 1 x 2 (all modulation orders: BPSK, QPSK, 16 QAM \& 64 QAM)}
+\end{figure}
+\subsubsection{BLER}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{Results/3/BLER.png}
+    \caption{BLER: LDPC rate 4/7 SIMO 1 x 2 (all modulation orders: BPSK, QPSK, 16 QAM \& 64 QAM)}
+\end{figure}
+
+\subsection{BPSK SISO LDPC rate = $1/3$ vs $4/7$}
+\subsubsection{BER}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{Results/4/BER.png}
+    \caption{BPSK SISO BER: LDPC rate = 1/3 vs 4/7}
+\end{figure}
+\subsubsection{BLER}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{Results/4/BLER.png}
+    \caption{BPSK SISO BLER: LDPC rate = 1/3 vs 4/7}
+\end{figure}

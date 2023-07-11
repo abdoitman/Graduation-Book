@@ -22,7 +22,7 @@ According to the signal model, we can write the rate equation for the user $k$, 
 \end{equation}
 Where our goal to find the best pre-coding vector $w_k$ which maximizes the overall rate.
 
-\section{Different Pre-coder Constrain Assumption}
+\section{Different Pre-coder Constraint Assumption}
 \subsection{Model 1 (Power Allocation)}
 \subsubsection{Model Constraints}
 \begin{itemize}
@@ -34,9 +34,10 @@ As we have mentioned our goal to maximize the sum rate so now we formulate our p
 \begin{equation}
     \label{eq:multi-user opt pa}
     \begin{aligned}
-        \max_{w_k} \quad & \sum_{k=1}^{K} R_k = \sum_{k=1}^{K} \log_2 \left( 1 + \frac{\rho | h_k w_k^H |^2}{1 + \rho \sum_{j=1, 1\neq k}^{K}| h_j w_j^H |^2} \right) \\
+        \max_{w_k} \quad & \sum_{k=1}^{K} \delta_k  R_k = \sum_{k=1}^{K} \delta_k \log_2 \left( 1 + \frac{\rho | h_k w_k^H |^2}{1 + \rho \sum_{j=1, 1\neq k}^{K}| h_k w_j^H |^2} \right) \\
         \text{s.t.} \quad &  \sum_{k=1}^{K}\|w_k\|^2_2 \leq 1 \\
         & \|s_k\|_2 =1 \quad , \quad k \in [1, \ldots , K] \\
+        & \sum_{k=1}^{K} \delta_k = 1 \\
         & h_k, w_k \in \mathbb{C}^{1 \times n_{T_x}}
     \end{aligned}
 \end{equation}
@@ -60,9 +61,10 @@ As we have mentioned our goal to maximize the sum rate so now we formulate our p
 \begin{equation}
     \label{eq:multi-user opt sp}
     \begin{aligned}
-        \max_{w_k} \quad & \sum_{k=1}^{K} R_k = \sum_{k=1}^{K} \log_2 \left( 1 + \frac{\rho | h_k w_k^H |^2}{1 + \rho \sum_{j=1, 1\neq k}^{K}| h_j w_j^H |^2} \right) \\
+        \max_{w_k} \quad & \sum_{k=1}^{K} \delta_k R_k = \sum_{k=1}^{K} \delta_k \log_2 \left( 1 + \frac{\rho | h_k w_k^H |^2}{1 + \rho \sum_{j=1, 1\neq k}^{K}| h_k w_j^H |^2} \right) \\
         \text{s.t.} \quad &  \|w_k\|_2 = 1 \\
         & \|s_k\|_2 =1 \quad , \quad k \in [1, \ldots , K] \\
+        & \sum_{k=1}^{K} \delta_k = 1 \\
         & h_k, w_k \in \mathbb{C}^{1 \times n_{T_x}}
     \end{aligned}
 \end{equation}
@@ -85,7 +87,7 @@ Now let's define the state, action and reward to map our optimization problem to
 \begin{description}
     \item[State:] $S_t=H_t$, but $H_t$ is a complex matrix which has a size $({K \times n}_{T_x})$, and as we have mentioned that neural networks don't take a complex as input so we define the state \[ S_t = \left[ \Re(H_t) , \Im(H_t) \right] \]So $S_t \in \mathbb{R}^{k \times 2n_{T_x}}$
     \item[Action:] $A_t = actor_{\theta^a} (S_t)$ where $A_t \in \mathbb{R}^{k \times 2n_{T_x}}$ but the pre-coder must be a complex so we will turn $A_t$ to complex by split $A_t$ to two halves by columns \[ W_t = A_{1:n_{T_x}} + \jmath A_{n_{T_x}+1 : 2n_{T_x}} \]where $A_{1:n_{T_x}}$ has a size of $(k \times n_{T_x})$
-    \item[Reward:] Sum average reward, where $R_k$ is the rate us the user.\[r_t = \frac{\sum_{k=1}^{K}R_k}{K} \quad , \quad K, r_t \in \mathbb{R}\]
+    \item[Reward:] Sum average reward, where $R_k$ is the rate us the user.\[r_t = \sum_{k=1}^{K} \delta_k R_k \quad , \quad K, r_t \in \mathbb{R}\]
 \end{description}
 \subsection{Algorithm Parameters}
 \begin{enumerate}
@@ -95,3 +97,181 @@ Now let's define the state, action and reward to map our optimization problem to
     \item Exploration noise variance \[ \sigma^2_\epsilon = \frac{0.1}{\text{episode number}} \]
     \item $\alpha, \beta, \gamma \in [0,1]$
 \end{enumerate}
+
+\section{Evaluation}
+\subsection{In Low SNR}
+\subsubsection{Model 1 (Power Allocation)}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=.85\linewidth]{Ha1.png}
+      \caption{Actor's to MRT's average reward}
+      \label{fig:lowSNR Model1}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=.85\linewidth]{Ha2.png}
+      \caption{Average reward}
+      \label{fig:lowSNR Model1_1}
+    \end{subfigure}
+\end{figure}
+\textbf{On average:}
+\begin{itemize}
+    \item Percentage subject to MRT= 100.43\%
+    \item Percentage subject to ZF= 157.84\%
+\end{itemize}
+The MRT has the performance better than ZF in low SNR, we will check our model using MRT, we observe that our model exceeds the MRT performance and it have not reached to convergence yet.
+\subsubsection{Model 2 (Fairness)}
+\textbf{On average: (after $30 \times {10}^4$ iterations)}
+    \begin{itemize}
+        \item Percentage subject to MRT= 96.71\%
+        \item Percentage subject to ZF= 129.8\%
+    \end{itemize}
+
+\subsection{In High SNR}
+\subsubsection{Model 1 (Power Allocation)}
+We have 2 versions of the model:
+\begin{enumerate}
+    \item \textbf{Log reward:}
+    \begin{equation}
+        \label{eq:Log reward model 1}
+        r_t=\sum_{k=1}^{K}{\delta_k \log_2 \left(1+\frac{{{\rho}\left|{h}_{k}\ {w}_{k}^{H}\right|}2}{{1}+{\rho}\ \sum_{{j}={1},{j}\neq{k}}^{{K}}{\left|{h}_{k}\ {w}_{j}^{H}\right|^{2}\ }}\right)}
+    \end{equation}
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}{.5\textwidth}
+          \centering
+          \includegraphics[width=.85\linewidth]{Ha3.png}
+          \caption{\% of actor reward to MRT's \& ZF's \& MMSE's}
+          \label{fig:highSNR Model1}
+        \end{subfigure}%
+        \begin{subfigure}{.5\textwidth}
+          \centering
+          \includegraphics[width=.85\linewidth]{Ha4.png}
+          \caption{Average reward}
+          \label{fig:highSNR Model1_1}
+        \end{subfigure}
+    \end{figure}
+    \textbf{On average: (after $20 \times {10}^4$ iterations)}
+    \begin{itemize}
+        \item Percentage subject to MRT= 87.3\%
+        \item Percentage subject to ZF= 49.76\%
+        \item Percentage subject to MMSE= 47.93\%
+    \end{itemize}
+    Since we have not resource and the model is extremely complex, the model needs at least 400 episodes to converge but we train it 30 episodes only, so it will reach to MMSE and can pass it, but it needs more computational power.\\
+    \textbf{Reshaped reward:}
+    \begin{equation}
+        \label{eq:reshaped model}
+        \begin{aligned}
+            {r}_{t} & = \sum_{{k}=1}^{{K}}{{{\delta}_{k} \log}_{2}\ \left(1+\frac{{{\rho}\left|{h}_{k}\ {w}_{k}^{H}\right|}^{2}}{{1}+{\rho}\ \sum_{{j}={1},{j}\neq{k}}^{{K}}{\left|{h}_{k}\ {w}_{j}^{H}\right|^{2}\ }}\right)} \\
+            & - \sum_{{k}={1}}^{{K}}{{\delta}_{k} \log_2\ \left({1}+\frac{{{\rho}\left|{h}_{k}\ {{w}_{k}^{{\text{MMSE}}}}^{H}\right|}^{2}}{{1}+{\rho}\ \sum_{{j}={1},{j}\neq{k}}^{{K}}{\left|{h}_{k}\ {{w}_{j}^{{\text{MMSE}}}}^{H}\right|^{2}\ }}\right)}\\
+            & + {0}.{5}
+        \end{aligned}
+    \end{equation}
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}{.5\textwidth}
+          \centering
+          \includegraphics[width=.85\linewidth]{Ha5.png}
+          \caption{\% of actor reward to MRT's \& ZF's \& MMSE's}
+          \label{fig:highSNR Model1-reshaped}
+        \end{subfigure}%
+        \begin{subfigure}{.5\textwidth}
+          \centering
+          \includegraphics[width=.85\linewidth]{Ha6.png}
+          \caption{Average reward}
+          \label{fig:highSNR Model1_1-reshaped}
+        \end{subfigure}
+    \end{figure}
+    \textbf{On average: (after $26 \times {10}^4$ iterations)}
+    \begin{itemize}
+        \item Percentage subject to MRT= 85.11\%
+        \item Percentage subject to ZF= 48.6\%
+        \item Percentage subject to MMSE= 46.76\%
+    \end{itemize}
+\end{enumerate}
+
+\subsubsection{Model 2 (Fairness)}
+\textbf{On average: (after $26 \times {10}^4$ iterations)}
+\begin{itemize}
+    \item Percentage subject to MRT= 95.9\%
+    \item Percentage subject to ZF= 34.77\%
+    \item Percentage subject to MMSE= 34.33\%
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=.85\linewidth]{Ha11.jpg}
+      \caption{\% of actor reward to MRT's \& ZF's \& MMSE's}
+      \label{fig:highSNR Model1-reshaped}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=.85\linewidth]{Ha12.jpg}
+      \caption{Average reward}
+      \label{fig:highSNR Model1_1-reshaped}
+    \end{subfigure}
+\end{figure}
+
+\section{Architecture of Other Trials}
+\subsection{Batch Normalize Layers}
+Batch normalization is a technique for training very deep neural networks that standardizes the inputs to a layer for each mini-batch. This has the effect of stabilizing the learning process and dramatically reducing the number of training epochs required to train deep networks by avoiding vanishing and exploding of gradient. \\
+There are 2 versions of this model depending on the activation function:
+\begin{description}
+    \item[Relu activation function:] Here we used 'relu' activation function with batch normalize, the performance of in case of model 1 and high SNR is 
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}{.5\textwidth}
+          \centering
+          \includegraphics[width=.85\linewidth]{Ha7.png}
+          \caption{\% of actor reward to MRT's \& ZF's \& MMSE's}
+          \label{fig:btl}
+        \end{subfigure}%
+        \begin{subfigure}{.5\textwidth}
+          \centering
+          \includegraphics[width=.85\linewidth]{Ha8.png}
+          \caption{Average reward}
+          \label{fig:btl-1}
+        \end{subfigure}
+    \end{figure}
+    \textbf{On average: (after 70 concatenated episodes)}
+    \begin{itemize}
+        \item Percentage subject to MRT= 88.55\% 
+        \item Percentage subject to ZF= 50.58\% 
+        \item Percentage subject to MMSE= 48.69\%
+    \end{itemize}
+    \item[Tanh activation function:] Here we used 'tanh' activation function with batch normalize, the performance of in case of model 1 and high SNR is 
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}{.5\textwidth}
+          \centering
+          \includegraphics[width=.85\linewidth]{Ha9.png}
+          \caption{\% of actor reward to MRT's \& ZF's \& MMSE's}
+          \label{fig:tanh}
+        \end{subfigure}%
+        \begin{subfigure}{.5\textwidth}
+          \centering
+          \includegraphics[width=.85\linewidth]{Ha10.png}
+          \caption{Average reward}
+          \label{fig:tanh-1}
+        \end{subfigure}
+    \end{figure}
+    \textbf{On average: (after 20 episodes)}
+    \begin{itemize}
+        \item Percentage subject to MRT= 79.49\% 
+        \item Percentage subject to ZF= 45.41\% 
+        \item Percentage subject to MMSE= 43.71\%
+    \end{itemize}
+\end{description}
+\subsection{Skip Connection}
+Skip Connections were introduced to solve different problems in different architectures. In the case of ResNets, skip connections solved the degradation problem that we addressed earlier whereas, in the case of DenseNets, it ensured feature reusability. \\
+We try to use it here to add regularization and decrease the complexity of the critic network.
+
+\section{Future Work}
+\subsection{General Model}
+High and low SNR at same time, input SNR chosen randomly between $[-10dB,\ 10dB]$.\\
+The difference here is in the state, here state is the channel coefficient matrix ($H_t$) in addition to input SNR ($\rho$).
+\subsection{Connect ML with RL}
+The MMSE pre-coder technique achieves the rate greater than MRT an ZF, so we will try to train an ordinary neural network that labeled by the pre-coder of MMSE so after training the NN will act like MMSE then we will transfer its weights to the actor network and then start soft update using RL to try to achieve better performance.
