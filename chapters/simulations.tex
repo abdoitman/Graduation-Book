@@ -33,7 +33,7 @@ The simulation parameters per $E_b$/$No$ is shown in Table~\ref{tbl:ch parameter
         Channel Coding & Linear Block Code with Coding Rate = $\frac{4}{7}$ \\
                        & LDPC with Coding Rate = $\frac{4}{7}$ \\
         Channel Variance & 0.03 \\
-        Resource Block (RB) & 16 sub-carriers \\
+        \# of Sub-carriers in a Resource Block (RB) & 16 \\
         Coherence Time & 4 Slots \\
         Coherence Bandwidth & 4 RBs \\ 
         \# of Pilots per Channel Block & 1 (for SISO, SIMO \& MISO) \\
@@ -46,7 +46,7 @@ Other facts about reference signals and channel estimation in the system are:
 \begin{itemize}
     \item CSI-RS is sent in the first OFDM symbol.
     \item DMRS is sent in the second OFDM symbol.
-    \item Perfect channel feedback from the Rx to the Tx is assumed.
+    \item Perfect \emph{channel feedback} from the Rx to the Tx is assumed.
     \item Resource blocks are different from 5G (which has the RB = 12 sub-carriers with 3300 sub-carriers OFDM symbol) just for simplicity.
     \item For all MIMO setups, number of pilots per channel block can range up to 64 pilots which are used to get more than channel estimate for each channel block and get the average estimation.
 \end{itemize}
