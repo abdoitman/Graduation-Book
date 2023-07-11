@@ -49,23 +49,23 @@
 \contentsline {figure}{\numberline {4.13}{\ignorespaces pilot symbols for 2x2 MIMO channel\relax }}{72}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Artificial Intelligence Map\relax }}{76}{}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Tic-Tac-Toe\relax }}{78}{}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces A sequence of tic-tac-toe moves.\relax }}{78}{}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces RL Taxonomy\relax }}{79}{}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Deterministic vs. Stochastic Policies\relax }}{80}{}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces 5x5 environment\relax }}{81}{}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Artificial Intelligence Map\relax }}{77}{}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Tic-Tac-Toe\relax }}{79}{}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces A sequence of tic-tac-toe moves.\relax }}{79}{}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces RL Taxonomy\relax }}{80}{}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Deterministic vs. Stochastic Policies\relax }}{81}{}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces 5x5 environment\relax }}{82}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces ACTOR-CRITIC Methods\relax }}{84}{}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces ACTOR-CRITIC\relax }}{85}{}%
-\contentsline {figure}{\numberline {7.3}{\ignorespaces DDPG Algorithm\relax }}{85}{}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces ACTOR-CRITIC Methods\relax }}{85}{}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces ACTOR-CRITIC\relax }}{86}{}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces DDPG Algorithm\relax }}{86}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Achievable linear reward\relax }}{92}{}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Achievable log reward\relax }}{93}{}%
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Linear \& log rewarding techniques comparison\relax }}{93}{}%
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Achievable rewards with and without PAE\relax }}{94}{}%
-\contentsline {figure}{\numberline {8.5}{\ignorespaces Training on random and fixed seeds\relax }}{95}{}%
-\contentsline {figure}{\numberline {8.6}{\ignorespaces Real and imaginary NNs\relax }}{95}{}%
-\contentsline {figure}{\numberline {8.7}{\ignorespaces Effect of decreasing neurons\relax }}{96}{}%
-\contentsline {figure}{\numberline {8.8}{\ignorespaces All versions of the model\relax }}{96}{}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Achievable linear reward\relax }}{93}{}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Achievable log reward\relax }}{94}{}%
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Linear \& log rewarding techniques comparison\relax }}{94}{}%
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Achievable rewards with and without PAE\relax }}{95}{}%
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Training on random and fixed seeds\relax }}{96}{}%
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Real and imaginary NNs\relax }}{96}{}%
+\contentsline {figure}{\numberline {8.7}{\ignorespaces Effect of decreasing neurons\relax }}{97}{}%
+\contentsline {figure}{\numberline {8.8}{\ignorespaces All versions of the model\relax }}{97}{}%
 \addvspace {10\p@ }

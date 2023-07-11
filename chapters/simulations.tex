@@ -1,5 +1,53 @@
 \chapter{Simulations}
-
+This Chapter show the simulation results of our 5G PDSCH simulator, before getting into the results and performance of our simulator, let's see our simulation parameters.
 \section{Channel Parameters}
+As mentioned before, our system is OFDM based using a block fading channel.
+\begin{GrayBox}
+    \textbf{Note:} Our performance metric of interest are the BER \& BLER.
+\end{GrayBox}
+The shown graphs in this chapter depicts relationship of (BER and BLER) vs $E_b$/$No$ for various setups of our simulator.\\
+The simulation parameters per $E_b$/$No$ is as follows:
+\begin{table}[ht]
+    \centering
+    \caption{Transmitter \& Receiver for different setups}
+    \label{tbl:ch parameters}
+    \begin{tabular}{ll}
+        \toprule
+        Parameter & Value \\
+        \midrule
+        Frames per $E_b$/$N_o$ & 100 \\
+        Slots per Frame & 100 (For Linear Coding) \\
+                        & 50 (For LDPC Coding) \\
+        OFDM Symbols per Slot & 14 \\
+        OFDM Symbol & 1024 sub-carriers \\
+        Modulation Order & BPSK \\
+                         & QPSK \\
+                         & 16 QAM \\
+                         & 64 QAM \\
+                         & 265 QAM \\
+        Input/Output Setup & SISO \\
+                           & SIMO \\
+                           & MISO \\
+                           & MIMO (Diversity) \\
+                           & MIMO (Spatial Multiplexing) \\
+        Channel Coding & Linear Block Code with Coding Rate = $\frac{4}{7}$ \\
+                       & LDPC with Coding Rate = $\frac{4}{7}$ \\
+        Channel Variance & 0.03 \\
+        Resource Block (RB) & 16 sub-carriers \\
+        Coherence Time & 4 Slots \\
+        Coherence Bandwidth & 4 RBs \\ 
+        Number of Pilots per Channel Block & 1 (for SISO, SIMO \& MISO) \\
+        & M (For MIMO) \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+Other facts about the reference signals in the system are:
+\begin{itemize}
+    \item CSI-RS is sent in the first OFDM symbol.
+    \item DMRS is sent in the second OFDM symbol.
+    \item Perfect channel feedback from the Rx to the Tx is assumed.
+    \item Resource blocks are different from 5G (which has the RB = 12 sub-carriers with 3300 sub-carriers OFDM symbol) just for simplicity.
+    \item For all MIMO setups, number of pilots per channel block can range up to 64 pilots which are used to get more than channel estimate for each channel block and get the average estimation.
+\end{itemize}
 
 \section{Results}
