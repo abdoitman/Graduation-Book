@@ -1,0 +1,9 @@
+#ignore chache and log files
+
+*.aux
+*.fdb_latexmk
+*.fls
+*.listing
+*.log
+*.toc
+*.synctex.gz
